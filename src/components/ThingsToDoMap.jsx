@@ -1,0 +1,401 @@
+import { useMemo, useRef, useState, useEffect } from "react";
+import { MapPin, X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+
+/**
+ * HOW IT WORKS
+ * - Uses a static map image (any PNG/JPG/SVG). Place pins using percentage coords.
+ * - Clicking a pin opens the detail panel with a mini photo slider.
+ * - Keyboard accessible (Tab through pins, Enter/Space to open).
+ *
+ * TODO: replace MAP_URL with your preferred map (transparent SVG looks great).
+ */
+const MAP_URL =
+  "https://upload.wikimedia.org/wikipedia/commons/7/79/Map_of_Sri_Lanka_Provinces.png"; // placeholder bg (swap with your sri lanka map image)
+
+const PLACES = [
+  // x,y are percentages relative to the map container
+  {
+    id: 1,
+    name: "Negombo",
+    region: "Western Province",
+    x: 18,
+    y: 77,
+    blurb:
+      "Beach town known for the Dutch canal, seafood, and early-morning fish markets.",
+    photos: [
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["Beaches", "Seafood", "Boat rides"],
+    gmap: "https://goo.gl/maps/8n5bY6q3V4cH1o3d6",
+  },
+  {
+    id: 2,
+    name: "Colombo",
+    region: "Western Province",
+    x: 22,
+    y: 82,
+    blurb:
+      "Sri Lanka’s bustling capital; galleries, temples, street food, and the Galle Face Green.",
+    photos: [
+      "https://images.unsplash.com/photo-1561406636-b80293969649?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["City life", "Food", "Museums"],
+    gmap: "https://goo.gl/maps/E3Kx3sB6bJt",
+  },
+  {
+    id: 3,
+    name: "Galle",
+    region: "Southern Province",
+    x: 28,
+    y: 93,
+    blurb:
+      "UNESCO-listed fort city with Dutch-era ramparts, boutique streets, and ocean views.",
+    photos: [
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["Heritage", "Photography", "Cafés"],
+    gmap: "https://goo.gl/maps/1pQz3t7iEjo",
+  },
+  {
+    id: 4,
+    name: "Hikkaduwa",
+    region: "Southern Province",
+    x: 26,
+    y: 95,
+    blurb: "Coral reefs, surfing spots, and laid-back beach vibes.",
+    photos: [
+      "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["Snorkeling", "Surfing"],
+    gmap: "https://goo.gl/maps/Hk7B2xqP9i22",
+  },
+  {
+    id: 5,
+    name: "Yala",
+    region: "Southern Province",
+    x: 58,
+    y: 92,
+    blurb:
+      "Sri Lanka’s most famous national park with high chances to spot leopards and elephants.",
+    photos: [
+      "https://images.unsplash.com/photo-1602153939368-7a2a1a0d3d3e?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["Wildlife", "Safaris"],
+    gmap: "https://goo.gl/maps/8W3y5o5r2wQ2",
+  },
+  {
+    id: 6,
+    name: "Nuwara Eliya",
+    region: "Central Province",
+    x: 45,
+    y: 75,
+    blurb:
+      "Misty tea country with colonial charm, waterfalls, and cool weather.",
+    photos: [
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["Tea estates", "Hikes", "Waterfalls"],
+    gmap: "https://goo.gl/maps/5F9G6sQF2bR2",
+  },
+  {
+    id: 7,
+    name: "Kandy",
+    region: "Central Province",
+    x: 39,
+    y: 66,
+    blurb:
+      "Sacred city home to the Temple of the Tooth, surrounded by hills and a serene lake.",
+    photos: [
+      "https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["Culture", "Temples", "City walks"],
+    gmap: "https://goo.gl/maps/1Z8Wyc52c7G2",
+  },
+  {
+    id: 8,
+    name: "Sigiriya",
+    region: "Central Province",
+    x: 44,
+    y: 54,
+    blurb:
+      "Iconic rock fortress with ancient frescoes and stunning views at sunrise.",
+    photos: [
+      "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["UNESCO", "Hikes", "History"],
+    gmap: "https://goo.gl/maps/c4bJrM3b5mL2",
+  },
+  {
+    id: 9,
+    name: "Pasikuda",
+    region: "Eastern Province",
+    x: 66,
+    y: 58,
+    blurb:
+      "Shallow turquoise bay famous for long, safe swims and calm seas.",
+    photos: [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["Calm beaches", "Families"],
+    gmap: "https://goo.gl/maps/a4g6sJYt4qT2",
+  },
+  {
+    id: 10,
+    name: "Jaffna",
+    region: "Northern Province",
+    x: 37,
+    y: 12,
+    blurb:
+      "Rich Tamil culture, colorful kovils, and unique cuisine at the island’s northern tip.",
+    photos: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["Culture", "Temples", "Food"],
+    gmap: "https://goo.gl/maps/4pP1vC3n1x82",
+  },
+  {
+    id: 11,
+    name: "Arugam Bay",
+    region: "Eastern Province",
+    x: 66,
+    y: 86,
+    blurb: "World-class right-hand point break and relaxed surf town.",
+    photos: [
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["Surfing", "Beaches"],
+    gmap: "https://goo.gl/maps/6P4wXn7wqK32",
+  },
+  {
+    id: 12,
+    name: "Batticaloa",
+    region: "Eastern Province",
+    x: 68,
+    y: 64,
+    blurb:
+      "Lagoon city with serene bridges, lighthouses, and quiet beaches.",
+    photos: [
+      "https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["Beaches", "Calm vibes"],
+    gmap: "https://goo.gl/maps/1e2hD8x7tSf",
+  },
+  {
+    id: 14,
+    name: "Trincomalee (Koneswaram Temple)",
+    region: "Eastern Province",
+    x: 63,
+    y: 40,
+    blurb:
+      "Clifftop kovil and pristine beaches; perfect blend of culture and sea.",
+    photos: [
+      "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop",
+    ],
+    bestFor: ["Temples", "Snorkeling", "Beaches"],
+    gmap: "https://goo.gl/maps/1m7tL9QpV8J2",
+  },
+];
+
+export default function ThingsToDoMap() {
+  const [active, setActive] = useState(PLACES[2]); // default to Galle so the panel isn't empty
+  const [slideIdx, setSlideIdx] = useState(0);
+  const panelRef = useRef(null);
+
+  // reset slider when place changes
+  useEffect(() => setSlideIdx(0), [active]);
+
+  const nextPhoto = () =>
+    setSlideIdx((i) => (i + 1) % (active?.photos?.length || 1));
+  const prevPhoto = () =>
+    setSlideIdx((i) =>
+      (i - 1 + (active?.photos?.length || 1)) % (active?.photos?.length || 1)
+    );
+
+  const pins = useMemo(
+    () =>
+      PLACES.map((p) => (
+        <button
+          key={p.id}
+          className={`absolute -translate-x-1/2 -translate-y-full focus:outline-none group`}
+          style={{ left: `${p.x}%`, top: `${p.y}%` }}
+          onClick={() => setActive(p)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setActive(p);
+            }
+          }}
+          aria-label={`${p.name}, ${p.region}`}
+        >
+          {/* pin */}
+          <div className="relative">
+            <div className="w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center ring-2 ring-blue-600/70 group-hover:ring-blue-600 transition">
+              <MapPin className="w-5 h-5 text-blue-700" />
+            </div>
+            {/* number bubble (optional) */}
+            {/* <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
+              {p.id}
+            </span> */}
+          </div>
+
+          {/* label on hover (desktop) */}
+          <span className="hidden md:block mt-1 text-xs font-semibold text-blue-900 bg-white/80 px-2 py-0.5 rounded shadow-sm opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition">
+            {p.name}
+          </span>
+        </button>
+      )),
+    []
+  );
+
+  return (
+    <section className="py-16 px-4 md:px-6 bg-white">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 items-start">
+        {/* Left: Title + blurb */}
+        <div className="lg:col-span-4">
+          <h2 className="text-5xl md:text-6xl font-extrabold leading-[0.95]">
+            THINGS
+            <br />
+            TO DO
+            <br />
+            <span className="text-gray-600 text-3xl md:text-4xl font-semibold">
+              IN SRI LANKA
+            </span>
+          </h2>
+
+          <p className="mt-6 text-gray-600 leading-relaxed">
+            We want to share Sri Lanka&apos;s extraordinarily diverse and
+            authentic story with the world. Tap a pin to discover places,
+            tips on what to do, when to go, and where to make your next
+            favourite memory.
+          </p>
+        </div>
+
+        {/* Middle: Map with pins */}
+        <div className="lg:col-span-4 relative">
+          <div className="rounded-3xl overflow-hidden shadow-xl bg-gradient-to-b from-blue-50 to-white">
+            <div className="relative pt-[140%]"> {/* aspect box */}
+              <img
+                src={MAP_URL}
+                alt="Sri Lanka map"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              {/* light vignette to improve contrast */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-blue-200/10 pointer-events-none" />
+              {/* pins */}
+              {pins}
+            </div>
+          </div>
+        </div>
+
+        {/* Right: Detail panel */}
+        <div className="lg:col-span-4">
+          <div
+            ref={panelRef}
+            className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100"
+          >
+            {/* photo slider */}
+            <div className="relative h-56 md:h-64">
+              {active?.photos?.map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`${active?.name} photo ${i + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+                    i === slideIdx ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+
+              <button
+                onClick={prevPhoto}
+                className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 p-2 rounded-full shadow"
+                aria-label="Previous photo"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={nextPhoto}
+                className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 p-2 rounded-full shadow"
+                aria-label="Next photo"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+
+              {active?.photos?.length > 1 && (
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                  {active.photos.map((_, i) => (
+                    <span
+                      key={i}
+                      className={`w-2 h-2 rounded-full ${
+                        i === slideIdx ? "bg-white" : "bg-white/50"
+                      }`}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* content */}
+            <div className="p-6">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-2xl font-extrabold">
+                    {active?.name}
+                  </h3>
+                  <p className="text-sm text-gray-500 mt-0.5">
+                    {active?.region}
+                  </p>
+                </div>
+                <a
+                  href={active?.gmap}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 font-medium"
+                >
+                  Google Maps <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+
+              <p className="mt-3 text-gray-700 leading-relaxed">{active?.blurb}</p>
+
+              {active?.bestFor?.length ? (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {active.bestFor.map((t, i) => (
+                    <span
+                      key={i}
+                      className="text-xs bg-blue-50 text-blue-700 border border-blue-100 px-2 py-1 rounded-full"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile bottom sheet (optional): shows when detail panel is off-screen on small screens */}
+      <div className="lg:hidden mt-6">
+        <div className="bg-white/80 border border-gray-200 rounded-2xl p-4 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+          <div className="flex items-center justify-between">
+            <div>
+              <div className="font-semibold">{active?.name}</div>
+              <div className="text-xs text-gray-500">{active?.region}</div>
+            </div>
+            <button
+              onClick={() => {
+                // scroll back to map area
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="text-gray-600 hover:text-gray-900"
+              aria-label="Back to map"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

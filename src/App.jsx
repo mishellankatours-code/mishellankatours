@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import WelcomePage from "./components/WelcomePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import PackagesPage from "./pages/PackagesPage";
+import ThingsToDoMap from "./components/ThingsToDoMap";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
               <>
                 <HeroSection />
                 <WelcomePage />
+                <ThingsToDoMap />
               </>
             }
           />
