@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-// import HeroSection from "./components/HeroSection";
-
+import HeroSection from "./components/HeroSection";
 
 export default function App() {
   return (
@@ -9,7 +8,14 @@ export default function App() {
       <Navbar />
       <main className="pt-16">
         <Routes>
-          {/* <Route path="/" element={<><HeroSection /><AboutSection /></>} /> */}
+          <Route
+            path="/"
+            element={
+              <>
+                <HeroSection />
+              </>
+            }
+          />
         </Routes>
       </main>
     </Router>
