@@ -5,6 +5,7 @@ import WelcomePage from "./components/WelcomePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import PackagesPage from "./pages/PackagesPage";
 import ThingsToDoMap from "./components/ThingsToDoMap";
+import ContactUsPage from "./pages/ContactUsPage";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/packages" element={<PackagesPage />} />
+          <Route path="/contact" element={<ContactUsPage />} />
         </Routes>
       </main>
     </Router>
