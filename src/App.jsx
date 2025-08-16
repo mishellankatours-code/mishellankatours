@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
+import WelcomePage from "./components/WelcomePage";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
             element={
               <>
                 <HeroSection />
+                <WelcomePage />
               </>
             }
           />
