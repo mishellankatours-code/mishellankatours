@@ -6,6 +6,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import PackagesPage from "./pages/PackagesPage";
 import ThingsToDoMap from "./components/ThingsToDoMap";
 import ContactUsPage from "./pages/ContactUsPage";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
                 <HeroSection />
                 <WelcomePage />
                 <ThingsToDoMap />
+                <Footer />
               </>
             }
           />
