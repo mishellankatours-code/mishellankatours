@@ -7,6 +7,7 @@ import PackagesPage from "./pages/PackagesPage";
 import ThingsToDoMap from "./components/ThingsToDoMap";
 import ContactUsPage from "./pages/ContactUsPage";
 import Footer from "./components/Footer";
+import Galary from "./pages/Galary";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/packages" element={<PackagesPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
+          <Route path="/Galary" element={<Galary />} />
         </Routes>
       </main>
     </Router>
