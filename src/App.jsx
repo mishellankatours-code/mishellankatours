@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import WelcomePage from "./components/WelcomePage";
 import AboutUsPage from "./pages/AboutUsPage";
+import PackagesPage from "./pages/PackagesPage";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
             }
           />
           <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/packages" element={<PackagesPage />} />
         </Routes>
       </main>
     </Router>

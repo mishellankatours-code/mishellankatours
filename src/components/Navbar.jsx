@@ -9,7 +9,8 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Portfolio", href: "/portfolio" },
-    { name: "About", href: "/about" }, // ✅ will now work
+    { name: "About", href: "/about" },
+    { name: "Packages", href: "/Packages" },
     { name: "Contact", href: "/contact" },
     { name: "Galary", href: "/Galary" },
   ];
