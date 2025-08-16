@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer";
 import {
   Heart,
   Shield,
@@ -266,6 +267,10 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
+      {/* Footer */}
+      <div className="bg-gray-100 py-8 mt-16">
+        <Footer />
+      </div>
     </div>
   );
 }

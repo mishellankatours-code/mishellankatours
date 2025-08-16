@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import React, { useState } from "react";
 import {
   Phone,
@@ -432,6 +433,10 @@ const ContactUsPage = () => {
           </div>
         </div>
       </section>
+            {/* Footer */}
+            <div className="bg-gray-100 py-8 mt-16">
+              <Footer />
+            </div>
     </div>
   );
 };

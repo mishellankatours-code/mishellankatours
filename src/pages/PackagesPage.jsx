@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import React from "react";
 import {
   Clock,
@@ -243,6 +244,10 @@ const PackagesPage = () => {
           </div>
         </div>
       </section>
+            {/* Footer */}
+            <div className="bg-gray-100 py-8 mt-16">
+              <Footer />
+            </div>
     </div>
   );
 };

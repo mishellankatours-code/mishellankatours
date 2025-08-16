@@ -1,5 +1,6 @@
 import { useMemo, useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Footer from "../components/Footer";
 import { X, ZoomIn, ChevronLeft, ChevronRight, Image as ImageIcon } from "lucide-react";
 
 /** Replace these with your imported assets if you prefer
@@ -217,6 +218,10 @@ export default function Galary() {
           </div>
         </div>
       )}
+            {/* Footer */}
+            <div className="bg-gray-100 py-8 mt-16">
+              <Footer />
+            </div>
     </div>
   );
 }
