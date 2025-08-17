@@ -564,6 +564,205 @@ const TourDetailsPage = () => {
       ],
     },
 
+    5: {
+      title: "12-Day Cultural Heritage Tour of Sri Lanka",
+      subtitle:
+        "Journey through time on this immersive 12-day cultural odyssey across Sri Lanka. Discover sacred temples, royal citadels, ancient cities, serene highlands, wildlife sanctuaries, and colonial towns—every step echoing centuries of history, faith, and tradition.",
+      duration: "12 Days / 11 Nights",
+      image: tour1,
+      rating: 4.9,
+      reviews: 156,
+      groupSize: "2-20 people",
+      difficulty: "Easy - Moderate",
+      highlights: [
+        "Colombo City exploration",
+        "Gangaramaya & Kelaniya Temples",
+        "Galle Fort & Madu River Safari",
+        "Yala National Park safari",
+        "Ella sightseeing – Ravana Falls, Nine Arch Bridge & Little Adam’s Peak",
+        "Scenic train journey to Nuwara Eliya",
+        "Lake Gregory & Sita Amman Temple visit",
+        "Ramboda Falls & Tea Plantation experience",
+        "Kandy cultural city tour & Temple of the Tooth",
+        "Matale Spice Garden & Muthumariamman Temple",
+        "Sigiriya Rock Fortress & Dambulla Cave Temple",
+        "Polonnaruwa Ancient City & Minneriya Safari",
+        "Anuradhapura Sacred City & Mihintale",
+      ],
+      itinerary: [
+        {
+          day: 1,
+          title: "Arrival in Colombo",
+          description:
+            "Meet & greet at Bandaranaike International Airport by MISHEL LANKA TOURS representative. Transfer to Colombo for check-in, dinner, and overnight stay.",
+          activities: [
+            "Airport pickup & welcome",
+            "Transfer to Colombo hotel",
+            "Evening leisure in Colombo",
+            "Dinner & overnight stay in Colombo",
+          ],
+        },
+        {
+          day: 2,
+          title: "Colombo → Kelaniya & Gangaramaya Temples → Galle",
+          description:
+            "Visit Gangaramaya Temple on Beira Lake and Kelaniya Raja Maha Vihara, then head south to Galle. Stop at Balapitiya for Madu River safari and a visit to the Sea Turtle Hatchery.",
+          activities: [
+            "Explore Gangaramaya Temple",
+            "Visit Kelaniya Raja Maha Vihara",
+            "Boat ride on Madu River",
+            "Visit Turtle Hatchery Farm",
+            "Check-in & overnight stay in Galle",
+          ],
+        },
+        {
+          day: 3,
+          title: "Galle → Yala National Park",
+          description:
+            "Morning visit to the UNESCO-listed Galle Fort before heading to Yala National Park for an adventurous safari.",
+          activities: [
+            "Explore Galle Fort",
+            "Travel to Yala National Park",
+            "Evening jeep safari at Yala",
+            "Dinner & overnight stay near Yala",
+          ],
+        },
+        {
+          day: 4,
+          title: "Yala → Ella",
+          description:
+            "Journey to Ella and explore its natural wonders including Ravana Falls, the Nine Arch Bridge, and Little Adam’s Peak.",
+          activities: [
+            "Visit Ravana Falls",
+            "Walk across Nine Arch Bridge",
+            "Hike Little Adam’s Peak",
+            "Evening leisure & overnight stay in Ella",
+          ],
+        },
+        {
+          day: 5,
+          title: "Ella → Train to Nuwara Eliya",
+          description:
+            "Experience one of the world’s most scenic train rides from Ella to Nanu Oya. Visit Lake Gregory, Nuwara Eliya Post Office, and the sacred Sita Amman Temple.",
+          activities: [
+            "Scenic train ride from Ella to Nuwara Eliya",
+            "Boat ride & leisure at Lake Gregory",
+            "Visit colonial Post Office",
+            "Explore Sita Amman Temple",
+            "Overnight stay in Nuwara Eliya",
+          ],
+        },
+        {
+          day: 6,
+          title: "Nuwara Eliya → Ramboda → Kandy",
+          description:
+            "Visit Ramboda Falls and Damro Tea Plantation before reaching Kandy. End the day at Peradeniya Royal Botanical Gardens.",
+          activities: [
+            "Visit Ramboda Falls",
+            "Tea tasting at Damro Tea Centre",
+            "Tour Peradeniya Botanical Gardens",
+            "Dinner & overnight stay in Kandy",
+          ],
+        },
+        {
+          day: 7,
+          title: "Kandy City Tour",
+          description:
+            "Full-day tour in the cultural city of Kandy including the Temple of the Tooth Relic, Bahirawakanda Temple, city viewpoint, and local markets.",
+          activities: [
+            "Visit Temple of the Tooth Relic (UNESCO site)",
+            "Explore Bahirawakanda Temple",
+            "Kandy city viewpoint",
+            "Shopping at Kandy market",
+            "Overnight stay in Kandy",
+          ],
+        },
+        {
+          day: 8,
+          title: "Kandy → Matale → Sigiriya",
+          description:
+            "Visit Matale Muthumariamman Temple and Spice Garden, then continue to Dambulla Cave Temple and climb Sigiriya Rock Fortress.",
+          activities: [
+            "Visit Muthumariamman Temple",
+            "Tour Matale Spice Garden",
+            "Explore Dambulla Cave Temple",
+            "Climb Sigiriya Rock Fortress (UNESCO)",
+            "Dinner & overnight stay in Sigiriya",
+          ],
+        },
+        {
+          day: 9,
+          title: "Sigiriya → Polonnaruwa & Minneriya Safari",
+          description:
+            "Discover the ruins of Polonnaruwa ancient city followed by an exciting safari in Minneriya National Park. Experience Hiriwadunna village life before returning to Sigiriya.",
+          activities: [
+            "Explore Polonnaruwa ancient city",
+            "Visit Royal Palace & Shiva Devale",
+            "Evening Minneriya Safari",
+            "Cultural experience at Hiriwadunna Village",
+            "Overnight stay in Sigiriya",
+          ],
+        },
+        {
+          day: 10,
+          title: "Sigiriya → Anuradhapura",
+          description:
+            "Travel to the UNESCO-listed sacred city of Anuradhapura, home to ancient stupas, lakes, and ruins.",
+          activities: [
+            "Tour Atamasthana (Eight Sacred Places)",
+            "Visit Jaya Sri Maha Bodhi & Ruwanwelisaya",
+            "Explore ancient ruins & monasteries",
+            "Dinner & overnight stay in Anuradhapura",
+          ],
+        },
+        {
+          day: 11,
+          title: "Anuradhapura City Tour & Mihintale",
+          description:
+            "Explore Mihintale, the birthplace of Buddhism in Sri Lanka, along with the historic monuments of Anuradhapura.",
+          activities: [
+            "Visit Mihintale Monastery",
+            "Climb Mihintale Hill",
+            "Explore Jetavanarama, Abhayagiriya, and Thuparamaya",
+            "Return to hotel for overnight stay in Anuradhapura",
+          ],
+        },
+        {
+          day: 12,
+          title: "Anuradhapura → Colombo Airport",
+          description:
+            "After breakfast, transfer to Bandaranaike International Airport for departure.",
+          activities: [
+            "Hotel breakfast & check-out",
+            "Drive to Colombo Airport",
+            "End of 12-Day Cultural Heritage Tour",
+          ],
+        },
+      ],
+      inclusions: [
+        "Air-conditioned vehicle with professional driver",
+        "English-speaking cultural tour guide",
+        "Airport pickup and drop-off",
+      ],
+      exclusions: [
+        "Travel insurance",
+        "Personal expenses (shopping, laundry, etc.)",
+        "Lunch meals (except mentioned)",
+        "Optional activities (Ayurvedic spa, adventure sports, etc.)",
+        "Alcoholic beverages",
+      ],
+      whatWeOffer: [
+        "24/7 customer support during the tour",
+        "Friendly and knowledgeable cultural guides",
+        "Comfortable & safe accommodation",
+        "Private, air-conditioned transportation",
+        "Flexible and customizable itinerary options",
+        "Authentic Sri Lankan heritage experiences",
+        "Emergency medical assistance support",
+        "Satisfaction guarantee with professional service",
+      ],
+    },
+
     // Add more tour details for other packages...
   };
 
