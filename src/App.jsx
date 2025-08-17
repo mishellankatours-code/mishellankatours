@@ -7,7 +7,7 @@ import PackagesPage from "./pages/PackagesPage";
 import ThingsToDoMap from "./components/ThingsToDoMap";
 import ContactUsPage from "./pages/ContactUsPage";
 import Footer from "./components/Footer";
-import Galary from "./pages/Galary";
+import Gallery from "./pages/Gallery";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function App() {
@@ -34,7 +34,7 @@ export default function App() {
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/packages" element={<PackagesPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
-          <Route path="/Galary" element={<Galary />} />
+          <Route path="/Gallery" element={<Gallery />} />
         </Routes>
       </main>
     </Router>

@@ -19,8 +19,8 @@ const PackagesPage = () => {
   const packages = [
     {
       id: 1,
-      title: "2 Days Tours",
-      subtitle: "2 Days, Tours",
+      title: "8-Days Tours",
+      subtitle: "8-Days Sri Lanka Cultural & Nature Sightseeing Tour",
       duration: "2 Days",
       image: tour1,
       highlights: [

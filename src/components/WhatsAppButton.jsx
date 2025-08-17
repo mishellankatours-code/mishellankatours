@@ -2,9 +2,9 @@ import React, { useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
-/** phone format: "94768384980" (no + or spaces) */
+/** phone format: "94762044065" (no + or spaces) */
 export default function WhatsAppButton({
-  phone = "94768384980",
+  phone = "94762044065",
   message = "Hi Mishellanka Tours! I'm interested in your tours.",
   tooltip = "Chat on WhatsApp",
   className = "",
