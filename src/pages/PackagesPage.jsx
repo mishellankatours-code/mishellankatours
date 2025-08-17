@@ -55,7 +55,7 @@ const PackagesPage = () => {
     );
   };
 
-  const packages = [
+  const srtpackages = [
     {
       id: 1,
       title: "8-Days Sri Lanka Cultural & Nature Sightseeing Tour",
@@ -270,6 +270,62 @@ const PackagesPage = () => {
     },
   ];
 
+  const honeymoonpackages = [
+    {
+      id: 1,
+      title: "8-Days Sri Lanka Cultural & Nature Sightseeing Tour",
+      subtitle: "8-Days Tours",
+      duration: "8 Days",
+      image: tour1,
+      highlights: [
+        "Sigiriya Rock Fortress",
+        "Dambulla Cave Temple",
+        "Polonnaruwa Ancient City",
+        "Kandy Temple of the Tooth",
+        "Scenic Train to Ella",
+        "Yala Safari",
+        "Mirissa Coconut Hill",
+        "Galle Fort & Turtle Hatchery",
+      ],
+      rating: 4.8,
+      reviews: 124,
+    },
+    {
+      id: 2,
+      title: "Sri Lanka 3-Days South Coast Discovery Tour",
+      subtitle: "3 Days Tours",
+      duration: "3 Days",
+      image: tour2,
+      highlights: [
+        "Temple of the Tooth",
+        "Cultural Heritage Sites",
+        "Traditional Cuisine",
+      ],
+      rating: 4.9,
+      reviews: 89,
+    },
+    {
+      id: 3,
+      title: "10-Day Sri Lanka Heritage, Nature & Culture Tour",
+      subtitle: "10 Days Tours",
+      duration: "10 Days",
+      image: tour3,
+      highlights: [
+        "Climb Sigiriya Rock Fortress",
+        "Explore Ancient Polonnaruwa & Dambulla Caves",
+        "Wildlife Safari at Minneriya & Yala",
+        "Temple of the Tooth Relic in Kandy",
+        "Scenic train ride from Nuwara Eliya to Ella",
+        "Nine Arch Bridge & Little Adam’s Peak",
+        "Whale Watching in Mirissa",
+        "Galle Fort & Turtle Hatchery",
+        "Bentota Beach & Madu River Safari",
+      ],
+      rating: 4.9,
+      reviews: 156,
+    },
+  ];
+
   const features = [
     { icon: <Mountain className="w-6 h-6" />, text: "Mountain Adventures" },
     { icon: <Camera className="w-6 h-6" />, text: "Photo Opportunities" },
@@ -346,7 +402,7 @@ const PackagesPage = () => {
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-            {packages.map((pkg) => (
+            {srtpackages.map((pkg) => (
               <div
                 key={pkg.id}
                 className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
@@ -419,35 +475,70 @@ const PackagesPage = () => {
 
       {/* Section Separator - ADD THIS */}
       <SectionSeparator title="honeymoon Tour" backgroundImage={tour1} />
-      {/* You can add another grid of beach packages here */}
+      {/* Packages Grid */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Beach package examples */}
-            <div className="bg-white rounded-3xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
-                7-Day Beach Paradise
-              </h3>
-              <p className="text-gray-600">
-                Experience the best beaches of Sri Lanka
-              </p>
-            </div>
-            <div className="bg-white rounded-3xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
-                5-Day Coastal Adventure
-              </h3>
-              <p className="text-gray-600">
-                Surfing, diving, and beach relaxation
-              </p>
-            </div>
-            <div className="bg-white rounded-3xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
-                10-Day Island Hopping
-              </h3>
-              <p className="text-gray-600">
-                Explore multiple coastal destinations
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {honeymoonpackages.map((pkg) => (
+              <div
+                key={pkg.id}
+                className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+              >
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden rounded-t-3xl">
+                  <img
+                    src={pkg.image}
+                    alt={pkg.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+                  {/* Duration Badge */}
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Clock className="w-4 h-4" />
+                      {pkg.duration}
+                    </div>
+                  </div>
+
+                  {/* Rating Badge */}
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      {pkg.rating}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    {pkg.title}
+                  </h3>
+                  <p className="text-gray-500 mb-4">{pkg.subtitle}</p>
+
+                  {/* Highlights */}
+                  <ul className="space-y-2 mb-6">
+                    {pkg.highlights.map((highlight, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center gap-2 text-sm text-gray-600"
+                      >
+                        <MapPin className="w-4 h-4 text-green-600" />
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                  {/* Updated CTA Button with navigation */}
+                  <button
+                    onClick={() => handleSeeMore(pkg.id)}
+                    className="w-full mt-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    SEE MORE
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
