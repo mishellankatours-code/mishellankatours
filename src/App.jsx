@@ -8,11 +8,16 @@ import ThingsToDoMap from "./components/ThingsToDoMap";
 import ContactUsPage from "./pages/ContactUsPage";
 import Footer from "./components/Footer";
 import Galary from "./pages/Galary";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function App() {
   return (
     <Router>
       <Navbar />
+      <WhatsAppButton
+        phone="94768384980" // ← your admin number (no +, spaces, or leading 0)
+        message="Hi Mishellanka Tours! I'd like to know more about your packages."
+      />
       <main className="pt-16">
         <Routes>
           <Route
