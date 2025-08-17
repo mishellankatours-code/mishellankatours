@@ -13,13 +13,13 @@ import {
 } from "lucide-react";
 import { srtpackages } from "../components/srtpackages";
 import { honeymoonpackages } from "../components/honeymoonpackages";
-
-import tour1 from "../assets/tour1.jpg";
 import { beachpackages } from "../components/Beachpackages";
 import { culturalpackages } from "../components/culturalpackages";
 import { Wildlifepackages } from "../components/willifepackages";
 import { budgetpackages } from "../components/Budgetpackages";
 import { tuktukpackages } from "../components/TukTukpackages";
+
+import tour1 from "../assets/tour1.jpg";
 
 const PackagesPage = () => {
   const navigate = useNavigate(); // Add this hook
