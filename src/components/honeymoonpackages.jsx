@@ -4,9 +4,9 @@ import tour3 from "../assets/tour3.jpg";
 export const honeymoonpackages = [
   {
     id: 1,
-    title: "8-Days Sri Lanka Cultural & Nature Sightseeing Tour",
-    subtitle: "8-Days Tours",
-    duration: "8 Days",
+    title: "7-Day Romantic Sri Lanka Honeymoon Tour",
+    subtitle: "7-Days Tours",
+    duration: "7 Days",
     image: tour1,
     highlights: [
       "Sigiriya Rock Fortress",
@@ -23,9 +23,9 @@ export const honeymoonpackages = [
   },
   {
     id: 2,
-    title: "Sri Lanka 3-Days South Coast Discovery Tour",
-    subtitle: "3 Days Tours",
-    duration: "3 Days",
+    title: "12-Day Enchanted Sri Lanka Honeymoon Tour",
+    subtitle: "12 Days Tours",
+    duration: "12 Days",
     image: tour2,
     highlights: [
       "Temple of the Tooth",
@@ -37,9 +37,9 @@ export const honeymoonpackages = [
   },
   {
     id: 3,
-    title: "10-Day Sri Lanka Heritage, Nature & Culture Tour",
-    subtitle: "10 Days Tours",
-    duration: "10 Days",
+    title: "6-Day Romantic Sri Lanka Honeymoon Tour",
+    subtitle: "6 Days Tours",
+    duration: "6 Days",
     image: tour3,
     highlights: [
       "Climb Sigiriya Rock Fortress",
