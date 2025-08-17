@@ -19,11 +19,47 @@ import tour3 from "../assets/tour3.jpg";
 const PackagesPage = () => {
   const navigate = useNavigate(); // Add this hook
 
+  // Section Separator Component
+  const SectionSeparator = ({ title, backgroundImage }) => {
+    return (
+      <section className="relative py-16 px-6 overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: backgroundImage
+              ? `url(${backgroundImage})`
+              : "linear-gradient(135deg, #0f766e 0%, #065f46 50%, #064e3b 100%)",
+          }}
+        >
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/60"></div>
+          {/* Gradient overlay for depth */}
+          <div className="absolute inset-0 bg-gradient-to-r from-green-900/40 via-transparent to-blue-900/40"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-bold text-white tracking-wide">
+            {title}
+          </h2>
+
+          {/* Decorative line */}
+          <div className="flex items-center justify-center mt-6">
+            <div className="h-1 w-20 bg-gradient-to-r from-transparent via-white to-transparent rounded-full"></div>
+            <div className="h-2 w-2 bg-white rounded-full mx-4"></div>
+            <div className="h-1 w-20 bg-gradient-to-r from-transparent via-white to-transparent rounded-full"></div>
+          </div>
+        </div>
+      </section>
+    );
+  };
+
   const packages = [
     {
       id: 1,
-      title: "8-Days Tours",
-      subtitle: "8-Days Sri Lanka Cultural & Nature Sightseeing Tour",
+      title: "8-Days Sri Lanka Cultural & Nature Sightseeing Tour",
+      subtitle: "8-Days Tours",
       duration: "8 Days",
       image: tour1,
       highlights: [
@@ -41,8 +77,8 @@ const PackagesPage = () => {
     },
     {
       id: 2,
-      title: "3 Days Tours",
-      subtitle: "Sri Lanka 3-Days South Coast Discovery Tour",
+      title: "Sri Lanka 3-Days South Coast Discovery Tour",
+      subtitle: "3 Days Tours",
       duration: "3 Days",
       image: tour2,
       highlights: [
@@ -55,8 +91,8 @@ const PackagesPage = () => {
     },
     {
       id: 3,
-      title: "10 Days Tours",
-      subtitle: "10-Day Sri Lanka Heritage, Nature & Culture Tour",
+      title: "10-Day Sri Lanka Heritage, Nature & Culture Tour",
+      subtitle: "10 Days Tours",
       duration: "10 Days",
       image: tour3,
       highlights: [
@@ -75,8 +111,8 @@ const PackagesPage = () => {
     },
     {
       id: 4,
-      title: "5 Days Tours",
-      subtitle: " 5-Day Sri Lanka Cultural Discovery Tour",
+      title: "5-Day Sri Lanka Cultural Discovery Tour",
+      subtitle: "5 Days Tours",
       duration: "5 Days",
       image: tour2,
       highlights: [
@@ -94,8 +130,8 @@ const PackagesPage = () => {
     },
     {
       id: 5,
-      title: "12 Days Tours",
-      subtitle: "12 Days Cultural Heritage Tour of Sri Lanka",
+      title: "12 Days Cultural Heritage Tour of Sri Lanka",
+      subtitle: "12 Days Tours",
       duration: "12 Days",
       image: tour1,
       highlights: [
@@ -118,70 +154,116 @@ const PackagesPage = () => {
     },
     {
       id: 6,
-      title: "2 Days Tours",
-      subtitle: "2 Days, Tours",
-      duration: "2 Days",
+      title: "14 Days Sightseeing Adventure Across Sri Lanka",
+      subtitle: "14 Days  Tours",
+      duration: "14 Days ",
       image: tour3,
       highlights: [
-        "Tea Plantation Visit",
-        "Local Village Tour",
-        "Scenic Viewpoints",
+        "Relax in Negombo fishing village & Dutch heritage sites",
+        "Explore sacred Anuradhapura & Mihintale",
+        "Climb Sigiriya Rock Fortress (UNESCO)",
+        "Discover ancient ruins of Polonnaruwa",
+        "Wildlife safari at Minneriya & Yala National Park",
+        "Visit Dambulla Golden Cave Temple (UNESCO)",
+        "Spice Garden & Matale Muthumariamman Temple",
+        "Kandy City Tour & Temple of the Tooth Relic",
+        "Witness Pinnawala Elephant Orphanage",
+        "Climb Adam’s Peak pilgrimage trail",
+        "Scenic train ride from Nuwara Eliya to Ella",
+        "Nine Arch Bridge, Little Adam’s Peak & Ravana Falls",
+        "Beach bliss in Mirissa with whale watching",
+        "Galle Fort, Turtle Hatchery & Madu River safari in Bentota",
       ],
       rating: 4.8,
       reviews: 124,
     },
     {
       id: 7,
-      title: "2 Days Tours",
-      subtitle: "2 Days, Tours",
-      duration: "2 Days",
+      title: "12 Days Sri Lanka Sightseeing Tour",
+      subtitle: "12 Days Tours",
+      duration: "12 Days",
       image: tour1,
       highlights: [
-        "Tea Plantation Visit",
-        "Local Village Tour",
-        "Scenic Viewpoints",
+        "Relax at Negombo beach town",
+        "Visit Mihintale – birthplace of Buddhism in Sri Lanka",
+        "Explore the sacred city of Anuradhapura (UNESCO)",
+        "Discover the ruins of Polonnaruwa (UNESCO)",
+        "Jeep Safari at Minneriya National Park",
+        "Climb the legendary Sigiriya Rock Fortress (UNESCO)",
+        "Visit Dambulla Golden Cave Temple (UNESCO)",
+        "Spice Garden & Hindu Temple at Matale",
+        "Kandy City Tour & Temple of the Tooth Relic",
+        "Tea plantations & waterfalls in Nuwara Eliya",
+        "Hike at Horton Plains & World’s End",
+        "Ella sightseeing – Nine Arch Bridge & Little Adam’s Peak",
+        "Yala National Park wildlife experience",
+        "Relax at Mirissa & Whale Watching Tour",
+        "Explore Galle Fort (UNESCO) & Turtle Hatchery",
+        "Madu River Boat Safari in Balapitiya",
       ],
       rating: 4.8,
       reviews: 124,
     },
     {
       id: 8,
-      title: "2 Days Tours",
-      subtitle: "2 Days, Tours",
-      duration: "2 Days",
+      title: "One Week Sri Lanka Holiday Tour Package",
+      subtitle: "7 Days Tours ",
+      duration: "7 Days",
       image: tour1,
       highlights: [
-        "Tea Plantation Visit",
-        "Local Village Tour",
-        "Scenic Viewpoints",
+        "Visit Pinnawala Elephant Orphanage",
+        "Explore the Temple of the Tooth Relic in Kandy",
+        "Scenic drive through Sri Lanka’s tea country",
+        "Discover colonial charm of Nuwara Eliya",
+        "Enjoy waterfalls: Ramboda, Devon & St. Clair’s",
+        "White-water rafting at Kitulgala",
+        "Relax on Bentota’s golden beaches",
+        "Madu River safari & Turtle Hatchery visit",
+        "Explore UNESCO Galle Fort",
+        "Colombo city tour with Lotus Tower & Gangaramaya Temple",
       ],
       rating: 4.8,
       reviews: 124,
     },
     {
       id: 9,
-      title: "2 Days Tours",
-      subtitle: "2 Days, Tours",
-      duration: "2 Days",
+      title: "Sri Lanka 18-Day Heritage & Coastal Odyssey Tour",
+      subtitle: "18 Days Tours",
+      duration: "18 Days",
       image: tour1,
       highlights: [
-        "Tea Plantation Visit",
-        "Local Village Tour",
-        "Scenic Viewpoints",
+        "Relax on golden beaches in Unawatuna & Trincomalee",
+        "Galle Fort & colonial heritage exploration",
+        "Witness stilt fishermen & southern coast wonders",
+        "Full-day Yala National Park jeep safari",
+        "Scenic waterfalls & Nine Arch Bridge in Ella",
+        "Tea country views from Lipton’s Seat",
+        "Temple of the Tooth Relic in Kandy",
+        "Dambulla Cave Temple & Sigiriya Rock Fortress",
+        "Whale watching & snorkeling at Pigeon Island",
+        "Ancient cities of Anuradhapura & Polonnaruwa",
       ],
       rating: 4.8,
       reviews: 124,
     },
     {
       id: 10,
-      title: "2 Days Tours",
-      subtitle: "2 Days, Tours",
-      duration: "2 Days",
+      title: "13 Days Sri Lanka Surf & Heritage Tour",
+      subtitle: "13 Days Tours",
+      duration: "13 Days",
       image: tour1,
       highlights: [
-        "Tea Plantation Visit",
-        "Local Village Tour",
-        "Scenic Viewpoints",
+        "Climb the UNESCO-listed Sigiriya Rock Fortress",
+        "Wildlife Safari at Minneriya National Park",
+        "Sunset hike to Pidurangala Rock",
+        "Explore Dambulla Golden Cave Temple",
+        "Relax at Pasikudah & Kalkudah Beaches",
+        "Surf world-class waves at Arugam Bay",
+        "Discover Muhudu Maha Viharaya & Pottuvil Lagoon",
+        "Scenic hike to Little Adam’s Peak & Ella Rock",
+        "Visit Ravana Falls & Nine Arch Bridge in Ella",
+        "Surf & chill at Ahangama, Midigama & Kabalana beaches",
+        "Experience Sri Lanka’s vibrant culture and rural village life",
       ],
       rating: 4.8,
       reviews: 124,
@@ -255,6 +337,11 @@ const PackagesPage = () => {
         </div>
       </section>
 
+      {/* Section Separator - ADD THIS */}
+      <SectionSeparator
+        title="SIGHTSEEING ROUND TOUR PACKAGES"
+        backgroundImage={tour1}
+      />
       {/* Packages Grid */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
@@ -326,6 +413,41 @@ const PackagesPage = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section Separator - ADD THIS */}
+      <SectionSeparator title="honeymoon Tour" backgroundImage={tour1} />
+      {/* You can add another grid of beach packages here */}
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Beach package examples */}
+            <div className="bg-white rounded-3xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                7-Day Beach Paradise
+              </h3>
+              <p className="text-gray-600">
+                Experience the best beaches of Sri Lanka
+              </p>
+            </div>
+            <div className="bg-white rounded-3xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                5-Day Coastal Adventure
+              </h3>
+              <p className="text-gray-600">
+                Surfing, diving, and beach relaxation
+              </p>
+            </div>
+            <div className="bg-white rounded-3xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                10-Day Island Hopping
+              </h3>
+              <p className="text-gray-600">
+                Explore multiple coastal destinations
+              </p>
+            </div>
           </div>
         </div>
       </section>

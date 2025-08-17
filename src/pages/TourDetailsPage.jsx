@@ -762,6 +762,1013 @@ const TourDetailsPage = () => {
         "Satisfaction guarantee with professional service",
       ],
     },
+    6: {
+      title: "14-Day Sightseeing Adventure Across Sri Lanka",
+      subtitle:
+        "Experience Sri Lanka like never before—historic cities, misty highlands, ancient temples, golden beaches, thrilling safaris, and authentic cultural encounters. This all-in-one sightseeing journey is perfect for travelers who crave discovery and diversity.",
+      duration: "14 Days / 13 Nights",
+      image: tour1,
+      rating: 4.9,
+      reviews: 132,
+      groupSize: "2-20 people",
+      difficulty: "Easy - Moderate",
+      highlights: [
+        "Relax in Negombo fishing village & Dutch heritage sites",
+        "Explore sacred Anuradhapura & Mihintale",
+        "Climb Sigiriya Rock Fortress (UNESCO)",
+        "Discover ancient ruins of Polonnaruwa",
+        "Wildlife safari at Minneriya & Yala National Park",
+        "Visit Dambulla Golden Cave Temple (UNESCO)",
+        "Spice Garden & Matale Muthumariamman Temple",
+        "Kandy City Tour & Temple of the Tooth Relic",
+        "Witness Pinnawala Elephant Orphanage",
+        "Climb Adam’s Peak pilgrimage trail",
+        "Scenic train ride from Nuwara Eliya to Ella",
+        "Nine Arch Bridge, Little Adam’s Peak & Ravana Falls",
+        "Beach bliss in Mirissa with whale watching",
+        "Galle Fort, Turtle Hatchery & Madu River safari in Bentota",
+      ],
+      itinerary: [
+        {
+          day: 1,
+          title: "Arrival in Sri Lanka – Airport → Negombo",
+          description:
+            "Meet and greet at Bandaranaike International Airport. Transfer to Negombo seaside hotel for rest and relaxation.",
+          activities: [
+            "Airport pickup & welcome",
+            "Drive to Negombo",
+            "Check-in at hotel & relax by the beach",
+            "Dinner & overnight stay in Negombo",
+          ],
+        },
+        {
+          day: 2,
+          title: "Negombo Sightseeing Tour",
+          description:
+            "Discover Negombo’s heritage and coastal charm. Visit fishing villages, Dutch-era monuments, and sandy beaches.",
+          activities: [
+            "Explore local fishing village",
+            "Visit Dutch Fort & Dutch Clock Tower",
+            "Relax at Negombo Beach Park",
+            "Optional water sports activities",
+            "Overnight stay in Negombo",
+          ],
+        },
+        {
+          day: 3,
+          title: "Negombo → Anuradhapura via Mihintale",
+          description:
+            "Travel to the sacred city of Anuradhapura, visiting Mihintale – the cradle of Buddhism – along the way.",
+          activities: [
+            "Visit Mihintale Buddhist site",
+            "Explore Anuradhapura’s Atamasthana (Eight Sacred Places)",
+            "See Jaya Sri Maha Bodhi, Ruwanwelisaya & Thuparamaya",
+            "Hotel check-in & overnight stay in Sigiriya",
+          ],
+        },
+        {
+          day: 4,
+          title: "Sigiriya → Polonnaruwa & Minneriya Safari",
+          description:
+            "Discover Polonnaruwa’s ancient ruins and enjoy a thrilling safari at Minneriya National Park.",
+          activities: [
+            "Visit Polonnaruwa ancient capital",
+            "Explore Royal Palace & Shiva Devale",
+            "Evening jeep safari at Minneriya National Park",
+            "Return to Sigiriya for overnight stay",
+          ],
+        },
+        {
+          day: 5,
+          title: "Sigiriya → Dambulla → Matale → Kandy",
+          description:
+            "Climb Sigiriya Rock Fortress, explore Dambulla Cave Temple, spice garden, and Muthumariamman Temple before heading to Kandy.",
+          activities: [
+            "Climb Sigiriya Rock Fortress",
+            "Visit Dambulla Golden Cave Temple (UNESCO)",
+            "Spice Garden experience in Matale",
+            "Muthumariamman Temple visit",
+            "Evening arrival in Kandy for overnight stay",
+          ],
+        },
+        {
+          day: 6,
+          title: "Kandy City Tour",
+          description:
+            "A full day exploring the cultural capital of Sri Lanka, with temples, viewpoints, and cultural performances.",
+          activities: [
+            "Temple of the Tooth Relic (UNESCO)",
+            "Walk around Kandy Lake",
+            "Visit Bahirawakanda Buddha Statue",
+            "Gem Museum & Tea Factory visit",
+            "Kandy Cultural Dance Show",
+            "Overnight stay in Kandy",
+          ],
+        },
+        {
+          day: 7,
+          title: "Kandy → Pinnawala → Gadaladeniya & Embekka → Kandy",
+          description:
+            "Witness elephants at Pinnawala and visit historical temples near Kandy.",
+          activities: [
+            "Pinnawala Elephant Orphanage",
+            "Visit Embekka Devalaya with wood carvings",
+            "Gadaladeniya Temple",
+            "Return to Kandy for overnight stay",
+          ],
+        },
+        {
+          day: 8,
+          title: "Kandy → Tea Plantations → Adam’s Peak",
+          description:
+            "Travel through tea estates to reach Adam’s Peak for a pilgrimage climb.",
+          activities: [
+            "Visit Labookellie Tea Estate & factory",
+            "Drive through scenic tea landscapes",
+            "Evening climb Adam’s Peak for sunrise pilgrimage",
+            "Overnight stay near Adam’s Peak",
+          ],
+        },
+        {
+          day: 9,
+          title: "Adam’s Peak → Nuwara Eliya",
+          description:
+            "Descend from Adam’s Peak and travel to the ‘Little England’ of Sri Lanka.",
+          activities: [
+            "Stop at St. Clair’s & Devon Falls",
+            "City tour of Nuwara Eliya",
+            "Check-in & relax at hotel",
+            "Overnight stay in Nuwara Eliya",
+          ],
+        },
+        {
+          day: 10,
+          title: "Nuwara Eliya → Train Journey → Ella",
+          description:
+            "Experience the most scenic train journey in Sri Lanka from Nanu Oya to Ella.",
+          activities: [
+            "Visit Gregory Lake & colonial Post Office",
+            "Board train from Nanu Oya to Ella",
+            "Enjoy breathtaking mountain & tea estate views",
+            "Pick up at Ella station & overnight stay in Ella",
+          ],
+        },
+        {
+          day: 11,
+          title:
+            "Ella → Little Adam’s Peak → Nine Arch Bridge → Ravana Falls → Yala",
+          description:
+            "Morning hikes and sightseeing in Ella followed by safari adventure in Yala National Park.",
+          activities: [
+            "Hike Little Adam’s Peak",
+            "Visit Nine Arch Bridge",
+            "Explore Ravana Falls",
+            "Evening safari at Yala National Park",
+            "Overnight stay in Yala",
+          ],
+        },
+        {
+          day: 12,
+          title: "Yala → Mirissa",
+          description:
+            "Travel to the southern coast and relax at the beach in Mirissa.",
+          activities: [
+            "Morning drive to Mirissa",
+            "Visit Coconut Tree Hill viewpoint",
+            "Relax on Mirissa Beach",
+            "Overnight stay in Mirissa",
+          ],
+        },
+        {
+          day: 13,
+          title: "Mirissa → Whale Watching → Galle → Bentota",
+          description:
+            "Enjoy whale watching in Mirissa, explore Galle Fort, and relax in Bentota.",
+          activities: [
+            "Whale watching cruise in Mirissa",
+            "Explore Galle Fort (UNESCO)",
+            "Visit Turtle Hatchery in Galle",
+            "Madu River boat safari in Balapitiya",
+            "Overnight stay in Bentota",
+          ],
+        },
+        {
+          day: 14,
+          title: "Departure – Bentota → Colombo Airport",
+          description:
+            "Final day of your 14-day journey. Transfer to Colombo Airport for departure.",
+          activities: [
+            "Breakfast at hotel",
+            "Leisure time at Bentota beach",
+            "Airport drop-off in Colombo",
+            "End of tour",
+          ],
+        },
+      ],
+      inclusions: [
+        "Airport pickup and drop-off",
+        "Air-conditioned private vehicle with driver",
+        "English-speaking cultural tour guide",
+        "Scenic train ride (subject to availability)",
+        "Wildlife safaris at Minneriya & Yala National Parks",
+        "Whale watching cruise in Mirissa",
+      ],
+      exclusions: [
+        "International flight tickets",
+        "Visa fees",
+        "Travel insurance",
+        "Personal expenses (shopping, laundry, etc.)",
+        "Lunch meals (unless specified)",
+        "Tips for guide and driver",
+        "Optional activities (spa treatments, adventure sports, etc.)",
+        "Alcoholic beverages",
+      ],
+      whatWeOffer: [
+        "24/7 customer support during the tour",
+        "Friendly and knowledgeable cultural guides",
+        "Comfortable & safe accommodation",
+        "Private, air-conditioned transportation",
+        "Flexible and customizable itinerary options",
+        "Authentic Sri Lankan heritage & nature experiences",
+        "Emergency medical assistance support",
+        "Satisfaction guarantee with professional service",
+      ],
+    },
+    7: {
+      title: "12 Days Sri Lanka Sightseeing Tour",
+      subtitle:
+        "✨ Immerse yourself in Sri Lanka’s stunning natural beauty, ancient wonders, and vibrant culture on this expertly guided 12-day journey.",
+      duration: "12 Days / 11 Nights",
+      image: tour1,
+      rating: 4.9,
+      reviews: 132,
+      groupSize: "2-20 people",
+      difficulty: "Easy - Moderate",
+      highlights: [
+        "Relax at Negombo beach town",
+        "Visit Mihintale – birthplace of Buddhism in Sri Lanka",
+        "Explore the sacred city of Anuradhapura (UNESCO)",
+        "Discover the ruins of Polonnaruwa (UNESCO)",
+        "Jeep Safari at Minneriya National Park",
+        "Climb the legendary Sigiriya Rock Fortress (UNESCO)",
+        "Visit Dambulla Golden Cave Temple (UNESCO)",
+        "Spice Garden & Hindu Temple at Matale",
+        "Kandy City Tour & Temple of the Tooth Relic",
+        "Tea plantations & waterfalls in Nuwara Eliya",
+        "Hike at Horton Plains & World’s End",
+        "Ella sightseeing – Nine Arch Bridge & Little Adam’s Peak",
+        "Yala National Park wildlife experience",
+        "Relax at Mirissa & Whale Watching Tour",
+        "Explore Galle Fort (UNESCO) & Turtle Hatchery",
+        "Madu River Boat Safari in Balapitiya",
+      ],
+      itinerary: [
+        {
+          day: 1,
+          title: "Arrival in Sri Lanka – Transfer to Negombo",
+          description:
+            "Meet & greet at Bandaranaike International Airport by our MISHEL LANKA TOURS representative. Transfer to Negombo beach town and relax for the evening.",
+          activities: [
+            "Airport pickup & welcome",
+            "Transfer to Negombo hotel",
+            "Relax by the beach",
+            "Dinner & overnight stay in Negombo",
+          ],
+        },
+        {
+          day: 2,
+          title: "Negombo → Mihintale & Anuradhapura",
+          description:
+            "Visit Mihintale – the cradle of Buddhism in Sri Lanka. Explore the sacred city of Anuradhapura with its ancient stupas and Eight Sacred Places.",
+          activities: [
+            "Visit Mihintale (Mahinda’s Hill)",
+            "Explore Anuradhapura Sacred City",
+            "See Jaya Sri Maha Bodhi, Ruwanwelisaya & Thuparamaya",
+            "Overnight stay in Anuradhapura",
+          ],
+        },
+        {
+          day: 3,
+          title: "Anuradhapura → Polonnaruwa & Minneriya Safari → Sigiriya",
+          description:
+            "Tour Polonnaruwa, Sri Lanka’s second ancient capital. Later, enjoy a thrilling safari at Minneriya National Park to spot wild elephants.",
+          activities: [
+            "Explore Polonnaruwa archaeological city",
+            "Visit Royal Palace of King Parakramabahu",
+            "Shiva Devale & Brahmanic monuments",
+            "Evening Jeep Safari at Minneriya National Park",
+            "Overnight stay in Sigiriya",
+          ],
+        },
+        {
+          day: 4,
+          title: "Sigiriya Rock Fortress → Dambulla → Matale → Kandy",
+          description:
+            "Climb the world-famous Sigiriya Rock Fortress. En route to Kandy, visit the Dambulla Golden Temple, Spice Garden, and Hindu Temple in Matale.",
+          activities: [
+            "Climb Sigiriya Rock Fortress",
+            "Visit Dambulla Cave Temple (UNESCO)",
+            "Matale Spice Garden & Muthumariamman Temple",
+            "Overnight stay in Kandy",
+          ],
+        },
+        {
+          day: 5,
+          title: "Kandy City Tour",
+          description:
+            "Discover Kandy, the cultural capital of Sri Lanka. Visit the Temple of the Tooth Relic, Bahirawakanda Buddha statue, cultural show, and local markets.",
+          activities: [
+            "Temple of the Tooth Relic (Sri Dalada Maligawa)",
+            "Bahirawakanda Buddha Statue",
+            "Kandy viewpoint & local market",
+            "Kandy Cultural Dance Show",
+            "Overnight stay in Kandy",
+          ],
+        },
+        {
+          day: 6,
+          title: "Kandy → Nuwara Eliya",
+          description:
+            "Journey through tea country with stops at waterfalls and tea plantations before arriving in Nuwara Eliya.",
+          activities: [
+            "Visit Ramboda Falls",
+            "Tea plantation & factory tour",
+            "Explore Gregory Lake & Nuwara Eliya town",
+            "Overnight stay in Nuwara Eliya",
+          ],
+        },
+        {
+          day: 7,
+          title: "Nuwara Eliya → Horton Plains → Ella",
+          description:
+            "Morning visit to Horton Plains National Park for a hike to World’s End. Later, transfer to Ella.",
+          activities: [
+            "Horton Plains hike & World’s End viewpoint",
+            "Scenic drive through hill country",
+            "Check-in & overnight stay in Ella",
+          ],
+        },
+        {
+          day: 8,
+          title: "Ella Sightseeing",
+          description:
+            "Explore the charming hill town of Ella. Visit Nine Arch Bridge, Little Adam’s Peak, and Ravana Falls.",
+          activities: [
+            "Visit Nine Arch Bridge",
+            "Climb Little Adam’s Peak",
+            "See Ravana Falls",
+            "Overnight stay in Ella",
+          ],
+        },
+        {
+          day: 9,
+          title: "Ella → Yala National Park → Tissamaharama",
+          description:
+            "Transfer to Yala region. Evening safari at Yala National Park, famous for leopards, elephants, and birdlife.",
+          activities: [
+            "Travel to Yala",
+            "Evening Jeep Safari at Yala National Park",
+            "Overnight stay in Tissamaharama/Yala area",
+          ],
+        },
+        {
+          day: 10,
+          title: "Yala → Mirissa",
+          description:
+            "After breakfast, transfer to Mirissa, one of Sri Lanka’s most beautiful beach towns.",
+          activities: [
+            "Scenic drive to Mirissa",
+            "Relax on the beach",
+            "Visit Coconut Tree Hill",
+            "Overnight stay in Mirissa",
+          ],
+        },
+        {
+          day: 11,
+          title: "Whale Watching & Transfer to Bentota via Galle",
+          description:
+            "Early morning whale watching in Mirissa. En route to Bentota, stop at Galle Fort, Turtle Hatchery, and enjoy a Madu River boat safari.",
+          activities: [
+            "Morning whale watching tour",
+            "Explore Galle Fort (UNESCO)",
+            "Visit Turtle Hatchery",
+            "Boat safari at Madu River",
+            "Overnight stay in Bentota",
+          ],
+        },
+        {
+          day: 12,
+          title: "Departure from Colombo",
+          description:
+            "Transfer to Bandaranaike International Airport for your departure flight with unforgettable memories of Sri Lanka.",
+          activities: [
+            "Breakfast at hotel",
+            "Drive to Colombo Airport",
+            "End of 12-day sightseeing tour",
+          ],
+        },
+      ],
+      inclusions: [
+        "Airport pickup & drop-off",
+        "Air-conditioned private vehicle with driver",
+        "English-speaking cultural tour guide",
+      ],
+      exclusions: [
+        "Tips for driver/guide",
+        "Optional activities (adventure sports, spa, etc.)",
+        "Alcoholic beverages",
+      ],
+      whatWeOffer: [
+        "24/7 customer support during the tour",
+        "Professional, friendly cultural guides",
+        "Safe & comfortable accommodation",
+        "Private air-conditioned transportation",
+        "Customizable itinerary",
+        "Authentic Sri Lankan cultural & wildlife experiences",
+        "Emergency medical assistance",
+        "Satisfaction guarantee with expert service",
+      ],
+    },
+    8: {
+      title: "One Week Sri Lanka Holiday Tour Package",
+      subtitle:
+        "Discover the magic of Sri Lanka in just one unforgettable week. From sacred temples and misty hills to tropical beaches and colonial cities—this curated tour has it all.",
+      duration: "07 Days / 06 Nights",
+      image: tour1,
+      rating: 4.9,
+      reviews: 124,
+      groupSize: "2-20 people",
+      difficulty: "Easy - Moderate",
+      highlights: [
+        "Visit Pinnawala Elephant Orphanage",
+        "Explore the Temple of the Tooth Relic in Kandy",
+        "Scenic drive through Sri Lanka’s tea country",
+        "Discover colonial charm of Nuwara Eliya",
+        "Enjoy waterfalls: Ramboda, Devon & St. Clair’s",
+        "White-water rafting at Kitulgala",
+        "Relax on Bentota’s golden beaches",
+        "Madu River safari & Turtle Hatchery visit",
+        "Explore UNESCO Galle Fort",
+        "Colombo city tour with Lotus Tower & Gangaramaya Temple",
+      ],
+      itinerary: [
+        {
+          day: 1,
+          title: "Arrival in Sri Lanka & Transfer to Kandy",
+          description:
+            "Welcome at Bandaranaike International Airport. Visit Pinnawala Elephant Orphanage & Spice Garden en route to Kandy. Evening hotel check-in.",
+          activities: [
+            "Airport pickup & welcome",
+            "Visit Pinnawala Elephant Orphanage",
+            "Explore Spice & Herbal Garden",
+            "Hotel check-in & overnight stay in Kandy",
+          ],
+        },
+        {
+          day: 2,
+          title: "Kandy City Tour",
+          description:
+            "Explore Kandy’s cultural gems including Temple of the Tooth, Kandy Lake, Bahirawakanda Temple & Kandy Market. Evening cultural dance show.",
+          activities: [
+            "Temple of the Tooth Relic (Sri Dalada Maligawa)",
+            "Walk around Kandy Lake",
+            "Kandy View Point & Bahirawakanda Buddha Statue",
+            "National Gems & Gemological Museum",
+            "Shopping at Kandy Market",
+            "Traditional Kandyan dance show",
+            "Overnight stay in Kandy",
+          ],
+        },
+        {
+          day: 3,
+          title: "Kandy → Nuwara Eliya (Scenic Drive)",
+          description:
+            "Drive through misty hills to Nuwara Eliya. Visit Ramboda Falls, Sri Bhaktha Hanuman Temple, and a tea plantation & factory.",
+          activities: [
+            "Scenic drive to Nuwara Eliya",
+            "Visit Ramboda Falls & viewpoint",
+            "Sri Bhaktha Hanuman Temple",
+            "Tea factory & plantation tour with tasting",
+            "Overnight stay in Nuwara Eliya",
+          ],
+        },
+        {
+          day: 4,
+          title: "Nuwara Eliya City Tour",
+          description:
+            "Explore colonial-era Nuwara Eliya. Visit Gregory Lake, Seetha Amman Temple, Hakgala Botanical Garden & Victoria Park.",
+          activities: [
+            "Visit Nuwara Eliya Post Office",
+            "Victoria Park stroll",
+            "Gregory Lake (boating optional)",
+            "Seetha Amman Temple (Ramayana site)",
+            "Hakgala Botanical Garden",
+            "Overnight stay in Nuwara Eliya",
+          ],
+        },
+        {
+          day: 5,
+          title: "Nuwara Eliya → Kitulgala → Bentota",
+          description:
+            "Travel from hill country to the coast. Stop at Devon & St. Clair’s Falls. Optional water rafting at Kitulgala. Arrive in Bentota for beachside stay.",
+          activities: [
+            "Visit Devon Falls",
+            "Visit St. Clair’s Waterfall",
+            "White-water rafting at Kitulgala (optional)",
+            "Overnight stay in Bentota beach hotel",
+          ],
+        },
+        {
+          day: 6,
+          title: "Bentota & Galle Excursion",
+          description:
+            "Enjoy Madu River safari & Turtle Hatchery visit. Afternoon trip to Galle Fort, a UNESCO World Heritage Site. Relax at Bentota Beach.",
+          activities: [
+            "Madu River boat safari",
+            "Visit Turtle Hatchery Farm",
+            "Explore Galle Fort (UNESCO site)",
+            "Beach leisure & optional water sports",
+            "Overnight stay in Bentota",
+          ],
+        },
+        {
+          day: 7,
+          title: "Colombo City Tour & Departure",
+          description:
+            "Head to Colombo. City tour covering Lotus Tower, Independence Square, Gangaramaya Temple & Galle Face Green before airport transfer.",
+          activities: [
+            "Visit Colombo Lotus Tower",
+            "Independence Square & Park",
+            "Galle Face Green walk & street food",
+            "Gangaramaya Temple & Beira Lake",
+            "Dutch Hospital Shopping Precinct",
+            "Airport transfer / departure",
+          ],
+        },
+      ],
+      inclusions: [
+        "Private air-conditioned vehicle with driver",
+        "English-speaking tour guide",
+        "Airport pickup & drop-off",
+      ],
+      exclusions: [
+        "Personal expenses (shopping, laundry, etc.)",
+        "Tips for guide and driver",
+        "Alcoholic beverages",
+      ],
+      whatWeOffer: [
+        "24/7 customer support during the tour",
+        "Professional & friendly cultural guides",
+        "Comfortable & safe accommodations",
+        "Private transfers & flexible itinerary",
+        "Authentic Sri Lankan cultural experiences",
+        "Emergency medical assistance support",
+        "Satisfaction guarantee with personalized service",
+      ],
+    },
+    9: {
+      title: "Sri Lanka 18-Day Heritage & Coastal Odyssey Tour",
+      subtitle:
+        "From ancient kingdoms and misty highlands to golden beaches and wildlife safaris—this 18-day journey is your immersive gateway to Sri Lanka’s most iconic and soul-stirring experiences.",
+      duration: "18 Days / 17 Nights",
+      image: tour1,
+      rating: 4.9,
+      reviews: 132,
+      groupSize: "2-20 people",
+      difficulty: "Easy - Moderate",
+      highlights: [
+        "Relax on golden beaches in Unawatuna & Trincomalee",
+        "Galle Fort & colonial heritage exploration",
+        "Witness stilt fishermen & southern coast wonders",
+        "Full-day Yala National Park jeep safari",
+        "Scenic waterfalls & Nine Arch Bridge in Ella",
+        "Tea country views from Lipton’s Seat",
+        "Temple of the Tooth Relic in Kandy",
+        "Dambulla Cave Temple & Sigiriya Rock Fortress",
+        "Whale watching & snorkeling at Pigeon Island",
+        "Ancient cities of Anuradhapura & Polonnaruwa",
+      ],
+      itinerary: [
+        {
+          day: 1,
+          title: "Arrival in Colombo – Transfer to Unawatuna",
+          description:
+            "Warm welcome at Bandaranaike International Airport, followed by a scenic drive south to Unawatuna. Evening beach walk and seafood dinner by the Indian Ocean.",
+          activities: [
+            "Airport pickup & transfer to Unawatuna",
+            "Check-in at beachfront hotel",
+            "Relaxation & evening beach stroll",
+          ],
+        },
+        {
+          day: 2,
+          title: "Unawatuna – Beach Leisure & Exploration",
+          description:
+            "Enjoy leisure at Unawatuna Beach or Jungle Beach. Optional snorkeling, yoga, or paddleboarding.",
+          activities: [
+            "Relax on Unawatuna Beach",
+            "Optional snorkeling or yoga session",
+            "Sunset dinner at a beach café",
+          ],
+        },
+        {
+          day: 3,
+          title: "Unawatuna – Southern Excursions",
+          description:
+            "Visit turtle hatchery, Weligama snake farm, and Galle Fort (UNESCO).",
+          activities: [
+            "Sea turtle conservation visit",
+            "Snake farm experience",
+            "Tour Galle Fort & lighthouse",
+          ],
+        },
+        {
+          day: 4,
+          title: "Unawatuna → Tissamaharama",
+          description:
+            "Travel via southern coast: stilt fishermen, Dondra Lighthouse, Hummanaya Blow Hole, Wewurukannala Temple & Lake Tissa Wewa.",
+          activities: [
+            "See stilt fishermen at Ahangama",
+            "Visit Dondra Lighthouse & Blow Hole",
+            "Explore Wewurukannala Buddha Temple",
+            "Birds park in Hambantota",
+          ],
+        },
+        {
+          day: 5,
+          title: "Yala National Park Safari",
+          description:
+            "Full-day jeep safari in Yala, spotting leopards, elephants, sloth bears & exotic birds.",
+          activities: [
+            "Morning departure for safari",
+            "Wildlife viewing & photography",
+            "Packed lunch amidst nature",
+          ],
+        },
+        {
+          day: 6,
+          title: "Tissamaharama → Ella",
+          description:
+            "Drive to Ella via Diyaluma Falls & Ravana Falls. Evening walk to Nine Arch Bridge.",
+          activities: [
+            "Visit Diyaluma Falls",
+            "Stop at Ravana Falls",
+            "Walk across Nine Arch Bridge",
+          ],
+        },
+        {
+          day: 7,
+          title: "Ella – Tea & Adventure",
+          description:
+            "Morning visit to Lipton’s Seat. Optional zipline, ATV, or plantation walk.",
+          activities: [
+            "Lipton’s Seat viewpoint",
+            "Tea plantation walk",
+            "Flying Ravana Zipline adventure",
+          ],
+        },
+        {
+          day: 8,
+          title: "Ella → Nuwara Eliya",
+          description:
+            "Drive to Nuwara Eliya, the ‘Little England’ of Sri Lanka, surrounded by tea estates.",
+          activities: [
+            "Scenic hill country drive",
+            "Explore Gregory Lake & town",
+            "Overnight in Nuwara Eliya",
+          ],
+        },
+        {
+          day: 9,
+          title: "Nuwara Eliya → Kandy",
+          description:
+            "Visit Peradeniya Botanical Gardens, then Temple of the Tooth in Kandy.",
+          activities: [
+            "Botanical garden tour",
+            "Temple of the Tooth Relic",
+            "Evening Kandy Lake walk",
+          ],
+        },
+        {
+          day: 10,
+          title: "Kandy – Elephant Orphanage & Cultural Show",
+          description:
+            "Visit Pinnawala Elephant Orphanage and evening Kandyan cultural dance show.",
+          activities: [
+            "Elephant bathing & feeding",
+            "Optional elephant safari",
+            "Kandyan dance performance",
+          ],
+        },
+        {
+          day: 11,
+          title: "Kandy → Dambulla",
+          description:
+            "Spice garden in Matale, Dambulla Cave Temple & Sigiriya Rock Fortress climb.",
+          activities: [
+            "Matale Spice Garden tour",
+            "Visit Dambulla Cave Temple",
+            "Climb Sigiriya Fortress",
+          ],
+        },
+        {
+          day: 12,
+          title: "Dambulla → Trincomalee",
+          description:
+            "Drive to Trincomalee with optional stop in Polonnaruwa. Evening at Uppuveli Beach.",
+          activities: [
+            "Polonnaruwa ancient city (optional)",
+            "Visit Thirukoneswaram Temple",
+            "Relax at Uppuveli Beach",
+          ],
+        },
+        {
+          day: 13,
+          title: "Trincomalee – Pigeon Island",
+          description:
+            "Optional snorkeling trip to Pigeon Island National Park.",
+          activities: [
+            "Boat ride to Pigeon Island",
+            "Snorkeling & marine life viewing",
+            "Relax at Nilaveli Beach",
+          ],
+        },
+        {
+          day: 14,
+          title: "Trincomalee – Whale Watching",
+          description:
+            "Optional whale & dolphin watching trip or leisure day at beach.",
+          activities: ["Whale watching cruise", "Beach leisure at Uppuveli"],
+        },
+        {
+          day: 15,
+          title: "Trincomalee Exploration",
+          description:
+            "Fish market, Fort Frederick & Hindu temple visits with beach leisure.",
+          activities: [
+            "Visit fish market & Fort Frederick",
+            "Explore Thirukoneswaram Temple",
+            "Relax at Marble or Nilaveli Beach",
+          ],
+        },
+        {
+          day: 16,
+          title: "Trincomalee Free Day",
+          description:
+            "Leisure day with optional snorkeling, fishing tour, or jet ski.",
+          activities: [
+            "Beach relaxation",
+            "Optional water sports",
+            "Sunset beach walk",
+          ],
+        },
+        {
+          day: 17,
+          title: "Trincomalee → Anuradhapura → Negombo",
+          description:
+            "Tour ancient Anuradhapura before continuing to Negombo.",
+          activities: [
+            "Visit Sri Maha Bodhi Tree",
+            "Explore Ruwanwelisaya & Jetavanaramaya",
+            "Transfer to Negombo",
+          ],
+        },
+        {
+          day: 18,
+          title: "Negombo – Departure",
+          description:
+            "Relax in Negombo before transfer to Bandaranaike International Airport for departure.",
+          activities: [
+            "Breakfast & Negombo Beach stroll",
+            "Visit Dutch Fort (optional)",
+            "Airport transfer",
+          ],
+        },
+      ],
+      inclusions: [
+        "Airport pickup & drop-off",
+        "Private air-conditioned transport with driver",
+        "English-speaking cultural guide",
+      ],
+      exclusions: [
+        "Personal expenses (shopping, laundry, etc.)",
+        "Lunch & meals not mentioned",
+        "Tips for guide & driver",
+        "Optional activities (spa, yoga, water sports)",
+        "Alcoholic beverages",
+      ],
+      whatWeOffer: [
+        "24/7 customer support during the tour",
+        "Experienced and friendly local guides",
+        "Handpicked hotels & resorts",
+        "Private, comfortable transportation",
+        "Customizable itinerary options",
+        "Authentic cultural, wildlife & coastal experiences",
+        "Emergency medical assistance support",
+        "Satisfaction guaranteed with professional service",
+      ],
+    },
+    10: {
+      title: "13 Days Sri Lanka Surf & Heritage Tour",
+      subtitle:
+        "From the ancient wonders of Sigiriya to the surf breaks of Arugam Bay and the misty peaks of Ella, this 13-day journey blends heritage, wildlife, and world-class waves into one unforgettable Sri Lankan escape.",
+      duration: "13 Days / 12 Nights",
+      image: tour1,
+      rating: 4.9,
+      reviews: 132,
+      groupSize: "2-12 people",
+      difficulty: "Easy - Moderate",
+      highlights: [
+        "Climb the UNESCO-listed Sigiriya Rock Fortress",
+        "Wildlife Safari at Minneriya National Park",
+        "Sunset hike to Pidurangala Rock",
+        "Explore Dambulla Golden Cave Temple",
+        "Relax at Pasikudah & Kalkudah Beaches",
+        "Surf world-class waves at Arugam Bay",
+        "Discover Muhudu Maha Viharaya & Pottuvil Lagoon",
+        "Scenic hike to Little Adam’s Peak & Ella Rock",
+        "Visit Ravana Falls & Nine Arch Bridge in Ella",
+        "Surf & chill at Ahangama, Midigama & Kabalana beaches",
+        "Experience Sri Lanka’s vibrant culture and rural village life",
+      ],
+      itinerary: [
+        {
+          day: 1,
+          title: "Arrival in Colombo – Transfer to Sigiriya",
+          description:
+            "Meet & greet at Bandaranaike International Airport by MISHEL LANKA TOURS representative. Drive to Sigiriya, with scenic countryside views. Evening check-in at hotel.",
+          activities: [
+            "Airport pickup & welcome",
+            "Drive to Sigiriya (approx. 4 hrs)",
+            "Hotel check-in & traditional dinner",
+            "Overnight stay in Sigiriya",
+          ],
+        },
+        {
+          day: 2,
+          title: "Minneriya Safari & Pidurangala Rock",
+          description:
+            "Morning jeep safari at Minneriya National Park to see elephants and wildlife. Evening hike up Pidurangala Rock for panoramic sunset views of Sigiriya.",
+          activities: [
+            "Minneriya National Park jeep safari",
+            "Wild elephant & bird watching",
+            "Evening hike to Pidurangala Rock",
+            "Overnight stay in Sigiriya",
+          ],
+        },
+        {
+          day: 3,
+          title: "Sigiriya Rock Fortress, Village Tour & Dambulla Caves",
+          description:
+            "Climb Sigiriya Rock Fortress (UNESCO), visit Sigiriya Museum, and enjoy a cultural village tour with traditional lunch. Evening visit to Dambulla Cave Temple.",
+          activities: [
+            "Climb Sigiriya Lion Rock",
+            "Explore Sigiriya Museum",
+            "Sigiriya Village Tour & local lunch",
+            "Visit Dambulla Golden Cave Temple",
+            "Overnight stay in Sigiriya",
+          ],
+        },
+        {
+          day: 4,
+          title: "Sigiriya → Pasikudah & Kalkudah Beaches",
+          description:
+            "Drive to the east coast beaches of Pasikudah & Kalkudah for relaxation, snorkeling, and water sports.",
+          activities: [
+            "Drive to Pasikudah (approx. 3.5 hrs)",
+            "Beach time & swimming",
+            "Snorkeling, jet-ski, kayaking (optional)",
+            "Overnight stay at beach hotel in Pasikudah",
+          ],
+        },
+        {
+          day: 5,
+          title: "Pasikudah → Arugam Bay",
+          description:
+            "Travel south to Arugam Bay, Sri Lanka’s surf capital, famous for world-class surf breaks and golden beaches.",
+          activities: [
+            "Scenic drive along east coast (2.5 hrs)",
+            "Check-in at Arugam Bay accommodation",
+            "Evening surf session / beach walk",
+            "Overnight stay in Arugam Bay",
+          ],
+        },
+        {
+          day: 6,
+          title: "Arugam Bay – Surf & Beach Chill",
+          description:
+            "Surf at Main Point or Whiskey Point, explore Pottuvil Lagoon or simply relax on the beach.",
+          activities: [
+            "Morning surf session",
+            "Snorkeling / kayaking (optional)",
+            "Pottuvil Lagoon exploration",
+            "Evening at beach bars / reggae vibes",
+          ],
+        },
+        {
+          day: 7,
+          title: "Arugam Bay – Free Beach Day",
+          description:
+            "Another full day of surfing, yoga, or exploring nearby attractions like Muhudu Maha Viharaya.",
+          activities: [
+            "Surfing lessons (optional)",
+            "Visit Muhudu Maha Viharaya temple",
+            "Relax at Elephant Rock beach",
+            "Overnight stay in Arugam Bay",
+          ],
+        },
+        {
+          day: 8,
+          title: "Arugam Bay – Surf & Local Exploration",
+          description:
+            "Spend the day catching waves or discovering hidden beaches. Enjoy Arugam Bay’s nightlife.",
+          activities: [
+            "Morning surf session",
+            "Free time to explore",
+            "Evening bonfire / beach party",
+          ],
+        },
+        {
+          day: 9,
+          title: "Arugam Bay – Relaxation & Adventure",
+          description:
+            "Freedom to surf, relax in hammocks, or join a yoga class by the beach.",
+          activities: [
+            "Optional snorkeling or kite-surfing",
+            "Relaxation day",
+            "Local seafood dinner",
+          ],
+        },
+        {
+          day: 10,
+          title: "Arugam Bay – Last Day of Surf Bliss",
+          description:
+            "Final day to enjoy the surf culture before heading inland tomorrow.",
+          activities: [
+            "Surf at Main Point / Peanut Farm",
+            "Beach chill & sunset",
+            "Overnight stay in Arugam Bay",
+          ],
+        },
+        {
+          day: 11,
+          title: "Arugam Bay → Ella (Hill Country)",
+          description:
+            "Travel inland to Ella, visiting Ravana Falls, hiking Little Adam’s Peak, and seeing the famous Nine Arch Bridge.",
+          activities: [
+            "Drive to Ella (approx. 3 hrs)",
+            "Visit Ravana Falls",
+            "Hike Little Adam’s Peak",
+            "Visit Nine Arch Bridge",
+            "Optional adventure sports / Ella Rock hike",
+            "Overnight stay in Ella",
+          ],
+        },
+        {
+          day: 12,
+          title: "Ella → Ahangama (Surf Town, South Coast)",
+          description:
+            "Travel to the laid-back surf village of Ahangama. Enjoy surfing, beach relaxation, and cultural encounters.",
+          activities: [
+            "Drive to Ahangama (approx. 3.5 hrs)",
+            "Surfing at Kabalana / Midigama",
+            "Visit stilt fishermen",
+            "Sunset yoga or beach café",
+            "Overnight stay in Ahangama",
+          ],
+        },
+        {
+          day: 13,
+          title: "Ahangama → Departure from Colombo",
+          description:
+            "Final day in Sri Lanka. Scenic drive along the southern coast to Colombo International Airport for departure.",
+          activities: [
+            "Beach sunrise walk",
+            "Drive to Colombo (approx. 3 hrs)",
+            "Airport drop-off & farewell",
+          ],
+        },
+      ],
+      inclusions: [
+        "Airport pickup and drop-off",
+        "Private air-conditioned vehicle with driver",
+        "Professional English-speaking tour guide",
+      ],
+      exclusions: [
+        "Optional adventure activities (surf lessons, yoga, etc.)",
+        "Alcoholic beverages",
+        "Tips for guide & driver",
+      ],
+      whatWeOffer: [
+        "24/7 customer support during the tour",
+        "Friendly and knowledgeable surf & heritage guides",
+        "Handpicked beach and mountain accommodations",
+        "Private and flexible itinerary options",
+        "Authentic Sri Lankan cultural and adventure experiences",
+        "Emergency assistance support",
+        "Satisfaction guarantee with professional service",
+      ],
+    },
 
     // Add more tour details for other packages...
   };
@@ -980,9 +1987,9 @@ const TourDetailsPage = () => {
                 <button className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                   Book Now
                 </button>
-                <button className="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-300">
+                {/* <button className="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-300">
                   Get Quote
-                </button>
+                </button> */}
               </div>
 
               <div className="mt-8 pt-6 border-t border-gray-100">
