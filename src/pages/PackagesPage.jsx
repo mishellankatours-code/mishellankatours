@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Clock,
   MapPin,
@@ -16,26 +17,32 @@ import tour2 from "../assets/tour2.jpg";
 import tour3 from "../assets/tour3.jpg";
 
 const PackagesPage = () => {
+  const navigate = useNavigate(); // Add this hook
+
   const packages = [
     {
       id: 1,
       title: "8-Days Tours",
       subtitle: "8-Days Sri Lanka Cultural & Nature Sightseeing Tour",
-      duration: "2 Days",
+      duration: "8 Days",
       image: tour1,
       highlights: [
-        "Tea Plantation Visit",
-        "Local Village Tour",
-        "Scenic Viewpoints",
+        "Sigiriya Rock Fortress",
+        "Dambulla Cave Temple",
+        "Polonnaruwa Ancient City",
+        "Kandy Temple of the Tooth",
+        "Scenic Train to Ella",
+        "Yala Safari",
+        "Mirissa Coconut Hill",
+        "Galle Fort & Turtle Hatchery",
       ],
-
       rating: 4.8,
       reviews: 124,
     },
     {
       id: 2,
       title: "3 Days Tours",
-      subtitle: "3 Days, Tours",
+      subtitle: "Sri Lanka 3-Days South Coast Discovery Tour",
       duration: "3 Days",
       image: tour2,
       highlights: [
@@ -85,7 +92,6 @@ const PackagesPage = () => {
         "Local Village Tour",
         "Scenic Viewpoints",
       ],
-
       rating: 4.8,
       reviews: 124,
     },
@@ -100,7 +106,6 @@ const PackagesPage = () => {
         "Local Village Tour",
         "Scenic Viewpoints",
       ],
-
       rating: 4.8,
       reviews: 124,
     },
@@ -115,7 +120,6 @@ const PackagesPage = () => {
         "Local Village Tour",
         "Scenic Viewpoints",
       ],
-
       rating: 4.8,
       reviews: 124,
     },
@@ -130,7 +134,6 @@ const PackagesPage = () => {
         "Local Village Tour",
         "Scenic Viewpoints",
       ],
-
       rating: 4.8,
       reviews: 124,
     },
@@ -142,6 +145,11 @@ const PackagesPage = () => {
     { icon: <TreePine className="w-6 h-6" />, text: "Nature Exploration" },
     { icon: <Compass className="w-6 h-6" />, text: "Expert Guides" },
   ];
+
+  // Add navigation function
+  const handleSeeMore = (packageId) => {
+    navigate(`/tour/${packageId}`);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
@@ -258,8 +266,12 @@ const PackagesPage = () => {
                     <Users className="w-4 h-4" />
                     <span>{pkg.reviews} reviews</span>
                   </div>
-                  {/* CTA Button */}
-                  <button className="w-full mt-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+
+                  {/* Updated CTA Button with navigation */}
+                  <button
+                    onClick={() => handleSeeMore(pkg.id)}
+                    className="w-full mt-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
                     SEE MORE
                   </button>
                 </div>

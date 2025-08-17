@@ -9,13 +9,14 @@ import ContactUsPage from "./pages/ContactUsPage";
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
 import WhatsAppButton from "./components/WhatsAppButton";
+import TourDetailsPage from "./pages/TourDetailsPage";
 
 export default function App() {
   return (
     <Router>
       <Navbar />
       <WhatsAppButton
-        phone="94768384980" // ← your admin number (no +, spaces, or leading 0)
+        phone="94762044065" // ← your admin number (no +, spaces, or leading 0)
         message="Hi Mishellanka Tours! I'd like to know more about your packages."
       />
       <main className="pt-16">
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/packages" element={<PackagesPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
           <Route path="/Gallery" element={<Gallery />} />
+          <Route path="/tour/:id" element={<TourDetailsPage />} />
         </Routes>
       </main>
     </Router>
