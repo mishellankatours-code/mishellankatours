@@ -11,6 +11,10 @@ import {
   Compass,
 } from "lucide-react";
 
+import tour1 from "../assets/tour1.jpg";
+import tour2 from "../assets/tour2.jpg";
+import tour3 from "../assets/tour3.jpg";
+
 const PackagesPage = () => {
   const packages = [
     {
@@ -18,14 +22,13 @@ const PackagesPage = () => {
       title: "2 Days Tours",
       subtitle: "2 Days, Tours",
       duration: "2 Days",
-      image:
-        "https://images.unsplash.com/photo-1563281577-a7be47e20db9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: tour1,
       highlights: [
         "Tea Plantation Visit",
         "Local Village Tour",
         "Scenic Viewpoints",
       ],
-      price: "From $150",
+
       rating: 4.8,
       reviews: 124,
     },
@@ -34,14 +37,12 @@ const PackagesPage = () => {
       title: "3 Days Tours",
       subtitle: "3 Days, Tours",
       duration: "3 Days",
-      image:
-        "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: tour2,
       highlights: [
         "Temple of the Tooth",
         "Cultural Heritage Sites",
         "Traditional Cuisine",
       ],
-      price: "From $280",
       rating: 4.9,
       reviews: 89,
     },
@@ -50,14 +51,12 @@ const PackagesPage = () => {
       title: "4 Days Tours",
       subtitle: "4 Days, Tours",
       duration: "4 Days",
-      image:
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: tour3,
       highlights: [
         "Cave Temples",
         "Ancient Rock Paintings",
         "Meditation Experience",
       ],
-      price: "From $420",
       rating: 4.9,
       reviews: 156,
     },
@@ -66,16 +65,74 @@ const PackagesPage = () => {
       title: "8 Days Tours",
       subtitle: "8 Days, Tours",
       duration: "8 Days",
-      image:
-        "https://images.unsplash.com/photo-1578916171728-46686eac8d58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: tour2,
       highlights: [
         "Golden Buddha Statue",
         "Mountain Climbing",
         "Sunrise Views",
       ],
-      price: "From $850",
       rating: 5.0,
       reviews: 203,
+    },
+    {
+      id: 5,
+      title: "2 Days Tours",
+      subtitle: "2 Days, Tours",
+      duration: "2 Days",
+      image: tour1,
+      highlights: [
+        "Tea Plantation Visit",
+        "Local Village Tour",
+        "Scenic Viewpoints",
+      ],
+
+      rating: 4.8,
+      reviews: 124,
+    },
+    {
+      id: 6,
+      title: "2 Days Tours",
+      subtitle: "2 Days, Tours",
+      duration: "2 Days",
+      image: tour3,
+      highlights: [
+        "Tea Plantation Visit",
+        "Local Village Tour",
+        "Scenic Viewpoints",
+      ],
+
+      rating: 4.8,
+      reviews: 124,
+    },
+    {
+      id: 7,
+      title: "2 Days Tours",
+      subtitle: "2 Days, Tours",
+      duration: "2 Days",
+      image: tour1,
+      highlights: [
+        "Tea Plantation Visit",
+        "Local Village Tour",
+        "Scenic Viewpoints",
+      ],
+
+      rating: 4.8,
+      reviews: 124,
+    },
+    {
+      id: 8,
+      title: "2 Days Tours",
+      subtitle: "2 Days, Tours",
+      duration: "2 Days",
+      image: tour1,
+      highlights: [
+        "Tea Plantation Visit",
+        "Local Village Tour",
+        "Scenic Viewpoints",
+      ],
+
+      rating: 4.8,
+      reviews: 124,
     },
   ];
 
@@ -201,19 +258,6 @@ const PackagesPage = () => {
                     <Users className="w-4 h-4" />
                     <span>{pkg.reviews} reviews</span>
                   </div>
-
-                  {/* Price and Button */}
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-2xl font-bold text-green-600">
-                        {pkg.price}
-                      </span>
-                      <span className="text-sm text-gray-500 ml-1">
-                        per person
-                      </span>
-                    </div>
-                  </div>
-
                   {/* CTA Button */}
                   <button className="w-full mt-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                     SEE MORE
@@ -244,10 +288,10 @@ const PackagesPage = () => {
           </div>
         </div>
       </section>
-            {/* Footer */}
-            <div className="bg-gray-100 py-8 mt-16">
-              <Footer />
-            </div>
+      {/* Footer */}
+      <div className="bg-gray-100 py-8 mt-16">
+        <Footer />
+      </div>
     </div>
   );
 };
