@@ -15,6 +15,11 @@ import { srtpackages } from "../components/srtpackages";
 import { honeymoonpackages } from "../components/honeymoonpackages";
 
 import tour1 from "../assets/tour1.jpg";
+import { beachpackages } from "../components/Beachpackages";
+import { culturalpackages } from "../components/culturalpackages";
+import { Wildlifepackages } from "../components/willifepackages";
+import { budgetpackages } from "../components/Budgetpackages";
+import { tuktukpackages } from "../components/TukTukpackages";
 
 const PackagesPage = () => {
   const navigate = useNavigate(); // Add this hook
@@ -209,6 +214,360 @@ const PackagesPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
             {honeymoonpackages.map((pkg) => (
+              <div
+                key={pkg.id}
+                className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+              >
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden rounded-t-3xl">
+                  <img
+                    src={pkg.image}
+                    alt={pkg.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+                  {/* Duration Badge */}
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Clock className="w-4 h-4" />
+                      {pkg.duration}
+                    </div>
+                  </div>
+
+                  {/* Rating Badge */}
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      {pkg.rating}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    {pkg.title}
+                  </h3>
+                  <p className="text-gray-500 mb-4">{pkg.subtitle}</p>
+
+                  {/* Highlights */}
+                  <ul className="space-y-2 mb-6">
+                    {pkg.highlights.map((highlight, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center gap-2 text-sm text-gray-600"
+                      >
+                        <MapPin className="w-4 h-4 text-green-600" />
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                  {/* Updated CTA Button with navigation */}
+                  <button
+                    onClick={() => handleSeeMore(pkg.id)}
+                    className="w-full mt-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    SEE MORE
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Section Separator - ADD THIS */}
+      <SectionSeparator title=" Beach Tour Package" backgroundImage={tour1} />
+      {/* Packages Grid */}
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {beachpackages.map((pkg) => (
+              <div
+                key={pkg.id}
+                className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+              >
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden rounded-t-3xl">
+                  <img
+                    src={pkg.image}
+                    alt={pkg.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+                  {/* Duration Badge */}
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Clock className="w-4 h-4" />
+                      {pkg.duration}
+                    </div>
+                  </div>
+
+                  {/* Rating Badge */}
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      {pkg.rating}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    {pkg.title}
+                  </h3>
+                  <p className="text-gray-500 mb-4">{pkg.subtitle}</p>
+
+                  {/* Highlights */}
+                  <ul className="space-y-2 mb-6">
+                    {pkg.highlights.map((highlight, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center gap-2 text-sm text-gray-600"
+                      >
+                        <MapPin className="w-4 h-4 text-green-600" />
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                  {/* Updated CTA Button with navigation */}
+                  <button
+                    onClick={() => handleSeeMore(pkg.id)}
+                    className="w-full mt-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    SEE MORE
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Section Separator - ADD THIS */}
+      <SectionSeparator
+        title="Sri Lanka Cultural Tour Packages"
+        backgroundImage={tour1}
+      />
+      {/* Packages Grid */}
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {culturalpackages.map((pkg) => (
+              <div
+                key={pkg.id}
+                className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+              >
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden rounded-t-3xl">
+                  <img
+                    src={pkg.image}
+                    alt={pkg.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+                  {/* Duration Badge */}
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Clock className="w-4 h-4" />
+                      {pkg.duration}
+                    </div>
+                  </div>
+
+                  {/* Rating Badge */}
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      {pkg.rating}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    {pkg.title}
+                  </h3>
+                  <p className="text-gray-500 mb-4">{pkg.subtitle}</p>
+
+                  {/* Highlights */}
+                  <ul className="space-y-2 mb-6">
+                    {pkg.highlights.map((highlight, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center gap-2 text-sm text-gray-600"
+                      >
+                        <MapPin className="w-4 h-4 text-green-600" />
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                  {/* Updated CTA Button with navigation */}
+                  <button
+                    onClick={() => handleSeeMore(pkg.id)}
+                    className="w-full mt-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    SEE MORE
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Section Separator - ADD THIS */}
+      <SectionSeparator
+        title="Sri Lanka Wildlife Tour Packages"
+        backgroundImage={tour1}
+      />
+      {/* Packages Grid */}
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {Wildlifepackages.map((pkg) => (
+              <div
+                key={pkg.id}
+                className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+              >
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden rounded-t-3xl">
+                  <img
+                    src={pkg.image}
+                    alt={pkg.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+                  {/* Duration Badge */}
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Clock className="w-4 h-4" />
+                      {pkg.duration}
+                    </div>
+                  </div>
+
+                  {/* Rating Badge */}
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      {pkg.rating}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    {pkg.title}
+                  </h3>
+                  <p className="text-gray-500 mb-4">{pkg.subtitle}</p>
+
+                  {/* Highlights */}
+                  <ul className="space-y-2 mb-6">
+                    {pkg.highlights.map((highlight, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center gap-2 text-sm text-gray-600"
+                      >
+                        <MapPin className="w-4 h-4 text-green-600" />
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                  {/* Updated CTA Button with navigation */}
+                  <button
+                    onClick={() => handleSeeMore(pkg.id)}
+                    className="w-full mt-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    SEE MORE
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Section Separator - ADD THIS */}
+      <SectionSeparator
+        title="Our Budget Tour Packages in Sri Lanka"
+        backgroundImage={tour1}
+      />
+      {/* Packages Grid */}
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {budgetpackages.map((pkg) => (
+              <div
+                key={pkg.id}
+                className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+              >
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden rounded-t-3xl">
+                  <img
+                    src={pkg.image}
+                    alt={pkg.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+                  {/* Duration Badge */}
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Clock className="w-4 h-4" />
+                      {pkg.duration}
+                    </div>
+                  </div>
+
+                  {/* Rating Badge */}
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      {pkg.rating}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    {pkg.title}
+                  </h3>
+                  <p className="text-gray-500 mb-4">{pkg.subtitle}</p>
+
+                  {/* Highlights */}
+                  <ul className="space-y-2 mb-6">
+                    {pkg.highlights.map((highlight, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center gap-2 text-sm text-gray-600"
+                      >
+                        <MapPin className="w-4 h-4 text-green-600" />
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                  {/* Updated CTA Button with navigation */}
+                  <button
+                    onClick={() => handleSeeMore(pkg.id)}
+                    className="w-full mt-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    SEE MORE
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Section Separator - ADD THIS */}
+      <SectionSeparator title="City Tuk Tuk Tour" backgroundImage={tour1} />
+      {/* Packages Grid */}
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {tuktukpackages.map((pkg) => (
               <div
                 key={pkg.id}
                 className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
