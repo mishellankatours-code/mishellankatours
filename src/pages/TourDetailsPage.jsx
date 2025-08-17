@@ -271,6 +271,299 @@ const TourDetailsPage = () => {
         "Cultural experiences",
       ],
     },
+    3: {
+      title: "10 Days Tours",
+      subtitle: "10-Day Sri Lanka Heritage, Nature & Culture Tour",
+      duration: "10 Days / 9 Nights",
+      image: tour1,
+      rating: 4.9,
+      reviews: 132,
+      groupSize: "2-20 people",
+      difficulty: "Moderate",
+      highlights: [
+        "Climb Sigiriya Rock Fortress",
+        "Explore Ancient Polonnaruwa & Dambulla Caves",
+        "Wildlife Safari at Minneriya & Yala",
+        "Temple of the Tooth Relic in Kandy",
+        "Scenic train ride from Nuwara Eliya to Ella",
+        "Nine Arch Bridge & Little Adam’s Peak",
+        "Whale Watching in Mirissa",
+        "Galle Fort & Turtle Hatchery",
+        "Bentota Beach & Madu River Safari",
+      ],
+      itinerary: [
+        {
+          day: 1,
+          title: "Arrival in Sri Lanka – Transfer to Sigiriya",
+          description:
+            "Meet and greet at Bandaranaike International Airport, transfer to Sigiriya hotel for check-in and relaxation.",
+          activities: [
+            "Airport pickup by CEYLON EYEFUL TOURS representative",
+            "Drive to Sigiriya",
+            "Hotel check-in",
+            "Relaxation & overnight stay",
+          ],
+        },
+        {
+          day: 2,
+          title: "Polonnaruwa & Minneriya Safari",
+          description:
+            "Explore the ancient ruins of Polonnaruwa, then enjoy an exciting safari at Minneriya National Park.",
+          activities: [
+            "Tour Polonnaruwa archaeological city",
+            "Visit Shiva Devale & King Parakramabahu’s Palace",
+            "Minneriya National Park jeep safari",
+            "Return to Sigiriya for overnight stay",
+          ],
+        },
+        {
+          day: 3,
+          title: "Sigiriya Rock Fortress, Dambulla & Matale",
+          description:
+            "Climb Sigiriya Rock Fortress, visit Dambulla Cave Temple, Hiriwadunna village, Spice Garden, and Matale Temple before heading to Kandy.",
+          activities: [
+            "Climb Sigiriya Rock Fortress (Lion Rock)",
+            "Visit Dambulla Golden Temple (UNESCO site)",
+            "Hiriwadunna village experience with bullock cart & boat ride",
+            "Matale Spice Garden visit",
+            "Matale Muthumariamman Temple",
+            "Transfer to Kandy & overnight stay",
+          ],
+        },
+        {
+          day: 4,
+          title: "Kandy City Tour",
+          description:
+            "Explore the cultural capital of Sri Lanka including sacred temples, gardens, museums, and cultural shows.",
+          activities: [
+            "Temple of the Tooth Relic",
+            "Bahirawakanda Buddha Statue & Kandy Viewpoint",
+            "Visit local market & Gem Museum",
+            "Peradeniya Royal Botanical Gardens",
+            "Kandy Cultural Dance Show",
+            "Evening shopping & leisure",
+          ],
+        },
+        {
+          day: 5,
+          title: "Kandy → Nuwara Eliya → Ella Train Ride",
+          description:
+            "Enjoy a scenic journey through tea plantations, waterfalls, and misty highlands ending with the famous train ride to Ella.",
+          activities: [
+            "Stop at Ramboda Falls",
+            "Visit Damro Labookellie Tea Centre",
+            "Tour Gregory Lake & Nuwara Eliya town",
+            "Visit Nuwara Eliya Post Office",
+            "Train ride from Nanu Oya to Ella",
+            "Overnight stay in Ella",
+          ],
+        },
+        {
+          day: 6,
+          title: "Ella City Tour",
+          description:
+            "Explore Ella’s highlights including the Nine Arch Bridge, Little Adam’s Peak, Flying Ravana Zipline, and Ella Rock.",
+          activities: [
+            "Visit Nine Arch Bridge",
+            "Hike Little Adam’s Peak",
+            "Flying Ravana zipline adventure",
+            "Ella Rock hiking experience",
+            "Return to hotel & overnight stay",
+          ],
+        },
+        {
+          day: 7,
+          title: "Ella → Yala via Tissamaharama",
+          description:
+            "Journey to Yala with stops at Ravana Falls before embarking on a thrilling Yala National Park safari.",
+          activities: [
+            "Stop at Ravana Falls",
+            "Safari adventure in Yala National Park",
+            "Spot leopards, elephants & exotic wildlife",
+            "Dinner & overnight stay near Yala",
+          ],
+        },
+        {
+          day: 8,
+          title: "Yala → Mirissa",
+          description:
+            "Travel to Mirissa and enjoy a relaxing beach evening at Coconut Tree Hill and Mirissa Bay.",
+          activities: [
+            "Drive to Mirissa",
+            "Visit Coconut Tree Hill viewpoint",
+            "Leisure time at Mirissa beach",
+            "Overnight stay in Mirissa",
+          ],
+        },
+        {
+          day: 9,
+          title: "Mirissa Whale Watching & Transfer to Bentota",
+          description:
+            "Go whale and dolphin watching in Mirissa before heading to Bentota with stops at Galle Fort, Turtle Hatchery, and Madu River.",
+          activities: [
+            "Whale & dolphin watching excursion",
+            "Explore Galle Fort (UNESCO site)",
+            "Visit Turtle Hatchery in Galle",
+            "Boat ride on Madu River",
+            "Overnight stay in Bentota",
+          ],
+        },
+        {
+          day: 10,
+          title: "Bentota → Airport Departure",
+          description:
+            "After breakfast, transfer to Bandaranaike International Airport for your departure flight.",
+          activities: [
+            "Hotel breakfast",
+            "Beach relaxation (time permitting)",
+            "Scenic drive to airport",
+            "Departure flight",
+          ],
+        },
+      ],
+      inclusions: [
+        "Air-conditioned vehicle with professional driver",
+        "English-speaking tour guide",
+        "Airport pickup and drop-off",
+        "Whale watching tour in Mirissa (seasonal)",
+        "Train journey through hill country (subject to availability)",
+        "Cultural show in Kandy",
+      ],
+
+      exclusions: [
+        "International flight tickets",
+        "Visa fees",
+        "Travel insurance",
+        "Personal expenses (shopping, laundry, etc.)",
+        "Lunch meals (except mentioned)",
+        "Tips for guide and driver",
+        "Optional activities (Ayurvedic spa, adventure sports, etc.)",
+        "Alcoholic beverages",
+      ],
+
+      whatWeOffer: [
+        "24/7 customer support during the tour",
+        "Friendly and experienced local guides",
+        "Comfortable and safe accommodation",
+        "Private, air-conditioned transportation",
+        "Flexible and customizable itinerary options",
+        "Wildlife and nature exploration opportunities",
+        "Authentic Sri Lankan cultural experiences",
+        "Emergency medical assistance support",
+        "Satisfaction guarantee with professional service",
+      ],
+    },
+    4: {
+      title: "5 Days Sri Lanka Cultural Discovery Tour",
+      subtitle:
+        "Step back in time and explore Sri Lanka’s cultural soul on this 5-day heritage-packed journey.",
+      duration: "05 Days / 04 Nights",
+      image: tour1,
+      rating: 4.9,
+      reviews: 98,
+      groupSize: "2-15 people",
+      difficulty: "Easy - Moderate",
+      highlights: [
+        "Explore Dambulla Golden Cave Temple (UNESCO)",
+        "Climb the iconic Sigiriya Rock Fortress",
+        "Visit the sacred city of Anuradhapura & Mihintale",
+        "Discover the ancient ruins of Polonnaruwa",
+        "Wildlife Safari at Minneriya National Park",
+        "Matale Spice Garden & Nalanda Gedige Temple",
+        "Temple of the Tooth Relic in Kandy",
+        "Visit Gadaladeniya, Lankatilaka & Embekka Temples",
+      ],
+      itinerary: [
+        {
+          day: 1,
+          title: "Arrival in Sri Lanka – Transfer to Sigiriya via Dambulla",
+          description:
+            "Meet and greet at Bandaranaike International Airport by CEYLON EYEFUL TOURS representative. On the way to Sigiriya, visit the famous Dambulla Golden Cave Temple (UNESCO). Evening check-in at Sigiriya hotel.",
+          activities: [
+            "Airport pickup & welcome",
+            "Drive to Sigiriya",
+            "Visit Dambulla Golden Temple (Rangiri Dambulla Cave Temple)",
+            "Hotel check-in, dinner & overnight stay in Sigiriya",
+          ],
+        },
+        {
+          day: 2,
+          title: "Sigiriya → Anuradhapura & Mihintale → Return to Sigiriya",
+          description:
+            "Explore the ancient city of Anuradhapura, home to sacred stupas and monasteries. Visit Mihintale, the cradle of Buddhism in Sri Lanka. Return to Sigiriya for overnight stay.",
+          activities: [
+            "Visit Mihintale (Mahinda’s Hill, ancient Buddhist site)",
+            "Tour Anuradhapura sacred city & Atamasthana (Eight Sacred Places)",
+            "Explore Jaya Sri Maha Bodhi, Ruwanwelisaya & Thuparamaya",
+            "Return to Sigiriya hotel & overnight stay",
+          ],
+        },
+        {
+          day: 3,
+          title: "Sigiriya → Polonnaruwa & Minneriya Safari → Sigiriya",
+          description:
+            "Discover the ruins of Polonnaruwa, Sri Lanka’s second ancient capital. Later, enjoy a thrilling safari at Minneriya National Park, famous for wild elephants.",
+          activities: [
+            "Visit Polonnaruwa archaeological city",
+            "Explore Royal Palace of King Parakramabahu",
+            "Shiva Devale & ancient Brahmanic monuments",
+            "Minneriya National Park jeep safari",
+            "Return to Sigiriya hotel for dinner & overnight stay",
+          ],
+        },
+        {
+          day: 4,
+          title: "Sigiriya Rock Fortress → Matale → Transfer to Kandy",
+          description:
+            "Climb the iconic Sigiriya Rock Fortress, then proceed to Kandy via Matale. En route, visit the Spice Garden, Nalanda Gedige Temple, and Muthumariamman Temple.",
+          activities: [
+            "Climb Sigiriya Rock Fortress (Lion Rock, UNESCO site)",
+            "Visit Matale Spice Garden",
+            "Explore Nalanda Gedige Temple",
+            "Visit Matale Muthumariamman Temple",
+            "Arrive in Kandy, evening leisure & overnight stay",
+          ],
+        },
+        {
+          day: 5,
+          title: "Kandy City Tour & Departure",
+          description:
+            "On your final day, explore the highlights of Kandy including the Temple of the Tooth Relic, Embekka Devalaya, Lankatilaka Viharaya, and Gadaladeniya Vihara before transfer to the airport.",
+          activities: [
+            "Visit Temple of the Tooth Relic (Sri Dalada Maligawa, UNESCO site)",
+            "Explore Embekka Devalaya (famous for wood carvings)",
+            "Visit Lankatilaka Viharaya",
+            "Explore Gadaladeniya Vihara Temple",
+            "Transfer to Bandaranaike International Airport for departure",
+          ],
+        },
+      ],
+      inclusions: [
+        "Air-conditioned vehicle with professional driver",
+        "English-speaking cultural tour guide",
+        "Airport pickup and drop-off",
+        "Minneriya National Park safari",
+      ],
+      exclusions: [
+        "Travel insurance",
+        "Personal expenses (shopping, laundry, etc.)",
+        "Lunch meals (except mentioned)",
+        "Tips for guide and driver",
+        "Optional activities (Ayurvedic spa, adventure sports, etc.)",
+        "Alcoholic beverages",
+      ],
+      whatWeOffer: [
+        "24/7 customer support during the tour",
+        "Friendly and knowledgeable cultural guides",
+        "Comfortable & safe accommodation",
+        "Private, air-conditioned transportation",
+        "Flexible and customizable itinerary options",
+        "Authentic Sri Lankan heritage experiences",
+        "Emergency medical assistance support",
+        "Satisfaction guarantee with professional service",
+      ],
+    },
+
     // Add more tour details for other packages...
   };
 
