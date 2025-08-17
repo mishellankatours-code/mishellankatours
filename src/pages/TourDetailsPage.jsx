@@ -58,7 +58,7 @@ const TourDetailsPage = () => {
           day: 1,
           title: "Arrival and Sigiriya Stay",
           description:
-            "Meet and greet at Bandaranaike International Airport by CEYLON EYEFUL TOURS representative. Transfer to Sigiriya via Dambulla Golden Cave Temple, a UNESCO heritage site with 2000 years of history, murals, and 157 Buddha statues.",
+            "Meet and greet at Bandaranaike International Airport by MISHEL LANKA TOURS representative. Transfer to Sigiriya via Dambulla Golden Cave Temple, a UNESCO heritage site with 2000 years of history, murals, and 157 Buddha statues.",
           activities: [
             "Airport pickup",
             "Golden Cave Temple tour (Dambulla)",
@@ -211,7 +211,7 @@ const TourDetailsPage = () => {
           description:
             "Arrive at Bandaranaike International Airport and transfer to your hotel in Bentota. Relax and enjoy leisure time at the hotel.",
           activities: [
-            "Airport pickup by CEYLON EYEFUL TOURS representative",
+            "Airport pickup by MISHEL LANKA TOURS representative",
             "Scenic drive to Bentota",
             "Hotel check-in",
             "Leisure time and overnight stay in Bentota",
@@ -298,7 +298,7 @@ const TourDetailsPage = () => {
           description:
             "Meet and greet at Bandaranaike International Airport, transfer to Sigiriya hotel for check-in and relaxation.",
           activities: [
-            "Airport pickup by CEYLON EYEFUL TOURS representative",
+            "Airport pickup by MISHEL LANKA TOURS representative",
             "Drive to Sigiriya",
             "Hotel check-in",
             "Relaxation & overnight stay",
@@ -478,7 +478,7 @@ const TourDetailsPage = () => {
           day: 1,
           title: "Arrival in Sri Lanka – Transfer to Sigiriya via Dambulla",
           description:
-            "Meet and greet at Bandaranaike International Airport by CEYLON EYEFUL TOURS representative. On the way to Sigiriya, visit the famous Dambulla Golden Cave Temple (UNESCO). Evening check-in at Sigiriya hotel.",
+            "Meet and greet at Bandaranaike International Airport by MISHEL LANKA TOURS representative. On the way to Sigiriya, visit the famous Dambulla Golden Cave Temple (UNESCO). Evening check-in at Sigiriya hotel.",
           activities: [
             "Airport pickup & welcome",
             "Drive to Sigiriya",
