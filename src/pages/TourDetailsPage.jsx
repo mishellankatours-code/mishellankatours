@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import Footer from "../components/Footer";
 
-import { tourDetails } from "../Data/tourData";
+import { tourDetails } from "../Data/srttourData";
 
 const TourDetailsPage = () => {
   const { id } = useParams();
