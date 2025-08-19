@@ -2,7 +2,7 @@ import tour1 from "../assets/tour1.jpg";
 import tour2 from "../assets/tour2.jpg";
 export const beachpackages = [
   {
-    id: 1,
+    id: 14,
     title: "8-Day Sri Lanka  Beach & Heritage Tour",
     subtitle: "8-Days Tours",
     duration: "8 Days",
@@ -21,7 +21,7 @@ export const beachpackages = [
     reviews: 124,
   },
   {
-    id: 2,
+    id: 15,
     title: "10-Day Sri Lanka Beach & Heritage Escape",
     subtitle: "10 Days Tours",
     duration: "10 Days",

@@ -3,7 +3,7 @@ import tour2 from "../assets/tour2.jpg";
 import tour3 from "../assets/tour3.jpg";
 export const honeymoonpackages = [
   {
-    id: 1,
+    id: 11,
     title: "7-Day Romantic Sri Lanka Honeymoon Tour",
     subtitle: "7-Days Tours",
     duration: "7 Days",
@@ -18,7 +18,7 @@ export const honeymoonpackages = [
     reviews: 124,
   },
   {
-    id: 2,
+    id: 12,
     title: "12-Day Enchanted Sri Lanka Honeymoon Tour",
     subtitle: "12 Days Tours",
     duration: "12 Days",
@@ -32,7 +32,7 @@ export const honeymoonpackages = [
     reviews: 89,
   },
   {
-    id: 3,
+    id: 13,
     title: "6-Day Romantic Sri Lanka Honeymoon Tour",
     subtitle: "6 Days Tours",
     duration: "6 Days",

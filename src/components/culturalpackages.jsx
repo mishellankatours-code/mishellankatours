@@ -2,7 +2,7 @@ import tour1 from "../assets/tour1.jpg";
 import tour2 from "../assets/tour2.jpg";
 export const culturalpackages = [
   {
-    id: 1,
+    id: 16,
     title: "5-Day Sri Lanka Cultural Heritage Tour",
     subtitle: "5-Days Tours",
     duration: "5 Days",
@@ -21,7 +21,7 @@ export const culturalpackages = [
     reviews: 124,
   },
   {
-    id: 2,
+    id: 17,
     title: "12-Day Sri Lanka Cultural Heritage Tour",
     subtitle: "12 Days Tours",
     duration: "12 Days",
