@@ -3,7 +3,7 @@ import tour2 from "../assets/tour2.jpg";
 import tour3 from "../assets/tour3.jpg";
 export const budgetpackages = [
   {
-    id: 1,
+    id: 19,
     title: "Sri Lanka 4-Day Budget Tour",
     subtitle: "4-Days Tours",
     duration: "4 Days",
@@ -22,7 +22,7 @@ export const budgetpackages = [
     reviews: 124,
   },
   {
-    id: 2,
+    id: 20,
     title: "5-Day Budget Tour of Sri Lanka",
     subtitle: "5 Days Tours",
     duration: "5 Days",
@@ -36,7 +36,7 @@ export const budgetpackages = [
     reviews: 89,
   },
   {
-    id: 3,
+    id: 21,
     title: " 5-Day South & City Budget Tour – Sri Lanka",
     subtitle: "5 Days Tours",
     duration: "5 Days",
@@ -56,7 +56,7 @@ export const budgetpackages = [
     reviews: 156,
   },
   {
-    id: 4,
+    id: 22,
     title: " 6-Day Sri Lanka Budget Tour",
     subtitle: "6 Days Tours",
     duration: "6 Days",

@@ -3,7 +3,7 @@ import tour2 from "../assets/tour2.jpg";
 import tour3 from "../assets/tour3.jpg";
 export const tuktukpackages = [
   {
-    id: 1,
+    id: 23,
     title: "Kandy City Tour by Tuk Tuk – Full Day Experience",
     subtitle: "1-Day Tours",
     duration: "1 Day",
@@ -22,7 +22,7 @@ export const tuktukpackages = [
     reviews: 124,
   },
   {
-    id: 2,
+    id: 24,
     title: "Sigiriya City Tour by Tuk Tuk",
     subtitle: "1 Day Tours",
     duration: "1 Day",
@@ -36,7 +36,7 @@ export const tuktukpackages = [
     reviews: 89,
   },
   {
-    id: 3,
+    id: 25,
     title: " Polonnaruwa City Tour by Tuk Tuk",
     subtitle: "1 Day Tours",
     duration: "1 Day",

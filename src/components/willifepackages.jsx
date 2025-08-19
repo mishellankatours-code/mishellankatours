@@ -1,7 +1,7 @@
 import tour1 from "../assets/tour1.jpg";
 export const Wildlifepackages = [
   {
-    id: 1,
+    id: 18,
     title: "Sri Lanka 15-Day Ultimate Wildlife & Cultural Explorer Tour",
     subtitle: "15-Days Tours",
     duration: "15 Days",

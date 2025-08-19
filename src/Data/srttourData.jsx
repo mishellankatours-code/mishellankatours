@@ -2651,7 +2651,7 @@ export const tourDetails = {
 
 
     //Sri Lanka Cultural Tour Packages
-  //package 1
+  //package 2
 
  
   17: {
@@ -2849,6 +2849,1076 @@ export const tourDetails = {
       "Wildlife & village experiences",
       "Flexible itinerary options",
       "24/7 support during your trip",
+    ],
+  },
+
+//Wildlife & Cultural Explorer Tour
+
+
+  18: {
+    title: "15-Day Ultimate Wildlife & Cultural Explorer",
+    subtitle: "Sri Lanka Wildlife & Cultural Explorer Tour",
+    duration: "15 Days / 14 Nights",
+    image: tour1, // replace with actual import
+    rating: 5.0,
+    reviews: 188,
+    groupSize: "2-15 people",
+    difficulty: "Moderate",
+    highlights: [
+      "Negombo beach stay",
+      "Wilpattu National Park safari",
+      "Minneriya National Park elephants",
+      "Pidurangala Rock hike & Hiriwadunna Village",
+      "Sigiriya Rock Fortress & Dambulla Cave Temple",
+      "Matale Spice Garden & Muthumariamman Temple",
+      "Temple of the Tooth Relic (Kandy)",
+      "Udawattakele Forest Reserve",
+      "Peradeniya Royal Botanical Gardens",
+      "Ramboda Falls & Damro Tea Estate",
+      "Nuwara Eliya sightseeing",
+      "Ella – Little Adam’s Peak & Nine Arch Bridge",
+      "Ravana Falls",
+      "Yala National Park safari",
+      "Udawalawe National Park & Elephant Transit Home",
+      "Sinharaja Rainforest",
+      "Mirissa – Coconut Tree Hill & Whale Watching",
+    ],
+
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival – Negombo",
+        description:
+          "Meet & greet at Bandaranaike International Airport. Transfer to Negombo beach hotel for overnight stay.",
+        activities: ["Airport pickup", "Hotel check-in at Negombo"],
+      },
+      {
+        day: 2,
+        title: "Negombo – Wilpattu",
+        description: "Scenic drive to Wilpattu. Check in at hotel near park.",
+        activities: ["Transfer to Wilpattu", "Relax at hotel"],
+      },
+      {
+        day: 3,
+        title: "Wilpattu Safari",
+        description:
+          "Full-day safari in Wilpattu National Park – famous for lakes, leopards, and elephants.",
+        activities: [
+          "Jeep safari in Wilpattu",
+          "Spot leopards, elephants & birds",
+          "Kudrimalai Point visit",
+        ],
+      },
+      {
+        day: 4,
+        title: "Wilpattu – Sigiriya",
+        description:
+          "Drive to Sigiriya. Afternoon safari at Minneriya National Park – known for wild elephant gatherings.",
+        activities: ["Minneriya National Park safari", "Hotel in Sigiriya"],
+      },
+      {
+        day: 5,
+        title: "Sigiriya City & Village",
+        description:
+          "Morning hike up Pidurangala Rock. Explore Hiriwadunna Village with bullock cart ride, boat trip, and local lunch.",
+        activities: ["Pidurangala Rock hike", "Hiriwadunna Village experience"],
+      },
+      {
+        day: 6,
+        title: "Sigiriya – Kandy",
+        description:
+          "Climb Sigiriya Rock Fortress. Visit Dambulla Cave Temple, Matale Spice Garden, and Muthumariamman Temple en route to Kandy.",
+        activities: [
+          "Sigiriya Rock Fortress",
+          "Dambulla Cave Temple",
+          "Spice Garden (Matale)",
+          "Muthumariamman Temple",
+        ],
+      },
+      {
+        day: 7,
+        title: "Kandy City Tour",
+        description:
+          "Explore Udawattakele Forest Reserve, Temple of the Tooth Relic, Kandy Lake, Kandy Viewpoint & local shopping.",
+        activities: [
+          "Udawattakele Forest Reserve",
+          "Temple of the Tooth Relic",
+          "Kandy Lake",
+          "City viewpoint",
+          "Shopping",
+        ],
+      },
+      {
+        day: 8,
+        title: "Kandy – Nuwara Eliya",
+        description:
+          "Visit Peradeniya Botanical Gardens, Ramboda Falls, and Damro Tea Estate before reaching Nuwara Eliya.",
+        activities: [
+          "Peradeniya Gardens",
+          "Ramboda Falls",
+          "Damro Tea Factory & Tasting",
+        ],
+      },
+      {
+        day: 9,
+        title: "Nuwara Eliya – Tissamaharama via Ella",
+        description:
+          "Travel through Ella visiting Little Adam’s Peak, Nine Arch Bridge, and Ravana Falls. Continue to Tissamaharama.",
+        activities: [
+          "Little Adam’s Peak hike",
+          "Nine Arch Bridge",
+          "Ravana Falls",
+          "Hotel check-in Tissamaharama",
+        ],
+      },
+      {
+        day: 10,
+        title: "Yala National Park",
+        description:
+          "Safari in Yala National Park – home to elephants, leopards, sloth bears, and ancient ruins.",
+        activities: ["Jeep safari in Yala", "Return to Tissamaharama hotel"],
+      },
+      {
+        day: 11,
+        title: "Tissamaharama – Udawalawe",
+        description:
+          "Head to Udawalawe National Park for safari and visit Elephant Transit Home.",
+        activities: ["Udawalawe Safari", "Elephant Transit Home visit"],
+      },
+      {
+        day: 12,
+        title: "Udawalawe – Sinharaja",
+        description:
+          "Transfer to Sinharaja Rainforest. Explore the UNESCO World Heritage rainforest rich in endemic flora & fauna.",
+        activities: ["Guided trek in Sinharaja", "Overnight stay nearby"],
+      },
+      {
+        day: 13,
+        title: "Sinharaja – Mirissa",
+        description:
+          "Drive to Mirissa. Visit Coconut Tree Hill and the fish market. Relax at beach hotel.",
+        activities: ["Coconut Tree Hill", "Fish market & harbor visit"],
+      },
+      {
+        day: 14,
+        title: "Mirissa – Whale Watching",
+        description:
+          "Early morning whale-watching tour in the Indian Ocean. Afternoon leisure at Mirissa Beach.",
+        activities: ["Whale watching tour", "Beach leisure day"],
+      },
+      {
+        day: 15,
+        title: "Departure",
+        description:
+          "Private transfer to Bandaranaike International Airport for departure.",
+        activities: ["Hotel checkout", "Airport drop-off"],
+      },
+    ],
+
+    inclusions: [
+      "14 nights accommodation in handpicked hotels",
+      "Daily breakfast",
+      "Private air-conditioned transport",
+      "English-speaking chauffeur guide",
+      "Airport pickup and drop-off",
+      "All entry tickets to mentioned sites",
+      "Wildlife safaris (Wilpattu, Minneriya, Yala, Udawalawe)",
+      "Sinharaja Rainforest trek",
+      "Scenic cultural & heritage visits",
+      "Whale-watching excursion",
+    ],
+    exclusions: [
+      "International flights",
+      "Visa fees",
+      "Travel insurance",
+      "Lunch & dinners (unless mentioned)",
+      "Personal expenses",
+      "Tips & gratuities",
+      "Alcoholic beverages",
+    ],
+    whatWeOffer: [
+      "Ultimate mix of wildlife & culture",
+      "Handpicked accommodations",
+      "Private transport with chauffeur guide",
+      "Multiple national park safaris",
+      "UNESCO World Heritage site visits",
+      "Whale-watching & rainforest trek",
+      "24/7 local support",
+    ],
+  },
+//Budget Tour
+//package 1
+
+  19: {
+    title: "4-Day Budget Tour",
+    subtitle: "Sri Lanka Cultural Highlights on a Budget",
+    duration: "04 Days / 03 Nights",
+    image: tour1, // replace with actual import
+    rating: 4.8,
+    reviews: 132,
+    groupSize: "2-20 people",
+    difficulty: "Easy",
+    highlights: [
+      "Pinnawala Elephant Orphanage",
+      "Scenic drive through central highlands",
+      "Damro Labookellie Tea Centre",
+      "Ramboda Falls",
+      "Lake Gregory & Nuwara Eliya Post Office",
+      "Sita Amman Temple (Ramayana site)",
+      "Matale Spice Garden",
+      "Muthumariamman Temple (Matale)",
+      "Sigiriya Rock Fortress OR Pidurangala Rock hike",
+      "Dambulla Cave Temple",
+      "Temple of the Tooth Relic (Kandy)",
+      "Bahirawakanda Buddha Statue",
+      "Kandy City Viewpoint & local market",
+      "Peradeniya Royal Botanical Gardens",
+    ],
+
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival – Airport to Kandy",
+        description:
+          "Meet & greet at Bandaranaike International Airport. Stop at Pinnawala Elephant Orphanage before heading to Kandy for overnight stay.",
+        activities: [
+          "Airport pickup",
+          "Visit Pinnawala Elephant Orphanage",
+          "Hotel check-in at Kandy",
+        ],
+      },
+      {
+        day: 2,
+        title: "Kandy – Nuwara Eliya via Ramboda",
+        description:
+          "Visit Damro Tea Centre, Ramboda Falls, Lake Gregory, Nuwara Eliya Post Office, and Sita Amman Temple before returning to Kandy.",
+        activities: [
+          "Damro Tea Centre & tasting",
+          "Ramboda Falls",
+          "Lake Gregory leisure",
+          "Nuwara Eliya Post Office",
+          "Sita Amman Temple",
+          "Overnight stay in Kandy",
+        ],
+      },
+      {
+        day: 3,
+        title: "Kandy – Sigiriya via Dambulla",
+        description:
+          "Visit Matale Spice Garden, Muthumariamman Temple, Sigiriya Rock Fortress OR Pidurangala Rock, and Dambulla Cave Temple.",
+        activities: [
+          "Muthumariamman Temple (Matale)",
+          "Spice Garden experience",
+          "Sigiriya Rock OR Pidurangala Rock climb",
+          "Dambulla Cave Temple",
+          "Return to Kandy hotel",
+        ],
+      },
+      {
+        day: 4,
+        title: "Kandy City Tour & Departure",
+        description:
+          "City highlights tour including Temple of the Tooth Relic, Bahirawakanda Temple, Kandy Viewpoint, local market, Gem Museum, and Peradeniya Botanical Gardens before transfer to airport/Colombo/beach town.",
+        activities: [
+          "Temple of the Tooth Relic",
+          "Bahirawakanda Temple",
+          "Kandy Viewpoint",
+          "Local market shopping",
+          "Gem & Gemmological Museum",
+          "Peradeniya Botanical Gardens",
+          "Airport drop-off",
+        ],
+      },
+    ],
+
+    inclusions: [
+      "3 nights accommodation in handpicked hotels",
+      "Daily breakfast",
+      "Private air-conditioned transport",
+      "English-speaking chauffeur guide",
+      "Airport pickup and drop-off",
+      "Entry tickets to major attractions",
+    ],
+    exclusions: [
+      "International flights",
+      "Visa fees",
+      "Travel insurance",
+      "Lunch & dinners (unless mentioned)",
+      "Personal expenses",
+      "Tips & gratuities",
+      "Alcoholic beverages",
+    ],
+    whatWeOffer: [
+      "Perfect short-stay cultural trip",
+      "Budget-friendly pricing",
+      "Handpicked accommodations",
+      "Private chauffeur-guide",
+      "Cultural & scenic highlights in 4 days",
+      "Flexible airport/beach drop-off",
+    ],
+  },
+
+//Budget Tour
+//package 2
+
+
+  20: {
+    title: "5-Day Budget Tour of Sri Lanka",
+    subtitle:
+      "Ideal for budget travelers, couples, solo adventurers, and families looking to explore Sri Lanka’s cultural gems, scenic highlands, and golden beaches without breaking the bank.",
+    duration: "05 Days / 04 Nights",
+    image: tour1, // replace with actual import
+    rating: 4.8,
+    reviews: 145,
+    groupSize: "2-20 people",
+    difficulty: "Easy",
+    highlights: [
+      "Pinnawala Elephant Orphanage",
+      "Scenic drive to Kandy",
+      "Damro Labookellie Tea Centre",
+      "Ramboda Falls",
+      "Lake Gregory & Nuwara Eliya Post Office",
+      "Temple of the Tooth Relic (Sri Dalada Maligawa)",
+      "Kandy City Viewpoint",
+      "Bentota beaches & Katukoliha Temple",
+      "Madu River boat safari",
+      "Bentota water sports (snorkeling, banana boat, windsurfing)",
+      "Gangaramaya Temple (Colombo)",
+      "Galle Face Green & Beira Lake",
+      "Independence Memorial Hall",
+      "Old Dutch Hospital (shopping & dining)",
+    ],
+
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival – Airport to Kandy",
+        description:
+          "Meet & greet at Bandaranaike International Airport. Drive to Kandy with a stop at Pinnawala Elephant Orphanage. Evening at leisure.",
+        activities: [
+          "Airport pickup",
+          "Visit Pinnawala Elephant Orphanage",
+          "Hotel check-in at Kandy",
+        ],
+      },
+      {
+        day: 2,
+        title: "Kandy – Nuwara Eliya – Return",
+        description:
+          "Travel to Nuwara Eliya via scenic highlands. Visit tea plantations, Ramboda Falls, Gregory Lake, and the historic Nuwara Eliya Post Office. Return to Kandy for overnight stay.",
+        activities: [
+          "Damro Labookellie Tea Centre",
+          "Ramboda Falls",
+          "Lake Gregory leisure & boat ride",
+          "Nuwara Eliya Post Office",
+          "Return to Kandy hotel",
+        ],
+      },
+      {
+        day: 3,
+        title: "Kandy – Temple of the Tooth – Bentota",
+        description:
+          "After breakfast, visit the Temple of the Tooth Relic and Kandy viewpoint before heading to Bentota for overnight stay.",
+        activities: [
+          "Temple of the Tooth Relic (Sri Dalada Maligawa)",
+          "Kandy City Viewpoint",
+          "Scenic drive to Bentota",
+          "Hotel check-in at Bentota",
+        ],
+      },
+      {
+        day: 4,
+        title: "Bentota City Tour & Water Sports",
+        description:
+          "Enjoy a full day exploring Bentota. Visit Katukoliha Temple, Dedduwa Lake, and relax at Bentota Beach. Experience optional water sports like snorkeling, diving, banana boat rides, and windsurfing. Evening Madu River safari.",
+        activities: [
+          "Katukoliha Temple & cycling tour",
+          "Dedduwa Lake visit",
+          "Bentota Beach leisure",
+          "Optional water sports (skiing, snorkeling, diving, banana boat, windsurfing)",
+          "Madu River boat safari",
+          "Overnight in Bentota",
+        ],
+      },
+      {
+        day: 5,
+        title: "Colombo City Tour & Departure",
+        description:
+          "City tour of Colombo including Gangaramaya Temple, Galle Face, Independence Memorial Hall, and Old Dutch Hospital for shopping/dining. Drop-off at airport or Colombo hotel.",
+        activities: [
+          "Gangaramaya Temple",
+          "Beira Lake walk",
+          "Galle Face Green promenade",
+          "Independence Memorial Hall",
+          "Old Dutch Hospital (shopping/dining)",
+          "Airport/Colombo drop-off",
+        ],
+      },
+    ],
+
+    inclusions: [
+      "Airport pickup & drop-off",
+      "All transportation in private air-conditioned vehicle",
+      "English-speaking chauffeur guide",
+      "Accommodation in handpicked hotels (B&B or Half-Board)",
+      "Bottled water",
+      "Hotel pickup & drop-off",
+      "Entry tickets to major attractions",
+      "Madu River boat safari",
+      "Cultural shows & village experience",
+    ],
+    exclusions: [
+      "International flights",
+      "Visa fees",
+      "Travel insurance",
+      "Lunch & dinners (unless mentioned)",
+      "Personal expenses",
+      "Alcoholic beverages",
+      "Tips & gratuities",
+    ],
+    whatWeOffer: [
+      "Perfect 5-day budget-friendly holiday",
+      "Balanced mix of culture, nature & beaches",
+      "Private chauffeur-guide",
+      "Handpicked accommodations",
+      "Flexible drop-off at Colombo or airport",
+      "Water sports & adventure options",
+    ],
+  },
+
+//Budget Tour
+//package 3
+
+  21: {
+    title: "5-Day South & City Budget Tour – Sri Lanka",
+    subtitle:
+      "Ideal for couples, solo travelers, families, and groups on a budget who want the best of Sri Lanka’s southern beaches and vibrant capital city.",
+    duration: "05 Days / 04 Nights",
+    image: tour1, // replace with actual import
+    rating: 4.7,
+    reviews: 130,
+    groupSize: "2-20 people",
+    difficulty: "Easy",
+    highlights: [
+      "Bentota rice fields & Katukoliha Temple",
+      "Dedduwa Lake & Mullegoda Temple murals",
+      "Bentota Beach & water sports (skiing, diving, banana boat, windsurfing)",
+      "Galle Fort (UNESCO Heritage)",
+      "Turtle Hatchery in Galle",
+      "Madu River boat safari",
+      "Colombo city tour: Gangaramaya Temple, Beira Lake",
+      "Galle Face Green promenade",
+      "Independence Memorial Hall & Museum",
+      "Old Dutch Hospital (shopping & dining)",
+    ],
+
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival – Airport to Bentota",
+        description:
+          "Arrive at Bandaranaike International Airport and be warmly welcomed by our representative. Transfer to your hotel in Bentota and relax.",
+        activities: [
+          "Airport pickup",
+          "Private transfer to Bentota",
+          "Hotel check-in",
+        ],
+      },
+      {
+        day: 2,
+        title: "Bentota Sightseeing & Galle Excursion",
+        description:
+          "Explore Bentota’s culture, temples, lakes, and rice fields. Enjoy Bentota Beach with optional water sports. Later, visit Galle Fort, Turtle Hatchery, and end the day with a Madu River boat safari.",
+        activities: [
+          "Katukoliha Temple & rice fields",
+          "Dedduwa Lake & Mullegoda Temple murals",
+          "Bentota Beach leisure & water sports",
+          "Galle Fort tour",
+          "Turtle Hatchery in Galle",
+          "Madu River boat safari",
+        ],
+      },
+      {
+        day: 3,
+        title: "Bentota to Colombo",
+        description:
+          "After a relaxed morning in Bentota, transfer to Colombo and check into your hotel.",
+        activities: ["Morning in Bentota", "Transfer to Colombo", "Hotel check-in"],
+      },
+      {
+        day: 4,
+        title: "Colombo City Tour",
+        description:
+          "Discover Colombo’s iconic landmarks, temples, and colonial sites. Shop, sightsee, and enjoy Sri Lanka’s bustling capital city.",
+        activities: [
+          "Gangaramaya Temple & Beira Lake",
+          "Galle Face Green promenade",
+          "Independence Memorial Hall & Museum",
+          "Old Dutch Hospital (shopping & dining)",
+        ],
+      },
+      {
+        day: 5,
+        title: "Departure",
+        description:
+          "After breakfast, transfer to Colombo or Bandaranaike International Airport in time for your departure flight.",
+        activities: ["Breakfast", "Airport/Colombo drop-off"],
+      },
+    ],
+
+    inclusions: [
+      "Airport pickup & drop-off",
+      "Private air-conditioned transportation",
+      "English-speaking chauffeur guide",
+      "Accommodation in handpicked hotels (B&B or Half-Board)",
+      "Hotel pickup & drop-off",
+      "Bottled water",
+      "Entry tickets to attractions",
+      "Madu River boat safari",
+    ],
+    exclusions: [
+      "International flights",
+      "Visa fees",
+      "Travel insurance",
+      "Lunch & dinners (unless mentioned)",
+      "Personal expenses",
+      "Alcoholic beverages",
+      "Tips & gratuities",
+    ],
+    whatWeOffer: [
+      "Perfect 5-day mix of beaches & city highlights",
+      "Private chauffeur-guide & comfortable transport",
+      "Handpicked accommodations",
+      "Flexible start & end points (Colombo/Airport)",
+      "Water sports & adventure options in Bentota",
+      "Authentic culture & heritage experiences",
+    ],
+  },
+
+//Budget Tour
+//package 3
+
+
+  22: {
+    title: "6-Day Budget Tour of Sri Lanka",
+    subtitle:
+      "Best for budget travelers, couples, families, and adventurers looking for a diverse Sri Lankan experience.",
+    duration: "06 Days / 05 Nights",
+    image: tour1, // replace with actual import
+    rating: 4.8,
+    reviews: 145,
+    groupSize: "2-20 people",
+    difficulty: "Easy",
+    highlights: [
+      "Pinnawala Elephant Orphanage",
+      "Temple of the Tooth Relic (Kandy)",
+      "Kandy Lake & city highlights",
+      "Peradeniya Royal Botanical Gardens",
+      "Ramboda Falls & Damro Tea Estate",
+      "Nuwara Eliya sightseeing & Gregory Lake",
+      "Ella highlights – Little Adam’s Peak & Nine Arch Bridge",
+      "Ravana Falls",
+      "Yala National Park safari",
+      "Galle Fort (UNESCO Heritage Site)",
+      "Bentota beach & water sports",
+      "Madu River boat safari",
+      "Colombo city tour – Gangaramaya Temple, Galle Face Green, Dutch Hospital",
+    ],
+
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival – Airport to Kandy",
+        description:
+          "Meet & greet at Bandaranaike International Airport. Stop at Pinnawala Elephant Orphanage to see elephants being bathed and fed. Continue to Kandy for hotel check-in.",
+        activities: [
+          "Airport pickup",
+          "Visit Pinnawala Elephant Orphanage",
+          "Transfer to Kandy",
+          "Hotel check-in",
+        ],
+      },
+      {
+        day: 2,
+        title: "Kandy to Nuwara Eliya",
+        description:
+          "Visit Temple of the Tooth Relic and Kandy Lake. Explore Peradeniya Botanical Gardens before heading to Nuwara Eliya via Ramboda Falls and Damro Tea Estate.",
+        activities: [
+          "Temple of the Tooth Relic",
+          "Kandy Lake walk",
+          "Peradeniya Botanical Gardens",
+          "Ramboda Falls",
+          "Damro Tea Factory & Tasting",
+          "Hotel in Nuwara Eliya",
+        ],
+      },
+      {
+        day: 3,
+        title: "Nuwara Eliya – Ella – Yala",
+        description:
+          "Morning sightseeing at Gregory Lake and Nuwara Eliya Post Office. Travel through Ella, stopping at Little Adam’s Peak, Nine Arch Bridge, and Ravana Falls. Continue to Yala for an evening safari.",
+        activities: [
+          "Gregory Lake",
+          "Nuwara Eliya Post Office",
+          "Little Adam’s Peak hike",
+          "Nine Arch Bridge visit",
+          "Ravana Falls",
+          "Yala National Park safari",
+          "Hotel in Tissamaharama/Yala",
+        ],
+      },
+      {
+        day: 4,
+        title: "Yala to Bentota via Galle",
+        description:
+          "Travel from Yala to Bentota. En route, stop at the UNESCO World Heritage Galle Fort. Continue to Bentota for overnight stay.",
+        activities: ["Morning in Yala", "Visit Galle Fort", "Hotel check-in in Bentota"],
+      },
+      {
+        day: 5,
+        title: "Bentota Sightseeing & Madu River",
+        description:
+          "Enjoy cycling near Katukoliha Temple and rice fields, explore Dedduwa Lake and Mullegoda Temple murals, relax at Bentota Beach with optional water sports, and take a Madu River boat safari.",
+        activities: [
+          "Katukoliha Temple & rice fields",
+          "Dedduwa Lake",
+          "Mullegoda Temple murals",
+          "Bentota Beach leisure & water sports",
+          "Madu River boat safari",
+        ],
+      },
+      {
+        day: 6,
+        title: "Colombo City Tour & Departure",
+        description:
+          "Head to Colombo for a half-day city tour including Gangaramaya Temple, Beira Lake, Galle Face Green, Independence Memorial Hall, and Dutch Hospital shopping precinct. Airport drop-off in time for departure.",
+        activities: [
+          "Gangaramaya Temple & Beira Lake",
+          "Galle Face Green promenade",
+          "Independence Memorial Hall",
+          "Old Dutch Hospital (shopping & dining)",
+          "Airport drop-off",
+        ],
+      },
+    ],
+
+    inclusions: [
+      "Airport pickup & drop-off",
+      "Private air-conditioned transport",
+      "English-speaking chauffeur guide",
+      "Accommodation in handpicked hotels (B&B or Half-Board)",
+      "Bottled water",
+      "Hotel pickup & drop-off",
+      "Entry tickets to attractions",
+      "Yala National Park safari",
+      "Madu River boat safari",
+    ],
+    exclusions: [
+      "International flights",
+      "Visa fees",
+      "Travel insurance",
+      "Lunch & dinners (unless mentioned)",
+      "Personal expenses",
+      "Alcoholic beverages",
+      "Tips & gratuities",
+    ],
+    whatWeOffer: [
+      "Budget-friendly complete Sri Lanka circuit",
+      "Private transport with chauffeur guide",
+      "Handpicked hotel stays",
+      "Safari in Yala National Park",
+      "Tea plantations & waterfalls",
+      "UNESCO World Heritage sites",
+      "Beach leisure & water sports in Bentota",
+      "24/7 local support",
+    ],
+  },
+
+//City Tuk Tuk Tour
+//package 1
+  23: {
+    title: "Kandy City Tour by Tuk Tuk",
+    subtitle: "Full-Day Guided Cultural & Heritage Tour in Kandy",
+    duration: "Full Day",
+    image: tour1,
+    rating: 4.7,
+    reviews: 89,
+    groupSize: "1-6 people",
+    difficulty: "Easy",
+    highlights: [
+      "Temple of the Tooth Relic (Sri Dalada Maligawa)",
+      "Kandy Lake (Kiri Muhuda)",
+      "Bahirawakanda Buddha Statue",
+      "Kandy City Viewpoint",
+      "Local Market Visit",
+      "Gems & Gemmological Museum",
+      "Tea Plantation & Factory",
+      "Peradeniya Royal Botanical Gardens",
+      "Kandy Cultural Dance Show",
+    ],
+
+    itinerary: [
+      {
+        day: 1,
+        title: "Full-Day Kandy Exploration",
+        description:
+          "Start your day with a tuk-tuk ride through the heart of Kandy. Visit sacred temples, explore bustling markets, and experience the cultural soul of Sri Lanka’s hill capital.",
+        activities: [
+          "Pickup from hotel in Kandy",
+          "Temple of the Tooth Relic visit (UNESCO site)",
+          "Walk around Kandy Lake (Kiri Muhuda)",
+          "Bahirawakanda Buddha Statue & panoramic viewpoint",
+          "Explore the local municipal market",
+          "Tour the Gems & Gemmological Museum",
+          "Visit a Tea Plantation & Factory (with tasting)",
+          "Peradeniya Royal Botanical Gardens walk",
+          "Enjoy the Kandy Cultural Dance Show",
+          "Drop-off at hotel",
+        ],
+      },
+    ],
+
+    inclusions: [
+      "Bottled water",
+      "Hotel pickup and drop-off",
+      "Tuk-tuk with driver/guide",
+    ],
+
+    exclusions: [
+      "Lunch and drinks",
+      "Personal expenses",
+      "Entry tickets to attractions",
+    ],
+
+    whatWeOffer: [
+      "Eco-friendly tuk-tuk travel",
+      "Experienced English-speaking local driver/guide",
+      "Authentic cultural experiences",
+      "Flexible start times",
+      "Safe and comfortable ride",
+      "Photography stops at viewpoints",
+      "Immersive market and tea plantation visits",
+    ],
+  },
+
+
+
+  //City Tuk Tuk Tour
+//package 2
+
+
+  24: {
+    title: "Sigiriya City Tour by Tuk Tuk",
+    subtitle: "8-Days Sri Lanka Cultural, Heritage & Nature Experience",
+    duration: "8 Days / 7 Nights",
+    image: tour1,
+    rating: 4.9,
+    reviews: 152,
+    groupSize: "2-15 people",
+    difficulty: "Easy to Moderate",
+    highlights: [
+      "Golden Cave Temple of Dambulla",
+      "Sigiriya Rock Fortress (Lion Rock)",
+      "Polonnaruwa Ancient City",
+      "Minneriya National Park Safari",
+      "Temple of the Tooth Relic – Kandy",
+      "Peradeniya Royal Botanical Gardens",
+      "Scenic Train Ride to Ella",
+      "Nine Arch Bridge & Little Adam’s Peak",
+      "Yala National Park Safari",
+      "Mirissa Coconut Tree Hill & Beach",
+      "Galle Fort & Turtle Hatchery",
+      "Madu River Boat Safari",
+    ],
+
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival & Dambulla Cave Temple",
+        description:
+          "Meet at Bandaranaike International Airport, visit the UNESCO Golden Cave Temple of Dambulla with 2,000-year-old shrines, then transfer to Sigiriya for check-in and relaxation.",
+        activities: [
+          "Airport pickup",
+          "Dambulla Cave Temple tour",
+          "Hotel check-in in Sigiriya",
+        ],
+      },
+      {
+        day: 2,
+        title: "Polonnaruwa Ancient City & Minneriya Safari",
+        description:
+          "Discover Polonnaruwa’s temples, palaces, and monuments. In the afternoon, enjoy a jeep safari in Minneriya National Park to see elephants and wildlife.",
+        activities: [
+          "Polonnaruwa ancient city tour",
+          "Visit Parakramabahu’s palace & Shiva Devale",
+          "Minneriya National Park safari",
+          "Overnight in Sigiriya",
+        ],
+      },
+      {
+        day: 3,
+        title: "Sigiriya Rock Fortress & Cultural Trail to Kandy",
+        description:
+          "Climb Sigiriya Rock Fortress. Visit Hiriwadunna village for a cultural immersion, enjoy a traditional lunch, tour a Spice Garden and Hindu temple in Matale, then continue to Kandy.",
+        activities: [
+          "Sigiriya Rock Fortress climb",
+          "Hiriwadunna village experience & lunch",
+          "Spice Garden tour (Matale)",
+          "Matale Muthumariamman Temple",
+          "Arrival & overnight in Kandy",
+        ],
+      },
+      {
+        day: 4,
+        title: "Kandy Heritage & Cultural Show",
+        description:
+          "Explore Kandy’s cultural icons: Temple of the Tooth, Bahirawakanda Buddha statue, Kandy Lake, city viewpoint, market, Gem Museum, Peradeniya Botanical Gardens, and end with a cultural dance show.",
+        activities: [
+          "Temple of the Tooth Relic visit",
+          "Bahirawakanda Buddha statue",
+          "Kandy Lake & Viewpoint",
+          "Local market & Gem Museum",
+          "Peradeniya Royal Botanical Gardens",
+          "Kandy Cultural Dance Show",
+        ],
+      },
+      {
+        day: 5,
+        title: "Kandy to Ella via Nuwara Eliya",
+        description:
+          "Travel through the scenic highlands. Visit Ramboda Falls, Damro Tea Estate, Gregory Lake, and Nuwara Eliya’s colonial landmarks. Board the iconic Nanu Oya to Ella train ride.",
+        activities: [
+          "Ramboda Falls visit",
+          "Damro Tea Estate tour & tasting",
+          "Gregory Lake walk",
+          "Nuwara Eliya Post Office",
+          "Train ride Nanu Oya → Ella",
+        ],
+      },
+      {
+        day: 6,
+        title: "Ella Adventures & Yala Safari",
+        description:
+          "Enjoy Ella’s highlights: Little Adam’s Peak hike, Nine Arch Bridge, and Ravana Falls. Later, transfer to Yala for an evening safari.",
+        activities: [
+          "Little Adam’s Peak hike",
+          "Nine Arch Bridge visit",
+          "Ravana Falls",
+          "Yala National Park safari",
+          "Overnight in Yala",
+        ],
+      },
+      {
+        day: 7,
+        title: "Mirissa Coastal Escape",
+        description:
+          "Relax in Mirissa, visit Coconut Tree Hill, and enjoy the tropical beaches and laid-back atmosphere.",
+        activities: [
+          "Drive to Mirissa",
+          "Coconut Tree Hill visit",
+          "Beach leisure & overnight in Mirissa",
+        ],
+      },
+      {
+        day: 8,
+        title: "Galle • Turtle Hatchery • Madu River Safari",
+        description:
+          "Explore southern coast: Galle Fort (UNESCO site), visit a Turtle Hatchery, and enjoy a boat safari on the Madu River before airport transfer.",
+        activities: [
+          "Galle Fort exploration",
+          "Turtle Hatchery visit",
+          "Madu River Boat Safari",
+          "Airport transfer for departure",
+        ],
+      },
+    ],
+
+    inclusions: [
+      "Bottled water",
+      "Hotel pickup and drop-off",
+      "Driver/guide",
+      "Private vehicle with A/C",
+      "Airport transfers",
+    ],
+
+    exclusions: [
+      "Lunch and drinks",
+      "Personal expenses",
+      "International flights & visas",
+      "Entry tickets to attractions",
+      "Travel insurance",
+      "Tips for driver/guide",
+    ],
+
+    whatWeOffer: [
+      "Handpicked accommodations (B&B or Half-Board)",
+      "English-speaking chauffeur guide",
+      "Safari & cultural show experiences",
+      "Tea plantation and village experiences",
+      "Flexible and customizable itinerary",
+      "Safe & reliable transportation",
+      "24/7 support during the tour",
+    ],
+  },
+
+
+
+//City Tuk Tuk Tour
+//package 2
+
+
+  25: {
+    title: "Polonnaruwa City Tour by Tuk Tuk",
+    subtitle: "8-Days Sri Lanka Heritage, Culture & Nature Experience",
+    duration: "8 Days / 7 Nights",
+    image: tour1,
+    rating: 4.8,
+    reviews: 137,
+    groupSize: "2-15 people",
+    difficulty: "Easy to Moderate",
+    highlights: [
+      "Golden Cave Temple of Dambulla",
+      "Polonnaruwa Ancient City & Royal Palaces",
+      "Minneriya National Park Safari",
+      "Sigiriya Rock Fortress (Lion Rock)",
+      "Hiriwadunna Village Experience",
+      "Temple of the Tooth – Kandy",
+      "Peradeniya Royal Botanical Gardens",
+      "Scenic Train Ride to Ella",
+      "Nine Arch Bridge & Little Adam’s Peak",
+      "Yala National Park Safari",
+      "Mirissa Coconut Tree Hill & Beach",
+      "Galle Fort & Turtle Hatchery",
+      "Madu River Boat Safari",
+    ],
+
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival & Dambulla Cave Temple",
+        description:
+          "Meet at Bandaranaike International Airport, visit the UNESCO Golden Cave Temple of Dambulla, then drive to Sigiriya for check-in.",
+        activities: [
+          "Airport pickup",
+          "Dambulla Golden Cave Temple tour",
+          "Hotel check-in in Sigiriya",
+        ],
+      },
+      {
+        day: 2,
+        title: "Polonnaruwa Ancient City & Minneriya Safari",
+        description:
+          "Explore Polonnaruwa’s temples and royal palaces, then enjoy an exciting safari in Minneriya National Park.",
+        activities: [
+          "Polonnaruwa ancient city ruins",
+          "Visit Parakramabahu’s palace & Shiva Devale",
+          "Minneriya National Park jeep safari",
+          "Overnight stay in Sigiriya",
+        ],
+      },
+      {
+        day: 3,
+        title: "Sigiriya Rock Fortress & Village Experience",
+        description:
+          "Climb Sigiriya Rock Fortress, experience village life in Hiriwadunna, visit a Spice Garden and Matale Hindu Temple en route to Kandy.",
+        activities: [
+          "Sigiriya Rock Fortress climb",
+          "Hiriwadunna village cultural tour & lunch",
+          "Matale Spice Garden tour",
+          "Matale Muthumariamman Temple",
+          "Dinner & overnight in Kandy",
+        ],
+      },
+      {
+        day: 4,
+        title: "Historic Kandy City",
+        description:
+          "Full day exploring Kandy – sacred temple, cultural icons, local shopping, and end with a traditional dance show.",
+        activities: [
+          "Temple of the Tooth Relic",
+          "Bahirawakanda Buddha statue",
+          "Kandy Lake & city viewpoint",
+          "Local market & Gem Museum",
+          "Peradeniya Royal Botanical Gardens",
+          "Kandy Cultural Dance Show",
+        ],
+      },
+      {
+        day: 5,
+        title: "Kandy to Ella via Nuwara Eliya",
+        description:
+          "Travel through tea country, visit waterfalls, Gregory Lake, and colonial sites before boarding the scenic train to Ella.",
+        activities: [
+          "Ramboda Falls",
+          "Damro Tea Estate & tasting",
+          "Gregory Lake walk",
+          "Nuwara Eliya Post Office",
+          "Train ride from Nanu Oya to Ella",
+        ],
+      },
+      {
+        day: 6,
+        title: "Ella Exploration & Yala Safari",
+        description:
+          "Discover Ella’s natural beauty and transfer to Yala for a thrilling evening safari.",
+        activities: [
+          "Little Adam’s Peak hike",
+          "Nine Arch Bridge visit",
+          "Ravana Falls",
+          "Yala National Park safari",
+          "Overnight stay near Yala",
+        ],
+      },
+      {
+        day: 7,
+        title: "Mirissa Beach Escape",
+        description:
+          "Relax on Sri Lanka’s southern coast in Mirissa, visit Coconut Tree Hill, and enjoy the tropical vibe.",
+        activities: [
+          "Drive to Mirissa",
+          "Coconut Tree Hill visit",
+          "Beach leisure & overnight in Mirissa",
+        ],
+      },
+      {
+        day: 8,
+        title: "Galle Fort • Turtle Hatchery • Madu River",
+        description:
+          "Tour Galle Fort, stop at a Turtle Hatchery, and enjoy a scenic Madu River boat safari before airport transfer.",
+        activities: [
+          "Galle Fort UNESCO site",
+          "Sea Turtle Hatchery visit",
+          "Madu River boat safari",
+          "Airport transfer for departure",
+        ],
+      },
+    ],
+
+    inclusions: [
+      "Bottled water",
+      "Hotel pickup and drop-off",
+      "Driver/guide",
+      "Private A/C vehicle",
+      "Airport transfers",
+    ],
+
+    exclusions: [
+      "Lunch and drinks",
+      "Personal expenses",
+      "International flights & visas",
+      "Entry tickets to attractions",
+      "Travel insurance",
+      "Guide/driver tips",
+    ],
+
+    whatWeOffer: [
+      "Handpicked accommodations (B&B or Half-Board)",
+      "English-speaking chauffeur guide",
+      "Village, safari & cultural experiences",
+      "Scenic train ride through tea country",
+      "Safe and comfortable transport",
+      "Customizable itineraries",
+      "24/7 support during the tour",
     ],
   },
 
