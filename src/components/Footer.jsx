@@ -18,18 +18,17 @@ export default function Footer() {
       title: "Email",
       details: ["mishellankatours@gmail.com"],
     },
-    {
-      icon: <Clock className="w-5 h-5" />,
-      title: "Working Hours",
-      details: ["Mon - Sat: 8:00 AM - 6:00 PM", "Sunday: 9:00 AM - 4:00 PM"],
-    },
+    // {
+    //   icon: <Clock className="w-5 h-5" />,
+    //   title: "Working Hours",
+    //   details: ["Mon - Sat: 8:00 AM - 6:00 PM", "Sunday: 9:00 AM - 4:00 PM"],
+    // },
   ];
 
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Tour Packages", href: "/packages" },
-    { name: "Things to Do", href: "/things-to-do" },
     { name: "Contact Us", href: "/contact" },
     { name: "Gallery", href: "/gallery" },
   ];
