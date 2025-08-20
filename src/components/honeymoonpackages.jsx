@@ -1,13 +1,13 @@
-import tour1 from "../assets/tour1.jpg";
-import tour2 from "../assets/tour2.jpg";
-import tour3 from "../assets/tour3.jpg";
+import honey1 from "../assets/honey1.jpg";
+import honey2 from "../assets/honey2.jpg";
+import honey4 from "../assets/honey4.jpg";
 export const honeymoonpackages = [
   {
     id: 11,
     title: "7-Day Romantic Sri Lanka Honeymoon Tour",
     subtitle: "7-Days Tours",
     duration: "7 Days",
-    image: tour1,
+    image: honey1,
     highlights: [
       "Sigiriya Rock Fortress",
       "Dambulla Cave Temple",
@@ -22,7 +22,7 @@ export const honeymoonpackages = [
     title: "12-Day Enchanted Sri Lanka Honeymoon Tour",
     subtitle: "12 Days Tours",
     duration: "12 Days",
-    image: tour2,
+    image: honey2,
     highlights: [
       "Temple of the Tooth",
       "Cultural Heritage Sites",
@@ -36,7 +36,7 @@ export const honeymoonpackages = [
     title: "6-Day Romantic Sri Lanka Honeymoon Tour",
     subtitle: "6 Days Tours",
     duration: "6 Days",
-    image: tour3,
+    image: honey4,
     highlights: [
       "Climb Sigiriya Rock Fortress",
       "Explore Ancient Polonnaruwa & Dambulla Caves",

@@ -1,12 +1,13 @@
-import tour1 from "../assets/tour1.jpg";
-import tour2 from "../assets/tour2.jpg";
+import beach2 from "../assets/beach2.jpg";
+import beach3 from "../assets/beach3.jpg";
+
 export const beachpackages = [
   {
     id: 14,
     title: "8-Day Sri Lanka  Beach & Heritage Tour",
     subtitle: "8-Days Tours",
     duration: "8 Days",
-    image: tour1,
+    image: beach2,
     highlights: [
       "Sigiriya Rock Fortress",
       "Dambulla Cave Temple",
@@ -25,7 +26,7 @@ export const beachpackages = [
     title: "10-Day Sri Lanka Beach & Heritage Escape",
     subtitle: "10 Days Tours",
     duration: "10 Days",
-    image: tour2,
+    image: beach3,
     highlights: [
       "Temple of the Tooth",
       "Cultural Heritage Sites",

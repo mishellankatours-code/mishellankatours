@@ -1,13 +1,13 @@
-import tour1 from "../assets/tour1.jpg";
-import tour2 from "../assets/tour2.jpg";
-import tour3 from "../assets/tour3.jpg";
+import tuktuk from "../assets/tuktuk.jpeg";
+import tuktuk2 from "../assets/tuktuk2.jpg";
+import tuktuk3 from "../assets/tuktuk3.webp";
 export const tuktukpackages = [
   {
     id: 23,
     title: "Kandy City Tour by Tuk Tuk – Full Day Experience",
     subtitle: "1-Day Tours",
     duration: "1 Day",
-    image: tour1,
+    image: tuktuk,
     highlights: [
       "Sigiriya Rock Fortress",
       "Dambulla Cave Temple",
@@ -26,7 +26,7 @@ export const tuktukpackages = [
     title: "Sigiriya City Tour by Tuk Tuk",
     subtitle: "1 Day Tours",
     duration: "1 Day",
-    image: tour2,
+    image: tuktuk2,
     highlights: [
       "Temple of the Tooth",
       "Cultural Heritage Sites",
@@ -40,7 +40,7 @@ export const tuktukpackages = [
     title: " Polonnaruwa City Tour by Tuk Tuk",
     subtitle: "1 Day Tours",
     duration: "1 Day",
-    image: tour3,
+    image: tuktuk3,
     highlights: [
       "Climb Sigiriya Rock Fortress",
       "Explore Ancient Polonnaruwa & Dambulla Caves",

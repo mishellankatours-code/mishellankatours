@@ -1,11 +1,11 @@
-import tour1 from "../assets/tour1.jpg";
+import wild2 from "../assets/wild2.jpg";
 export const Wildlifepackages = [
   {
     id: 18,
     title: "Sri Lanka 15-Day Ultimate Wildlife & Cultural Explorer Tour",
     subtitle: "15-Days Tours",
     duration: "15 Days",
-    image: tour1,
+    image: wild2,
     highlights: [
       "Sigiriya Rock Fortress",
       "Dambulla Cave Temple",

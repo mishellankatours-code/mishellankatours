@@ -20,6 +20,10 @@ import { budgetpackages } from "../components/Budgetpackages";
 import { tuktukpackages } from "../components/TukTukpackages";
 
 import tour1 from "../assets/tour1.jpg";
+import honey3 from "../assets/honey3.jpg";
+import beach1 from "../assets/beach1.jpg";
+import tuktuk from "../assets/tuktuk.jpeg";
+import wild1 from "../assets/wild1.jpg";
 
 const PackagesPage = () => {
   const navigate = useNavigate(); // Add this hook
@@ -208,7 +212,7 @@ const PackagesPage = () => {
       </section>
 
       {/* Section Separator - ADD THIS */}
-      <SectionSeparator title="honeymoon Tour" backgroundImage={tour1} />
+      <SectionSeparator title="honeymoon Tour" backgroundImage={honey3} />
       {/* Packages Grid */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
@@ -277,7 +281,7 @@ const PackagesPage = () => {
         </div>
       </section>
       {/* Section Separator - ADD THIS */}
-      <SectionSeparator title=" Beach Tour Package" backgroundImage={tour1} />
+      <SectionSeparator title=" Beach Tour Package" backgroundImage={beach1} />
       {/* Packages Grid */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
@@ -420,7 +424,7 @@ const PackagesPage = () => {
       {/* Section Separator - ADD THIS */}
       <SectionSeparator
         title="Sri Lanka Wildlife Tour Packages"
-        backgroundImage={tour1}
+        backgroundImage={wild1}
       />
       {/* Packages Grid */}
       <section className="py-16 px-6">
@@ -562,7 +566,7 @@ const PackagesPage = () => {
         </div>
       </section>
       {/* Section Separator - ADD THIS */}
-      <SectionSeparator title="City Tuk Tuk Tour" backgroundImage={tour1} />
+      <SectionSeparator title="City Tuk Tuk Tour" backgroundImage={tuktuk} />
       {/* Packages Grid */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
