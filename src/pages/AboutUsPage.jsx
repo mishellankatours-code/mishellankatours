@@ -13,6 +13,16 @@ import {
 } from "lucide-react";
 
 import pp1 from "../assets/pp1.jpg";
+import pp2 from "../assets/pp2.jpg";
+import pp4 from "../assets/pp4.jpg";
+import pp5 from "../assets/pp5.jpg";
+import pp6 from "../assets/pp6.jpg";
+import pp9 from "../assets/pp9.jpg";
+import pp10 from "../assets/pp10.jpg";
+import pp8 from "../assets/pp8.jpg";
+import buddha from "../assets/buddha.jpg";
+import elephant from "../assets/elephant.jpg";
+import beach from "../assets/beach.jpg";
 
 // Mock Footer component
 const Footer = () => (
@@ -30,8 +40,7 @@ export default function AboutUsPage() {
       title: "Stunning Beaches",
       description:
         "Golden sands, clear waters, and unforgettable sunsets along Sri Lanka's pristine coastline.",
-      image:
-        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80",
+      image: beach,
       gradient: "from-blue-500 to-cyan-500",
     },
     {
@@ -39,8 +48,7 @@ export default function AboutUsPage() {
       title: "Rich Culture",
       description:
         "Ancient heritage sites, vibrant traditions, and spiritual experiences that connect you with history.",
-      image:
-        "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: buddha,
       gradient: "from-orange-500 to-red-500",
     },
     {
@@ -48,8 +56,7 @@ export default function AboutUsPage() {
       title: "Wildlife & Nature",
       description:
         "Exotic animals, lush rainforests, and breathtaking natural beauty in protected reserves.",
-      image:
-        "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: elephant,
       gradient: "from-green-500 to-emerald-500",
     },
   ];
@@ -77,88 +84,81 @@ export default function AboutUsPage() {
     },
   ];
 
-  const partners = [
-    {
-      name: "Trustpilot",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/Trustpilot_logo.svg",
-    },
-    {
-      name: "TourRadar",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/4/48/TourRadar_Logo.svg",
-    },
-    {
-      name: "Sri Lanka Tourism",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/3/32/Sri_Lanka_Tourism_Logo.svg",
-    },
-    {
-      name: "Safe Travels",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/2/27/Safe_Travels_Logo.svg",
-    },
-    {
-      name: "Tripadvisor",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Tripadvisor_logo.svg",
-    },
-    {
-      name: "GetYourGuide",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/7/77/GetYourGuide_Logo.svg",
-    },
-  ];
+  // const partners = [
+  //   {
+  //     name: "Trustpilot",
+  //     logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/Trustpilot_logo.svg",
+  //   },
+  //   {
+  //     name: "TourRadar",
+  //     logo: "https://upload.wikimedia.org/wikipedia/commons/4/48/TourRadar_Logo.svg",
+  //   },
+  //   {
+  //     name: "Sri Lanka Tourism",
+  //     logo: "https://upload.wikimedia.org/wikipedia/commons/3/32/Sri_Lanka_Tourism_Logo.svg",
+  //   },
+  //   {
+  //     name: "Safe Travels",
+  //     logo: "https://upload.wikimedia.org/wikipedia/commons/2/27/Safe_Travels_Logo.svg",
+  //   },
+  //   {
+  //     name: "Tripadvisor",
+  //     logo: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Tripadvisor_logo.svg",
+  //   },
+  //   {
+  //     name: "GetYourGuide",
+  //     logo: "https://upload.wikimedia.org/wikipedia/commons/7/77/GetYourGuide_Logo.svg",
+  //   },
+  // ];
 
   // Previous tours images
   const previousTours = [
     {
       title: "Sigiriya Ancient Rock Fortress",
       location: "Central Province",
-      image: pp1,
+      image: pp2,
       date: "March 2024",
     },
     {
-      title: "Temple of the Sacred Tooth",
+      title: "Ramboda Waterfall",
       location: "Kandy",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: pp8,
       date: "February 2024",
     },
     {
-      title: "Yala National Park Safari",
+      title: "Village Tour / Bullock Cart Ride",
       location: "Southern Province",
-      image:
-        "https://images.unsplash.com/photo-1549366021-9f761d040fb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: pp5,
       date: "January 2024",
     },
     {
-      title: "Galle Fort Heritage Walk",
+      title: "Madu River Boat Safari (Mangrove Tour)",
       location: "Southern Coast",
-      image:
-        "https://images.unsplash.com/photo-1567473030492-533b30c5494c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: pp1,
       date: "December 2023",
     },
     {
       title: "Tea Plantation Experience",
       location: "Nuwara Eliya",
-      image:
-        "https://images.unsplash.com/photo-1563822249548-6a32b6ae7b6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: pp9,
       date: "November 2023",
     },
     {
-      title: "Mirissa Whale Watching",
+      title: "Coconut Tree Hill, Mirissa",
       location: "Southern Coast",
-      image:
-        "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: pp10,
       date: "October 2023",
     },
     {
       title: "Polonnaruwa Ancient City",
       location: "North Central Province",
-      image:
-        "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: pp6,
       date: "September 2023",
     },
     {
       title: "Ella Nine Arch Bridge",
       location: "Uva Province",
-      image:
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: pp4,
       date: "August 2023",
     },
   ];
@@ -403,7 +403,7 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Partners Section */}
+      {/* Partners Section
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -429,7 +429,7 @@ export default function AboutUsPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 px-6 bg-gradient-to-r from-blue-600 to-green-600 text-white">
