@@ -1,5 +1,4 @@
-import React from "react";
-import Footer from "../components/Footer";
+import React, { useState } from "react";
 import {
   Heart,
   Shield,
@@ -9,9 +8,22 @@ import {
   Camera,
   Compass,
   Star,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
+import pp1 from "../assets/pp1.jpg";
+
+// Mock Footer component
+const Footer = () => (
+  <div className="text-center text-gray-600">
+    <p>&copy; 2024 Mishellanka Tours. All rights reserved.</p>
+  </div>
+);
+
 export default function AboutUsPage() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const features = [
     {
       icon: <MapPin className="w-8 h-8" />,
@@ -91,6 +103,75 @@ export default function AboutUsPage() {
       logo: "https://upload.wikimedia.org/wikipedia/commons/7/77/GetYourGuide_Logo.svg",
     },
   ];
+
+  // Previous tours images
+  const previousTours = [
+    {
+      title: "Sigiriya Ancient Rock Fortress",
+      location: "Central Province",
+      image: pp1,
+      date: "March 2024",
+    },
+    {
+      title: "Temple of the Sacred Tooth",
+      location: "Kandy",
+      image:
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      date: "February 2024",
+    },
+    {
+      title: "Yala National Park Safari",
+      location: "Southern Province",
+      image:
+        "https://images.unsplash.com/photo-1549366021-9f761d040fb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      date: "January 2024",
+    },
+    {
+      title: "Galle Fort Heritage Walk",
+      location: "Southern Coast",
+      image:
+        "https://images.unsplash.com/photo-1567473030492-533b30c5494c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      date: "December 2023",
+    },
+    {
+      title: "Tea Plantation Experience",
+      location: "Nuwara Eliya",
+      image:
+        "https://images.unsplash.com/photo-1563822249548-6a32b6ae7b6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      date: "November 2023",
+    },
+    {
+      title: "Mirissa Whale Watching",
+      location: "Southern Coast",
+      image:
+        "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      date: "October 2023",
+    },
+    {
+      title: "Polonnaruwa Ancient City",
+      location: "North Central Province",
+      image:
+        "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      date: "September 2023",
+    },
+    {
+      title: "Ella Nine Arch Bridge",
+      location: "Uva Province",
+      image:
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      date: "August 2023",
+    },
+  ];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % previousTours.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + previousTours.length) % previousTours.length
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
@@ -180,6 +261,109 @@ export default function AboutUsPage() {
                   <p className="text-gray-600 leading-relaxed">
                     {feature.description}
                   </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Previous Tours Section */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+              Our Previous Tours
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Take a glimpse into the incredible journeys we've crafted for our
+              travelers across Sri Lanka's most spectacular destinations
+            </p>
+          </div>
+
+          {/* Featured Tour Image */}
+          <div className="relative mb-12">
+            <div className="relative h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src={previousTours[currentImageIndex].image}
+                alt={previousTours[currentImageIndex].title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
+              {/* Navigation Buttons */}
+              <button
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+
+              {/* Tour Info Overlay */}
+              <div className="absolute bottom-6 left-6 right-6 text-white">
+                <h3 className="text-3xl font-bold mb-2">
+                  {previousTours[currentImageIndex].title}
+                </h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-lg opacity-90 flex items-center gap-2">
+                    <MapPin className="w-5 h-5" />
+                    {previousTours[currentImageIndex].location}
+                  </p>
+                  <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                    {previousTours[currentImageIndex].date}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Indicators */}
+            <div className="flex justify-center mt-6 gap-2">
+              {previousTours.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentImageIndex
+                      ? "bg-blue-600 w-8"
+                      : "bg-gray-300 hover:bg-gray-400"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Thumbnail Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {previousTours.slice(0, 8).map((tour, index) => (
+              <div
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`relative cursor-pointer group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ${
+                  index === currentImageIndex ? "ring-4 ring-blue-500" : ""
+                }`}
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={tour.image}
+                    alt={tour.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-3 left-3 right-3 text-white">
+                    <h4 className="font-semibold text-sm mb-1 line-clamp-2">
+                      {tour.title}
+                    </h4>
+                    <p className="text-xs opacity-90 flex items-center gap-1">
+                      <MapPin className="w-3 h-3" />
+                      {tour.location}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
