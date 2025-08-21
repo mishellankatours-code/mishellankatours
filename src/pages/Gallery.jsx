@@ -9,21 +9,30 @@ import {
   Image as ImageIcon,
 } from "lucide-react";
 
-/** Replace these with your imported assets if you prefer
- *   import g1 from "../assets/gallery/g1.jpg"  etc.
- */
+import pp1 from "../assets/pp1.jpg";
+import pp2 from "../assets/pp2.jpg";
+import pp3 from "../assets/pp3.jpg";
+import pp4 from "../assets/pp4.jpg";
+import pp5 from "../assets/pp5.jpg";
+import pp6 from "../assets/pp6.jpg";
+import pp7 from "../assets/pp7.jpg";
+import pp8 from "../assets/pp8.jpg";
+import pp9 from "../assets/pp9.jpg";
+import pp10 from "../assets/pp10.jpg";
+import pp11 from "../assets/pp11.jpg";
+import pp12 from "../assets/pp12.jpg";
+
 const IMAGES = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop",
-    w: 1600,
+    image: pp1,
     h: 1067,
     title: "Sigiriya Rock",
     tags: ["Culture", "Nature"],
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1600&auto=format&fit=crop",
+    image: pp2,
     w: 1600,
     h: 1067,
     title: "Mirissa Beach",
@@ -31,7 +40,7 @@ const IMAGES = [
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=1600&auto=format&fit=crop",
+    image: pp3,
     w: 1600,
     h: 1067,
     title: "Tea Country",
@@ -39,7 +48,7 @@ const IMAGES = [
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop",
+    image: pp4,
     w: 1600,
     h: 1067,
     title: "Galle Fort",
@@ -47,7 +56,7 @@ const IMAGES = [
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1602153939368-7a2a1a0d3d3e?q=80&w=1600&auto=format&fit=crop",
+    image: pp5,
     w: 1600,
     h: 1067,
     title: "Yala Safari",
@@ -55,7 +64,7 @@ const IMAGES = [
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop",
+    image: pp6,
     w: 1600,
     h: 1067,
     title: "Arugam Bay",
@@ -63,7 +72,7 @@ const IMAGES = [
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=1600&auto=format&fit=crop",
+    image: pp7,
     w: 1600,
     h: 1067,
     title: "Udawalawe",
@@ -71,23 +80,16 @@ const IMAGES = [
   },
   {
     id: 8,
-    src: "https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1600&auto=format&fit=crop",
+    image: pp8,
     w: 1600,
     h: 1067,
     title: "Batticaloa Lagoon",
     tags: ["Beaches", "City"],
   },
-  {
-    id: 9,
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop",
-    w: 1600,
-    h: 1067,
-    title: "Pasikuda",
-    tags: ["Beaches"],
-  },
+  { id: 9, image: pp9, w: 1600, h: 1067, title: "Pasikuda", tags: ["Beaches"] },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1600&auto=format&fit=crop",
+    image: pp10,
     w: 1600,
     h: 1067,
     title: "Kandy",
@@ -95,20 +97,13 @@ const IMAGES = [
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1600&auto=format&fit=crop",
+    image: pp11,
     w: 1600,
     h: 1067,
     title: "Trincomalee",
     tags: ["Beaches", "Culture"],
   },
-  {
-    id: 12,
-    src: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1600&auto=format&fit=crop",
-    w: 1600,
-    h: 1067,
-    title: "Negombo",
-    tags: ["Beaches", "City"],
-  },
+  { id: 12, image: pp12, h: 1067, title: "Negombo", tags: ["Beaches", "City"] },
 ];
 
 const ALL_TAG = "All";
@@ -125,7 +120,7 @@ const fadeIn = {
 
 export default function Gallery() {
   const [activeTag, setActiveTag] = useState(ALL_TAG);
-  const [lightboxIdx, setLightboxIdx] = useState(-1); // -1 = closed
+  const [lightboxIdx, setLightboxIdx] = useState(-1);
 
   const tags = useMemo(() => {
     const t = new Set([ALL_TAG]);
@@ -146,7 +141,6 @@ export default function Gallery() {
     [filtered]
   );
 
-  // Keyboard navigation for lightbox
   useEffect(() => {
     const onKey = (e) => {
       if (lightboxIdx < 0) return;
@@ -228,7 +222,7 @@ export default function Gallery() {
                 onClick={() => openAt(img.id)}
               >
                 <img
-                  src={`${img.src}&dpr=1`} // ensure good quality
+                  src={img.image} // ✅ fixed here
                   alt={img.title}
                   loading="lazy"
                   className="w-full rounded-2xl shadow-sm transition-transform duration-300 group-hover:-translate-y-1"
@@ -279,19 +273,18 @@ export default function Gallery() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <img
-                  src={`${filtered[lightboxIdx].src}&dpr=2`}
+                  src={filtered[lightboxIdx].image} // ✅ fixed here
                   alt={filtered[lightboxIdx].title}
                   className="w-full max-h-[78vh] object-contain rounded-xl shadow-2xl"
                 />
 
-                {/* title */}
                 <div className="mt-3 text-center text-white/90">
                   <div className="font-semibold">
                     {filtered[lightboxIdx].title}
                   </div>
                 </div>
 
-                {/* controls */}
+                {/* Controls */}
                 <button
                   className="absolute -top-10 right-0 text-white/90 hover:text-white"
                   onClick={() => setLightboxIdx(-1)}
@@ -325,7 +318,7 @@ export default function Gallery() {
         )}
       </AnimatePresence>
 
-      {/* Empty state (if filters remove everything) */}
+      {/* Empty state */}
       {filtered.length === 0 && (
         <div className="pb-24">
           <div className="max-w-6xl mx-auto px-4">
@@ -338,6 +331,7 @@ export default function Gallery() {
           </div>
         </div>
       )}
+
       {/* Footer */}
       <div className="bg-gray-100 py-8 mt-16">
         <Footer />
