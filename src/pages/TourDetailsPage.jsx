@@ -1,43 +1,51 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {
   Clock,
   MapPin,
   Users,
   Star,
-  Camera,
   Mountain,
-  TreePine,
-  Compass,
   Check,
   X,
   Calendar,
-  Car,
-  Home,
-  Utensils,
-  Plane,
-  Shield,
-  ArrowLeft,
   Phone,
   Mail,
+  ArrowLeft,
+  Send,
+  CheckCircle,
 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../components/Footer";
 
 import { tourDetails } from "../Data/srttourData";
 
+const ADMIN_WHATSAPP = "94762044065"; // without '+' for wa.me
+const tourTypes = ["Private", "Group", "Honeymoon", "Adventure", "Cultural", "Wildlife"];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 16 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.35 } },
+};
+
+const stagger = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08 } },
+};
+
 const TourDetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const formRef = useRef(null);
 
   const tour = tourDetails[id];
 
+  // ----- Guard -----
   if (!tour) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Tour Not Found
-          </h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Tour Not Found</h1>
           <button
             onClick={() => navigate("/packages")}
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
@@ -49,15 +57,89 @@ const TourDetailsPage = () => {
     );
   }
 
+  // ----- Form state -----
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    tourType: "",
+    travelDate: "",
+    groupSize: "",
+    subject: `Booking Request: ${tour.title}`,
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((p) => ({ ...p, [name]: value }));
+  };
+
+  const buildWhatsAppMessage = () => {
+    const lines = [
+      "Hello Mishel Lanka Tours 👋",
+      "",
+      `I'd like to inquire/book the following tour:`,
+      `• Tour: ${tour.title}`,
+      `• Duration: ${tour.duration}`,
+      `• Difficulty: ${tour.difficulty}`,
+      "",
+      "My details:",
+      `• Name: ${formData.name}`,
+      `• Email: ${formData.email}`,
+      `• Phone: ${formData.phone || "-"}`,
+      `• Tour Type: ${formData.tourType || "-"}`,
+      `• Travel Date: ${formData.travelDate || "-"}`,
+      `• Group Size: ${formData.groupSize || "-"}`,
+      "",
+      `Subject: ${formData.subject}`,
+      `Message: ${formData.message || "-"}`,
+      "",
+      "Please let me know availability and pricing. Thank you!",
+    ];
+    return lines.join("\n");
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Show local success toast
+    setIsSubmitted(true);
+    setTimeout(() => setIsSubmitted(false), 3500);
+
+    // Build WhatsApp URL
+    const text = buildWhatsAppMessage();
+    const url = `https://wa.me/${ADMIN_WHATSAPP}?text=${encodeURIComponent(text)}`;
+
+    // Navigate to admin WhatsApp (new tab keeps user on your site too)
+    window.open(url, "_blank");
+
+    // (Optional) Reset form
+    setFormData((p) => ({
+      ...p,
+      name: "",
+      email: "",
+      phone: "",
+      tourType: "",
+      travelDate: "",
+      groupSize: "",
+      subject: `Booking Request: ${tour.title}`,
+      message: "",
+    }));
+  };
+
+  const scrollToForm = () => {
+    // Prefill subject with tour title
+    setFormData((p) => ({ ...p, subject: `Booking Request: ${tour.title}` }));
+    // Smooth scroll
+    formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       {/* Hero Section */}
       <section className="relative h-96 overflow-hidden">
-        <img
-          src={tour.image}
-          alt={tour.title}
-          className="w-full h-full object-cover"
-        />
+        <img src={tour.image} alt={tour.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 
         {/* Back Button */}
@@ -71,9 +153,7 @@ const TourDetailsPage = () => {
         {/* Hero Content */}
         <div className="absolute bottom-0 left-0 right-0 p-8">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              {tour.title}
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">{tour.title}</h1>
             <p className="text-xl text-white/90 mb-6">{tour.subtitle}</p>
 
             {/* Quick Stats */}
@@ -101,15 +181,14 @@ const TourDetailsPage = () => {
         </div>
       </section>
 
+      {/* Main Body */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-12">
             {/* Tour Highlights */}
             <section className="bg-white rounded-3xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                Tour Highlights
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Tour Highlights</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {tour.highlights.map((highlight, index) => (
                   <div
@@ -125,30 +204,20 @@ const TourDetailsPage = () => {
 
             {/* Daily Itinerary */}
             <section className="bg-white rounded-3xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-800 mb-8">
-                Daily Itinerary
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-8">Daily Itinerary</h2>
               <div className="space-y-6">
                 {tour.itinerary.map((day, index) => (
-                  <div
-                    key={index}
-                    className="border-l-4 border-blue-600 pl-6 pb-8"
-                  >
+                  <div key={index} className="border-l-4 border-blue-600 pl-6 pb-8">
                     <div className="flex items-center gap-4 mb-3">
                       <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
                         {day.day}
                       </div>
-                      <h3 className="text-xl font-bold text-gray-800">
-                        {day.title}
-                      </h3>
+                      <h3 className="text-xl font-bold text-gray-800">{day.title}</h3>
                     </div>
                     <p className="text-gray-600 mb-4">{day.description}</p>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                       {day.activities.map((activity, idx) => (
-                        <div
-                          key={idx}
-                          className="flex items-center gap-2 text-sm text-gray-500"
-                        >
+                        <div key={idx} className="flex items-center gap-2 text-sm text-gray-500">
                           <Calendar className="w-4 h-4 text-green-600" />
                           <span>{activity}</span>
                         </div>
@@ -169,10 +238,7 @@ const TourDetailsPage = () => {
                 </h2>
                 <ul className="space-y-3">
                   {tour.inclusions.map((item, index) => (
-                    <li
-                      key={index}
-                      className="flex items-start gap-3 text-gray-600"
-                    >
+                    <li key={index} className="flex items-start gap-3 text-gray-600">
                       <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
@@ -188,10 +254,7 @@ const TourDetailsPage = () => {
                 </h2>
                 <ul className="space-y-3">
                   {tour.exclusions.map((item, index) => (
-                    <li
-                      key={index}
-                      className="flex items-start gap-3 text-gray-600"
-                    >
+                    <li key={index} className="flex items-start gap-3 text-gray-600">
                       <X className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
@@ -203,7 +266,7 @@ const TourDetailsPage = () => {
             {/* What We Offer */}
             <section className="bg-white rounded-3xl shadow-lg p-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                <Shield className="w-7 h-7 text-blue-600" />
+                <span className="inline-block w-6 h-6 rounded-full bg-blue-600"></span>
                 What We Offer
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -218,11 +281,212 @@ const TourDetailsPage = () => {
                 ))}
               </div>
             </section>
+
+            {/* ===== Contact / Booking Form ===== */}
+            <section ref={formRef} id="contact-form" className="scroll-mt-28">
+              {/* Main Content Grid */}
+              <div className="grid lg:grid-cols-2 gap-12">
+                {/* Contact Form */}
+                <motion.div
+                  className="bg-white rounded-3xl shadow-2xl p-8"
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.2 }}
+                >
+                  <motion.div className="mb-8" variants={fadeUp}>
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">Send us a Message</h2>
+                    <p className="text-gray-600">
+                      Fill out the form below and we'll get back to you within 24 hours.
+                    </p>
+                  </motion.div>
+
+                  <AnimatePresence>
+                    {isSubmitted && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -8, scale: 0.98 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -8, scale: 0.98 }}
+                        className="mb-6 bg-green-50 border border-green-200 rounded-2xl p-4 flex items-center gap-3"
+                      >
+                        <CheckCircle className="w-5 h-5 text-green-600" />
+                        <span className="text-green-700 font-medium">
+                          Message ready! Redirecting you to WhatsApp…
+                        </span>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <motion.div
+                      className="grid md:grid-cols-2 gap-6"
+                      variants={stagger}
+                      initial="hidden"
+                      animate="show"
+                    >
+                      <motion.div variants={fadeUp}>
+                        <label className="block text-gray-700 font-medium mb-2">Full Name</label>
+                        <input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                          placeholder="Your full name"
+                          required
+                        />
+                      </motion.div>
+                      <motion.div variants={fadeUp}>
+                        <label className="block text-gray-700 font-medium mb-2">Email Address</label>
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                          placeholder="your@email.com"
+                          required
+                        />
+                      </motion.div>
+                    </motion.div>
+
+                    <motion.div
+                      className="grid md:grid-cols-2 gap-6"
+                      variants={stagger}
+                      initial="hidden"
+                      animate="show"
+                    >
+                      <motion.div variants={fadeUp}>
+                        <label className="block text-gray-700 font-medium mb-2">Phone Number</label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                          placeholder="+94 77 123 4567"
+                        />
+                      </motion.div>
+                      <motion.div variants={fadeUp}>
+                        <label className="block text-gray-700 font-medium mb-2">Tour Type</label>
+                        <select
+                          name="tourType"
+                          value={formData.tourType}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                        >
+                          <option value="">Select tour type</option>
+                          {tourTypes.map((type, index) => (
+                            <option key={index} value={type}>
+                              {type}
+                            </option>
+                          ))}
+                        </select>
+                      </motion.div>
+                    </motion.div>
+
+                    <motion.div
+                      className="grid md:grid-cols-2 gap-6"
+                      variants={stagger}
+                      initial="hidden"
+                      animate="show"
+                    >
+                      <motion.div variants={fadeUp}>
+                        <label className="block text-gray-700 font-medium mb-2">Travel Date</label>
+                        <input
+                          type="date"
+                          name="travelDate"
+                          value={formData.travelDate}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                        />
+                      </motion.div>
+                      <motion.div variants={fadeUp}>
+                        <label className="block text-gray-700 font-medium mb-2">Group Size</label>
+                        <select
+                          name="groupSize"
+                          value={formData.groupSize}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                        >
+                          <option value="">Select group size</option>
+                          <option value="1-2">1-2 people</option>
+                          <option value="3-5">3-5 people</option>
+                          <option value="6-10">6-10 people</option>
+                          <option value="10+">10+ people</option>
+                        </select>
+                      </motion.div>
+                    </motion.div>
+
+                    <motion.div variants={fadeUp} initial="hidden" animate="show">
+                      <label className="block text-gray-700 font-medium mb-2">Subject</label>
+                      <input
+                        type="text"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                        placeholder="Subject of your inquiry"
+                        required
+                      />
+                    </motion.div>
+
+                    <motion.div variants={fadeUp} initial="hidden" animate="show">
+                      <label className="block text-gray-700 font-medium mb-2">Message</label>
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        rows="5"
+                        className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all resize-none"
+                        placeholder="Tell us about your dream Sri Lankan adventure..."
+                        required
+                      />
+                    </motion.div>
+
+                    <motion.button
+                      type="submit"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white font-semibold py-4 px-8 rounded-2xl shadow-lg"
+                    >
+                      <div className="flex items-center justify-center gap-2">
+                        <Send className="w-5 h-5" />
+                        Send Message via WhatsApp
+                      </div>
+                    </motion.button>
+                  </form>
+                </motion.div>
+
+                {/* Helpful Contact Card */}
+                <div className="bg-white rounded-3xl shadow-2xl p-8">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-6">Need Help?</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <Phone className="w-5 h-5 text-blue-600" />
+                      <span>+94 76 204 4065</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <Mail className="w-5 h-5 text-blue-600" />
+                      <span>mishellankatours@gmail.com</span>
+                    </div>
+                    <button
+                      onClick={() =>
+                        window.open(`https://wa.me/${ADMIN_WHATSAPP}`, "_blank")
+                      }
+                      className="mt-4 w-full border-2 border-green-600 text-green-700 hover:bg-green-600 hover:text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300"
+                    >
+                      Chat on WhatsApp
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
 
           {/* Sidebar */}
           <div className="space-y-8">
-            {/* Pricing Card */}
+            {/* Pricing / Quick Info Card */}
             <div className="bg-white rounded-3xl shadow-lg p-8 sticky top-6">
               <div className="space-y-4 mb-8">
                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
@@ -240,7 +504,10 @@ const TourDetailsPage = () => {
               </div>
 
               <div className="space-y-4">
-                <button className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <button
+                  onClick={scrollToForm}
+                  className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
                   Book Now
                 </button>
                 {/* <button className="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-300">
@@ -263,6 +530,7 @@ const TourDetailsPage = () => {
               </div>
             </div>
           </div>
+          {/* /Sidebar */}
         </div>
       </div>
 
