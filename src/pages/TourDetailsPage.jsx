@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useMemo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {
   Clock,
@@ -17,10 +17,9 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../components/Footer";
-
 import { tourDetails } from "../Data/srttourData";
 
-const ADMIN_WHATSAPP = "94762044065"; // without '+' for wa.me
+const ADMIN_WHATSAPP = "94762044065"; // no '+' for wa.me
 const ADMIN_EMAIL = "mishellankatours@gmail.com";
 const tourTypes = ["Private", "Group", "Honeymoon", "Adventure", "Cultural", "Wildlife"];
 
@@ -40,6 +39,16 @@ const TourDetailsPage = () => {
   const formRef = useRef(null);
 
   const tour = tourDetails[id];
+
+  // --- detect mobile/tablet vs desktop (JS only) ---
+  const isMobile = useMemo(() => {
+    if (typeof navigator === "undefined" || typeof window === "undefined") return false;
+    const ua = navigator.userAgent || navigator.vendor || (window && window.opera) || "";
+    const iPadOS13Plus = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+    const mobileRegex =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|Tablet/i;
+    return mobileRegex.test(ua) || iPadOS13Plus;
+  }, []);
 
   if (!tour) {
     return (
@@ -76,67 +85,55 @@ const TourDetailsPage = () => {
   };
 
   // ----- Builders -----
-  const buildSharedLines = () => {
-    return [
-      `• Tour: ${tour.title}`,
-      `• Duration: ${tour.duration}`,
-      `• Difficulty: ${tour.difficulty}`,
-      "",
-      "My details:",
-      `• Name: ${formData.name}`,
-      `• Email: ${formData.email}`,
-      `• Phone: ${formData.phone || "-"}`,
-      `• Tour Type: ${formData.tourType || "-"}`,
-      `• Travel Date: ${formData.travelDate || "-"}`,
-      `• Group Size: ${formData.groupSize || "-"}`,
-      "",
-      `Subject: ${formData.subject}`,
-      `Message: ${formData.message || "-"}`,
-      "",
-      "Please let me know availability and pricing. Thank you!",
-    ];
-  };
+  const buildSharedLines = () => [
+    `• Tour: ${tour.title}`,
+    `• Duration: ${tour.duration}`,
+    `• Difficulty: ${tour.difficulty}`,
+    "",
+    "My details:",
+    `• Name: ${formData.name}`,
+    `• Email: ${formData.email}`,
+    `• Phone: ${formData.phone || "-"}`,
+    `• Tour Type: ${formData.tourType || "-"}`,
+    `• Travel Date: ${formData.travelDate || "-"}`,
+    `• Group Size: ${formData.groupSize || "-"}`,
+    "",
+    `Subject: ${formData.subject}`,
+    `Message: ${formData.message || "-"}`,
+    "",
+    "Please let me know availability and pricing. Thank you!",
+  ];
 
-  const buildWhatsAppMessage = () => {
-    const lines = [
+  const buildWhatsAppMessage = () =>
+    [
       "Hello Mishel Lanka Tours 👋",
       "",
-      `I'd like to inquire/book the following tour:`,
+      "I'd like to inquire/book the following tour:",
       ...buildSharedLines(),
-    ];
-    return lines.join("\n");
-  };
+    ].join("\n");
 
   const buildEmailSubject = () => formData.subject || `Booking Request: ${tour.title}`;
 
-  const buildEmailBody = () => {
-    const lines = [
+  const buildEmailBody = () =>
+    [
       "Hello Mishel Lanka Tours,",
       "",
       "I'd like to inquire/book the following tour:",
       ...buildSharedLines(),
       "",
       "— Sent from Mishel Lanka Tours website",
-    ];
-    return lines.join("\n");
-  };
+    ].join("\n");
 
   // ----- Actions -----
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Show local success toast
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3500);
 
-    // Build WhatsApp URL
     const text = buildWhatsAppMessage();
     const url = `https://wa.me/${ADMIN_WHATSAPP}?text=${encodeURIComponent(text)}`;
-
-    // Navigate to admin WhatsApp (new tab is fine here)
     window.open(url, "_blank");
 
-    // (Optional) Reset form
     setFormData({
       name: "",
       email: "",
@@ -149,11 +146,13 @@ const TourDetailsPage = () => {
     });
   };
 
-  // Use a hidden anchor (not "_blank") to avoid a blank tab for mailto:
+  // Email via default app (mailto:) using hidden anchor to avoid blank tab
   const handleEmailCompose = () => {
     const subject = buildEmailSubject();
     const body = buildEmailBody();
-    const mailto = `mailto:${ADMIN_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:${ADMIN_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+      body
+    )}`;
 
     const a = document.createElement("a");
     a.href = mailto;
@@ -162,7 +161,6 @@ const TourDetailsPage = () => {
     a.click();
     a.remove();
 
-    // Fallback if the click was blocked
     setTimeout(() => {
       if (document.visibilityState === "visible") {
         window.location.href = mailto;
@@ -170,7 +168,7 @@ const TourDetailsPage = () => {
     }, 300);
   };
 
-  // Optional: Compose directly in Gmail web (good for Chrome users)
+  // Compose in Gmail (desktop preferred)
   const handleGmailCompose = () => {
     const subject = buildEmailSubject();
     const body = buildEmailBody();
@@ -206,7 +204,6 @@ const TourDetailsPage = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">{tour.title}</h1>
             <p className="text-xl text-white/90 mb-6">{tour.subtitle}</p>
 
-            {/* Quick Stats */}
             <div className="flex flex-wrap gap-6 text-white">
               <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5" />
@@ -280,7 +277,6 @@ const TourDetailsPage = () => {
 
             {/* Inclusions & Exclusions */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Inclusions */}
               <section className="bg-white rounded-3xl shadow-lg p-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
                   <Check className="w-6 h-6 text-green-600" />
@@ -296,7 +292,6 @@ const TourDetailsPage = () => {
                 </ul>
               </section>
 
-              {/* Exclusions */}
               <section className="bg-white rounded-3xl shadow-lg p-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
                   <X className="w-6 h-6 text-red-600" />
@@ -367,12 +362,7 @@ const TourDetailsPage = () => {
                   </AnimatePresence>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <motion.div
-                      className="grid md:grid-cols-2 gap-6"
-                      variants={stagger}
-                      initial="hidden"
-                      animate="show"
-                    >
+                    <motion.div className="grid md:grid-cols-2 gap-6" variants={stagger} initial="hidden" animate="show">
                       <motion.div variants={fadeUp}>
                         <label className="block text-gray-700 font-medium mb-2">Full Name</label>
                         <input
@@ -399,12 +389,7 @@ const TourDetailsPage = () => {
                       </motion.div>
                     </motion.div>
 
-                    <motion.div
-                      className="grid md:grid-cols-2 gap-6"
-                      variants={stagger}
-                      initial="hidden"
-                      animate="show"
-                    >
+                    <motion.div className="grid md:grid-cols-2 gap-6" variants={stagger} initial="hidden" animate="show">
                       <motion.div variants={fadeUp}>
                         <label className="block text-gray-700 font-medium mb-2">Phone Number</label>
                         <input
@@ -434,12 +419,7 @@ const TourDetailsPage = () => {
                       </motion.div>
                     </motion.div>
 
-                    <motion.div
-                      className="grid md:grid-cols-2 gap-6"
-                      variants={stagger}
-                      initial="hidden"
-                      animate="show"
-                    >
+                    <motion.div className="grid md:grid-cols-2 gap-6" variants={stagger} initial="hidden" animate="show">
                       <motion.div variants={fadeUp}>
                         <label className="block text-gray-700 font-medium mb-2">Travel Date</label>
                         <input
@@ -507,35 +487,37 @@ const TourDetailsPage = () => {
                         </div>
                       </motion.button>
 
-                      <motion.button
-                        type="button"
-                        onClick={handleEmailCompose}
-                        whileHover={{ scale: 1.03 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full border-2 border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white font-semibold py-4 px-8 rounded-2xl shadow-lg transition-colors"
-                        aria-label="Prepare email to admin"
-                        title="Prepare email to admin"
-                      >
-                        <div className="flex items-center justify-center gap-2">
-                          <Mail className="w-5 h-5" />
-                          Email App
-                        </div>
-                      </motion.button>
-
-                      <motion.button
-                        type="button"
-                        onClick={handleGmailCompose}
-                        whileHover={{ scale: 1.03 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full border-2 border-red-600 text-red-700 hover:bg-red-600 hover:text-white font-semibold py-4 px-8 rounded-2xl shadow-lg transition-colors"
-                        aria-label="Compose in Gmail"
-                        title="Compose in Gmail"
-                      >
-                        <div className="flex items-center justify-center gap-2">
-                          <Mail className="w-5 h-5" />
-                          Gmail
-                        </div>
-                      </motion.button>
+                      {isMobile ? (
+                        <motion.button
+                          type="button"
+                          onClick={handleEmailCompose}
+                          whileHover={{ scale: 1.03 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="w-full border-2 border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white font-semibold py-4 px-8 rounded-2xl shadow-lg transition-colors"
+                          aria-label="Prepare email to admin"
+                          title="Prepare email to admin"
+                        >
+                          <div className="flex items-center justify-center gap-2">
+                            <Mail className="w-5 h-5" />
+                            Email App
+                          </div>
+                        </motion.button>
+                      ) : (
+                        <motion.button
+                          type="button"
+                          onClick={handleGmailCompose}
+                          whileHover={{ scale: 1.03 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="w-full border-2 border-red-600 text-red-700 hover:bg-red-600 hover:text-white font-semibold py-4 px-8 rounded-2xl shadow-lg transition-colors"
+                          aria-label="Compose in Gmail"
+                          title="Compose in Gmail"
+                        >
+                          <div className="flex items-center justify-center gap-2">
+                            <Mail className="w-5 h-5" />
+                            Gmail
+                          </div>
+                        </motion.button>
+                      )}
                     </div>
                   </form>
                 </motion.div>
@@ -566,7 +548,6 @@ const TourDetailsPage = () => {
 
           {/* Sidebar */}
           <div className="space-y-8">
-            {/* Quick Info Card */}
             <div className="bg-white rounded-3xl shadow-lg p-8 sticky top-6">
               <div className="space-y-4 mb-8">
                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
