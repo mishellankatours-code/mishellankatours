@@ -30,7 +30,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="/logo.png"
+            src="/logo.mishel.png"
             alt="Logo"
             className="h-12 md:h-14 w-auto max-w-[240px] object-contain"
           />
