@@ -75,6 +75,7 @@ const TourDetailsPage = () => {
     setFormData((p) => ({ ...p, [name]: value }));
   };
 
+  // ----- Builders -----
   const buildSharedLines = () => {
     return [
       `• Tour: ${tour.title}`,
@@ -120,6 +121,7 @@ const TourDetailsPage = () => {
     return lines.join("\n");
   };
 
+  // ----- Actions -----
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -131,12 +133,11 @@ const TourDetailsPage = () => {
     const text = buildWhatsAppMessage();
     const url = `https://wa.me/${ADMIN_WHATSAPP}?text=${encodeURIComponent(text)}`;
 
-    // Navigate to admin WhatsApp (new tab)
+    // Navigate to admin WhatsApp (new tab is fine here)
     window.open(url, "_blank");
 
     // (Optional) Reset form
-    setFormData((p) => ({
-      ...p,
+    setFormData({
       name: "",
       email: "",
       phone: "",
@@ -145,21 +146,38 @@ const TourDetailsPage = () => {
       groupSize: "",
       subject: `Booking Request: ${tour.title}`,
       message: "",
-    }));
+    });
   };
 
+  // Use a hidden anchor (not "_blank") to avoid a blank tab for mailto:
   const handleEmailCompose = () => {
     const subject = buildEmailSubject();
     const body = buildEmailBody();
-
-    // mailto link (opens default email client, user can review & send)
     const mailto = `mailto:${ADMIN_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Prefer opening a new window/tab; fallback to setting location if blocked
-    const opened = window.open(mailto, "_blank");
-    if (!opened) {
-      window.location.href = mailto;
-    }
+    const a = document.createElement("a");
+    a.href = mailto;
+    a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    // Fallback if the click was blocked
+    setTimeout(() => {
+      if (document.visibilityState === "visible") {
+        window.location.href = mailto;
+      }
+    }, 300);
+  };
+
+  // Optional: Compose directly in Gmail web (good for Chrome users)
+  const handleGmailCompose = () => {
+    const subject = buildEmailSubject();
+    const body = buildEmailBody();
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      ADMIN_EMAIL
+    )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(url, "_blank");
   };
 
   const scrollToForm = () => {
@@ -476,7 +494,7 @@ const TourDetailsPage = () => {
                     </motion.div>
 
                     {/* Action Buttons */}
-                    <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="grid sm:grid-cols-3 gap-4">
                       <motion.button
                         type="submit"
                         whileHover={{ scale: 1.03 }}
@@ -485,7 +503,7 @@ const TourDetailsPage = () => {
                       >
                         <div className="flex items-center justify-center gap-2">
                           <Send className="w-5 h-5" />
-                          Send via WhatsApp
+                          WhatsApp
                         </div>
                       </motion.button>
 
@@ -500,7 +518,22 @@ const TourDetailsPage = () => {
                       >
                         <div className="flex items-center justify-center gap-2">
                           <Mail className="w-5 h-5" />
-                          Prepare Email
+                          Email App
+                        </div>
+                      </motion.button>
+
+                      <motion.button
+                        type="button"
+                        onClick={handleGmailCompose}
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full border-2 border-red-600 text-red-700 hover:bg-red-600 hover:text-white font-semibold py-4 px-8 rounded-2xl shadow-lg transition-colors"
+                        aria-label="Compose in Gmail"
+                        title="Compose in Gmail"
+                      >
+                        <div className="flex items-center justify-center gap-2">
+                          <Mail className="w-5 h-5" />
+                          Gmail
                         </div>
                       </motion.button>
                     </div>
