@@ -21,6 +21,7 @@ import Footer from "../components/Footer";
 import { tourDetails } from "../Data/srttourData";
 
 const ADMIN_WHATSAPP = "94762044065"; // without '+' for wa.me
+const ADMIN_EMAIL = "mishellankatours@gmail.com";
 const tourTypes = ["Private", "Group", "Honeymoon", "Adventure", "Cultural", "Wildlife"];
 
 const fadeUp = {
@@ -40,7 +41,6 @@ const TourDetailsPage = () => {
 
   const tour = tourDetails[id];
 
-  // ----- Guard -----
   if (!tour) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -75,11 +75,8 @@ const TourDetailsPage = () => {
     setFormData((p) => ({ ...p, [name]: value }));
   };
 
-  const buildWhatsAppMessage = () => {
-    const lines = [
-      "Hello Mishel Lanka Tours 👋",
-      "",
-      `I'd like to inquire/book the following tour:`,
+  const buildSharedLines = () => {
+    return [
       `• Tour: ${tour.title}`,
       `• Duration: ${tour.duration}`,
       `• Difficulty: ${tour.difficulty}`,
@@ -97,6 +94,29 @@ const TourDetailsPage = () => {
       "",
       "Please let me know availability and pricing. Thank you!",
     ];
+  };
+
+  const buildWhatsAppMessage = () => {
+    const lines = [
+      "Hello Mishel Lanka Tours 👋",
+      "",
+      `I'd like to inquire/book the following tour:`,
+      ...buildSharedLines(),
+    ];
+    return lines.join("\n");
+  };
+
+  const buildEmailSubject = () => formData.subject || `Booking Request: ${tour.title}`;
+
+  const buildEmailBody = () => {
+    const lines = [
+      "Hello Mishel Lanka Tours,",
+      "",
+      "I'd like to inquire/book the following tour:",
+      ...buildSharedLines(),
+      "",
+      "— Sent from Mishel Lanka Tours website",
+    ];
     return lines.join("\n");
   };
 
@@ -111,7 +131,7 @@ const TourDetailsPage = () => {
     const text = buildWhatsAppMessage();
     const url = `https://wa.me/${ADMIN_WHATSAPP}?text=${encodeURIComponent(text)}`;
 
-    // Navigate to admin WhatsApp (new tab keeps user on your site too)
+    // Navigate to admin WhatsApp (new tab)
     window.open(url, "_blank");
 
     // (Optional) Reset form
@@ -128,10 +148,22 @@ const TourDetailsPage = () => {
     }));
   };
 
+  const handleEmailCompose = () => {
+    const subject = buildEmailSubject();
+    const body = buildEmailBody();
+
+    // mailto link (opens default email client, user can review & send)
+    const mailto = `mailto:${ADMIN_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Prefer opening a new window/tab; fallback to setting location if blocked
+    const opened = window.open(mailto, "_blank");
+    if (!opened) {
+      window.location.href = mailto;
+    }
+  };
+
   const scrollToForm = () => {
-    // Prefill subject with tour title
     setFormData((p) => ({ ...p, subject: `Booking Request: ${tour.title}` }));
-    // Smooth scroll
     formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
@@ -284,7 +316,6 @@ const TourDetailsPage = () => {
 
             {/* ===== Contact / Booking Form ===== */}
             <section ref={formRef} id="contact-form" className="scroll-mt-28">
-              {/* Main Content Grid */}
               <div className="grid lg:grid-cols-2 gap-12">
                 {/* Contact Form */}
                 <motion.div
@@ -444,17 +475,35 @@ const TourDetailsPage = () => {
                       />
                     </motion.div>
 
-                    <motion.button
-                      type="submit"
-                      whileHover={{ scale: 1.03 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white font-semibold py-4 px-8 rounded-2xl shadow-lg"
-                    >
-                      <div className="flex items-center justify-center gap-2">
-                        <Send className="w-5 h-5" />
-                        Send Message via WhatsApp
-                      </div>
-                    </motion.button>
+                    {/* Action Buttons */}
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <motion.button
+                        type="submit"
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white font-semibold py-4 px-8 rounded-2xl shadow-lg"
+                      >
+                        <div className="flex items-center justify-center gap-2">
+                          <Send className="w-5 h-5" />
+                          Send via WhatsApp
+                        </div>
+                      </motion.button>
+
+                      <motion.button
+                        type="button"
+                        onClick={handleEmailCompose}
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full border-2 border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white font-semibold py-4 px-8 rounded-2xl shadow-lg transition-colors"
+                        aria-label="Prepare email to admin"
+                        title="Prepare email to admin"
+                      >
+                        <div className="flex items-center justify-center gap-2">
+                          <Mail className="w-5 h-5" />
+                          Prepare Email
+                        </div>
+                      </motion.button>
+                    </div>
                   </form>
                 </motion.div>
 
@@ -468,12 +517,10 @@ const TourDetailsPage = () => {
                     </div>
                     <div className="flex items-center gap-3 text-gray-700">
                       <Mail className="w-5 h-5 text-blue-600" />
-                      <span>mishellankatours@gmail.com</span>
+                      <span>{ADMIN_EMAIL}</span>
                     </div>
                     <button
-                      onClick={() =>
-                        window.open(`https://wa.me/${ADMIN_WHATSAPP}`, "_blank")
-                      }
+                      onClick={() => window.open(`https://wa.me/${ADMIN_WHATSAPP}`, "_blank")}
                       className="mt-4 w-full border-2 border-green-600 text-green-700 hover:bg-green-600 hover:text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300"
                     >
                       Chat on WhatsApp
@@ -486,7 +533,7 @@ const TourDetailsPage = () => {
 
           {/* Sidebar */}
           <div className="space-y-8">
-            {/* Pricing / Quick Info Card */}
+            {/* Quick Info Card */}
             <div className="bg-white rounded-3xl shadow-lg p-8 sticky top-6">
               <div className="space-y-4 mb-8">
                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
@@ -510,9 +557,6 @@ const TourDetailsPage = () => {
                 >
                   Book Now
                 </button>
-                {/* <button className="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-300">
-                  Get Quote
-                </button> */}
               </div>
 
               <div className="mt-8 pt-6 border-t border-gray-100">
@@ -524,7 +568,7 @@ const TourDetailsPage = () => {
                   </div>
                   <div className="flex items-center gap-3 text-gray-600">
                     <Mail className="w-5 h-5 text-blue-600" />
-                    <span>mishellankatours@gmail.com</span>
+                    <span>{ADMIN_EMAIL}</span>
                   </div>
                 </div>
               </div>
