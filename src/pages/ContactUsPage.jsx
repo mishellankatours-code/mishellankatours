@@ -38,8 +38,8 @@ const ContactUsPage = () => {
   }, [isSubmitted]);
 
   const contactInfo = [
-    { icon: <Phone className="w-6 h-6" />, title: "Phone Number", info: "+94 77 123 4567", subinfo: "+94 11 234 5678", color: "from-blue-500 to-cyan-500" },
-    { icon: <Mail className="w-6 h-6" />, title: "Email Address", info: "info@mishellanka.com", subinfo: "tours@mishellanka.com", color: "from-green-500 to-emerald-500" },
+    { icon: <Phone className="w-6 h-6" />, title: "Phone Number", info: "+94 76 204 40 65", subinfo: "+94 11 234 5678", color: "from-blue-500 to-cyan-500" },
+    { icon: <Mail className="w-6 h-6" />, title: "Email Address", info: "mishellankatours@gmail.com", subinfo: "mishellankatours@gmail.com", color: "from-green-500 to-emerald-500" },
     { icon: <MapPin className="w-6 h-6" />, title: "Our Location", info: "Colombo, Sri Lanka", subinfo: "Main Office, Level 3", color: "from-orange-500 to-red-500" },
     { icon: <Clock className="w-6 h-6" />, title: "Working Hours", info: "Mon - Sat: 8AM - 8PM", subinfo: "Sunday: 9AM - 5PM", color: "from-purple-500 to-pink-500" },
   ];
@@ -360,7 +360,7 @@ const ContactUsPage = () => {
               whileTap={{ scale: 0.98 }}
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-2xl"
             >
-              Call Now: +94 77 123 4567
+              Call Now: +94 76 204 40 65
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.04 }}
