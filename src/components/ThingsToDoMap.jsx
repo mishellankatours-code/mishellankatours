@@ -18,22 +18,22 @@ const PLACES = [
     id: 1,
     name: "Negombo",
     region: "Western Province",
-    x: 18,
-    y: 77,
+    x: 20,
+    y: 68,
     blurb:
       "Beach town known for the Dutch canal, seafood, and early-morning fish markets.",
     photos: [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/florian-wehde-szpz0b1Q6IE-unsplash.jpg",
     ],
     bestFor: ["Beaches", "Seafood", "Boat rides"],
-    gmap: "https://maps.app.goo.gl/Ti5n2mY4CVvkmLj67",
+    gmap: "https://maps.app.goo.gl/hAXGRpVGh1WhppSi7",
   },
   {
     id: 2,
     name: "Colombo",
     region: "Western Province",
     x: 22,
-    y: 82,
+    y: 77,
     blurb:
       "Sri Lanka’s bustling capital; galleries, temples, street food, and the Galle Face Green.",
     photos: [
@@ -46,8 +46,8 @@ const PLACES = [
     id: 3,
     name: "Galle",
     region: "Southern Province",
-    x: 28,
-    y: 93,
+    x: 32,
+    y: 102,
     blurb:
       "UNESCO-listed fort city with Dutch-era ramparts, boutique streets, and ocean views.",
     photos: [
@@ -60,8 +60,8 @@ const PLACES = [
     id: 4,
     name: "Hikkaduwa",
     region: "Southern Province",
-    x: 26,
-    y: 95,
+    x: 32,
+    y: 97,
     blurb: "Coral reefs, surfing spots, and laid-back beach vibes.",
     photos: [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/beautiful-tropical-beach-sea.jpg",
@@ -73,8 +73,8 @@ const PLACES = [
     id: 5,
     name: "Yala",
     region: "Southern Province",
-    x: 58,
-    y: 92,
+    x: 70,
+    y: 93,
     blurb:
       "Sri Lanka’s most famous national park with high chances to spot leopards and elephants.",
     photos: [
@@ -87,7 +87,7 @@ const PLACES = [
     id: 6,
     name: "Nuwara Eliya",
     region: "Central Province",
-    x: 45,
+    x: 50,
     y: 75,
     blurb:
       "Misty tea country with colonial charm, waterfalls, and cool weather.",
@@ -101,7 +101,7 @@ const PLACES = [
     id: 7,
     name: "Kandy",
     region: "Central Province",
-    x: 39,
+    x: 45,
     y: 66,
     blurb:
       "Sacred city home to the Temple of the Tooth, surrounded by hills and a serene lake.",
@@ -129,8 +129,8 @@ const PLACES = [
     id: 9,
     name: "Pasikuda",
     region: "Eastern Province",
-    x: 66,
-    y: 58,
+    x: 85,
+    y: 64,
     blurb:
       "Shallow turquoise bay famous for long, safe swims and calm seas.",
     photos: [
@@ -157,7 +157,7 @@ const PLACES = [
     id: 11,
     name: "Arugam Bay",
     region: "Eastern Province",
-    x: 66,
+    x: 85,
     y: 86,
     blurb: "World-class right-hand point break and relaxed surf town.",
     photos: [
@@ -170,8 +170,8 @@ const PLACES = [
     id: 12,
     name: "Batticaloa",
     region: "Eastern Province",
-    x: 68,
-    y: 64,
+    x: 85,
+    y: 59,
     blurb:
       "Lagoon city with serene bridges, lighthouses, and quiet beaches.",
     photos: [
@@ -184,8 +184,8 @@ const PLACES = [
     id: 14,
     name: "Trincomalee (Koneswaram Temple)",
     region: "Eastern Province",
-    x: 63,
-    y: 40,
+    x: 72,
+    y: 43,
     blurb:
       "Clifftop kovil and pristine beaches; perfect blend of culture and sea.",
     photos: [
