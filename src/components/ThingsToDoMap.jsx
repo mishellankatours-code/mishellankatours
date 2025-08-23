@@ -23,7 +23,7 @@ const PLACES = [
     blurb:
       "Beach town known for the Dutch canal, seafood, and early-morning fish markets.",
     photos: [
-      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop",
+      "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/florian-wehde-szpz0b1Q6IE-unsplash.jpg",
     ],
     bestFor: ["Beaches", "Seafood", "Boat rides"],
     gmap: "https://goo.gl/maps/8n5bY6q3V4cH1o3d6",
@@ -37,7 +37,7 @@ const PLACES = [
     blurb:
       "Sri Lanka’s bustling capital; galleries, temples, street food, and the Galle Face Green.",
     photos: [
-      "https://images.unsplash.com/photo-1561406636-b80293969649?q=80&w=1200&auto=format&fit=crop",
+      "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/tharoushan-kandarajah-KtDXt7DyfVM-unsplash.jpg",
     ],
     bestFor: ["City life", "Food", "Museums"],
     gmap: "https://goo.gl/maps/E3Kx3sB6bJt",
@@ -51,7 +51,7 @@ const PLACES = [
     blurb:
       "UNESCO-listed fort city with Dutch-era ramparts, boutique streets, and ocean views.",
     photos: [
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop",
+      "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/shainee-fernando-WDVMyBsSSwY-unsplash.jpg",
     ],
     bestFor: ["Heritage", "Photography", "Cafés"],
     gmap: "https://goo.gl/maps/1pQz3t7iEjo",
@@ -64,7 +64,7 @@ const PLACES = [
     y: 95,
     blurb: "Coral reefs, surfing spots, and laid-back beach vibes.",
     photos: [
-      "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1200&auto=format&fit=crop",
+      "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/beautiful-tropical-beach-sea.jpg",
     ],
     bestFor: ["Snorkeling", "Surfing"],
     gmap: "https://goo.gl/maps/Hk7B2xqP9i22",
@@ -78,7 +78,7 @@ const PLACES = [
     blurb:
       "Sri Lanka’s most famous national park with high chances to spot leopards and elephants.",
     photos: [
-      "https://images.unsplash.com/photo-1602153939368-7a2a1a0d3d3e?q=80&w=1200&auto=format&fit=crop",
+      "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/udara-karunarathna-MXY2UUe1C4g-unsplash.jpg",
     ],
     bestFor: ["Wildlife", "Safaris"],
     gmap: "https://goo.gl/maps/8W3y5o5r2wQ2",
@@ -92,7 +92,7 @@ const PLACES = [
     blurb:
       "Misty tea country with colonial charm, waterfalls, and cool weather.",
     photos: [
-      "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=1200&auto=format&fit=crop",
+      "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/heshan-weeramanthri-ytNk5s_4Wys-unsplash.jpg",
     ],
     bestFor: ["Tea estates", "Hikes", "Waterfalls"],
     gmap: "https://goo.gl/maps/5F9G6sQF2bR2",
@@ -106,7 +106,7 @@ const PLACES = [
     blurb:
       "Sacred city home to the Temple of the Tooth, surrounded by hills and a serene lake.",
     photos: [
-      "https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1200&auto=format&fit=crop",
+      "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/supun-batagoda-xAV7NSUeeLc-unsplash.jpg",
     ],
     bestFor: ["Culture", "Temples", "City walks"],
     gmap: "https://goo.gl/maps/1Z8Wyc52c7G2",
@@ -120,7 +120,7 @@ const PLACES = [
     blurb:
       "Iconic rock fortress with ancient frescoes and stunning views at sunrise.",
     photos: [
-      "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=1200&auto=format&fit=crop",
+      "https://imagizer.imageshack.com/img924/741/3T5FhV.jpg",
     ],
     bestFor: ["UNESCO", "Hikes", "History"],
     gmap: "https://goo.gl/maps/c4bJrM3b5mL2",
@@ -134,7 +134,7 @@ const PLACES = [
     blurb:
       "Shallow turquoise bay famous for long, safe swims and calm seas.",
     photos: [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
+      "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/pasikudah-beach-you-would.jpg",
     ],
     bestFor: ["Calm beaches", "Families"],
     gmap: "https://goo.gl/maps/a4g6sJYt4qT2",
@@ -148,10 +148,10 @@ const PLACES = [
     blurb:
       "Rich Tamil culture, colorful kovils, and unique cuisine at the island’s northern tip.",
     photos: [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop",
+      "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/eshan-malaviarachchi-Z3XO2B2Db7Q-unsplash.jpg",
     ],
     bestFor: ["Culture", "Temples", "Food"],
-    gmap: "https://goo.gl/maps/4pP1vC3n1x82",
+    gmap: "https://maps.app.goo.gl/nMM3gCocb8ro7LYZ6",
   },
   {
     id: 11,
@@ -161,7 +161,7 @@ const PLACES = [
     y: 86,
     blurb: "World-class right-hand point break and relaxed surf town.",
     photos: [
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop",
+      "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/LS_Aru_Elephant-Rock_Desktop_1920x700.jpg",
     ],
     bestFor: ["Surfing", "Beaches"],
     gmap: "https://goo.gl/maps/6P4wXn7wqK32",
@@ -175,7 +175,7 @@ const PLACES = [
     blurb:
       "Lagoon city with serene bridges, lighthouses, and quiet beaches.",
     photos: [
-      "https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1200&auto=format&fit=crop",
+      "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/LS_Desktop_1920x7001-3.jpg",
     ],
     bestFor: ["Beaches", "Calm vibes"],
     gmap: "https://goo.gl/maps/1e2hD8x7tSf",
@@ -189,7 +189,7 @@ const PLACES = [
     blurb:
       "Clifftop kovil and pristine beaches; perfect blend of culture and sea.",
     photos: [
-      "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop",
+      "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/nadun-ranasinghe-Crx7Ktg5LgY-unsplash.jpg",
     ],
     bestFor: ["Temples", "Snorkeling", "Beaches"],
     gmap: "https://goo.gl/maps/1m7tL9QpV8J2",
