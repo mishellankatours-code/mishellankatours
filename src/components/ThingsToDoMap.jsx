@@ -26,7 +26,7 @@ const PLACES = [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/florian-wehde-szpz0b1Q6IE-unsplash.jpg",
     ],
     bestFor: ["Beaches", "Seafood", "Boat rides"],
-    gmap: "https://goo.gl/maps/8n5bY6q3V4cH1o3d6",
+    gmap: "https://maps.app.goo.gl/Ti5n2mY4CVvkmLj67",
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const PLACES = [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/tharoushan-kandarajah-KtDXt7DyfVM-unsplash.jpg",
     ],
     bestFor: ["City life", "Food", "Museums"],
-    gmap: "https://goo.gl/maps/E3Kx3sB6bJt",
+    gmap: "https://maps.app.goo.gl/Vedy7YPnn7TPvkiF6",
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ const PLACES = [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/shainee-fernando-WDVMyBsSSwY-unsplash.jpg",
     ],
     bestFor: ["Heritage", "Photography", "Cafés"],
-    gmap: "https://goo.gl/maps/1pQz3t7iEjo",
+    gmap: "https://maps.app.goo.gl/UfZw7BHCjotgxC829",
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ const PLACES = [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/beautiful-tropical-beach-sea.jpg",
     ],
     bestFor: ["Snorkeling", "Surfing"],
-    gmap: "https://goo.gl/maps/Hk7B2xqP9i22",
+    gmap: "https://maps.app.goo.gl/osNxaYDF7bMYxXks7",
   },
   {
     id: 5,
@@ -81,7 +81,7 @@ const PLACES = [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/udara-karunarathna-MXY2UUe1C4g-unsplash.jpg",
     ],
     bestFor: ["Wildlife", "Safaris"],
-    gmap: "https://goo.gl/maps/8W3y5o5r2wQ2",
+    gmap: "https://maps.app.goo.gl/Urec8gsi4Dhgo4RN8",
   },
   {
     id: 6,
@@ -95,7 +95,7 @@ const PLACES = [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/heshan-weeramanthri-ytNk5s_4Wys-unsplash.jpg",
     ],
     bestFor: ["Tea estates", "Hikes", "Waterfalls"],
-    gmap: "https://goo.gl/maps/5F9G6sQF2bR2",
+    gmap: "https://maps.app.goo.gl/fcrWFhgs2drb6d7m9",
   },
   {
     id: 7,
@@ -109,7 +109,7 @@ const PLACES = [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/supun-batagoda-xAV7NSUeeLc-unsplash.jpg",
     ],
     bestFor: ["Culture", "Temples", "City walks"],
-    gmap: "https://goo.gl/maps/1Z8Wyc52c7G2",
+    gmap: "https://maps.app.goo.gl/sFdMb1q2dTs1mTpQ7",
   },
   {
     id: 8,
@@ -123,7 +123,7 @@ const PLACES = [
       "https://imagizer.imageshack.com/img924/741/3T5FhV.jpg",
     ],
     bestFor: ["UNESCO", "Hikes", "History"],
-    gmap: "https://goo.gl/maps/c4bJrM3b5mL2",
+    gmap: "https://maps.app.goo.gl/nvDn562pDmZNdosY6",
   },
   {
     id: 9,
@@ -137,7 +137,7 @@ const PLACES = [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/pasikudah-beach-you-would.jpg",
     ],
     bestFor: ["Calm beaches", "Families"],
-    gmap: "https://goo.gl/maps/a4g6sJYt4qT2",
+    gmap: "https://maps.app.goo.gl/rRoNiccyNyKWM7F69",
   },
   {
     id: 10,
@@ -164,7 +164,7 @@ const PLACES = [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/LS_Aru_Elephant-Rock_Desktop_1920x700.jpg",
     ],
     bestFor: ["Surfing", "Beaches"],
-    gmap: "https://goo.gl/maps/6P4wXn7wqK32",
+    gmap: "https://maps.app.goo.gl/6RNE7JXdH82C9cCi7",
   },
   {
     id: 12,
@@ -192,7 +192,7 @@ const PLACES = [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/nadun-ranasinghe-Crx7Ktg5LgY-unsplash.jpg",
     ],
     bestFor: ["Temples", "Snorkeling", "Beaches"],
-    gmap: "https://goo.gl/maps/1m7tL9QpV8J2",
+    gmap: "https://maps.app.goo.gl/TWDPCwssUWUnYxkS8",
   },
 ];
 
