@@ -192,7 +192,7 @@ const PLACES = [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/nadun-ranasinghe-Crx7Ktg5LgY-unsplash.jpg",
     ],
     bestFor: ["Temples", "Snorkeling", "Beaches"],
-    gmap: "https://maps.app.goo.gl/TWDPCwssUWUnYxkS8",
+    gmap: "https://maps.app.goo.gl/9LPT5imcZXMZEzC67",
   },
 ];
 
