@@ -178,7 +178,7 @@ const PLACES = [
       "https://zmplowykbzkeekwhrmos.supabase.co/storage/v1/object/public/sri%20lanka%20images/LS_Desktop_1920x7001-3.jpg",
     ],
     bestFor: ["Beaches", "Calm vibes"],
-    gmap: "https://goo.gl/maps/1e2hD8x7tSf",
+    gmap: "https://maps.app.goo.gl/YbZhzTEMPt66kymFA",
   },
   {
     id: 14,
