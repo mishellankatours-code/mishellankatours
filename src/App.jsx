@@ -10,15 +10,28 @@ import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
 import WhatsAppButton from "./components/WhatsAppButton";
 import TourDetailsPage from "./pages/TourDetailsPage";
+import AmbientAudio from "./components/AmbientAudio";
 
 export default function App() {
   return (
     <Router>
       <Navbar />
+
+      {/* Floating WhatsApp chat */}
       <WhatsAppButton
-        phone="94762044065" // ← your admin number (no +, spaces, or leading 0)
+        phone="94762044065" // no +, spaces, or leading 0
         message="Hi Mishellanka Tours! I'd like to know more about your packages."
       />
+
+      {/* Floating ambient music controller (MP3 only). 
+          Starts after first user interaction and remembers user preference. */}
+      <AmbientAudio
+        src="/audio/SriLankan.mp3"
+        defaultVolume={0.25}
+        position="bottom-24 right-4" // or "bottom-4 left-4" etc.
+        respectPreviousPause={false}  // set true if you want to remember user pause
+      />
+
       <main className="pt-16">
         <Routes>
           <Route
