@@ -318,7 +318,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-green-400 font-semibold"
                 >
-                  Alpha Gen Coding.com
+                  Alpha Gen Coding
                 </a>
               </span>
             </div>
